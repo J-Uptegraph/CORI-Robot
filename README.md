@@ -81,8 +81,6 @@ So I built CORI for exactly that reason.”_
 
 MIT License
 
-MIT License
-
 Copyright (c) 2025 Johnathan Uptegraph
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
