@@ -53,27 +53,10 @@ The robot’s first goal is to autonomously **sort laundry by color**, navigatin
 
 ---
 
-## 📁 Project Structure
-
-cori_chore_robot/
-├── cori_description/ # URDF, meshes, and visuals
-├── cori_bringup/ # Launch files for sim/hardware
-├── cori_navigation/ # Nav2 or SLAM-based navigation
-├── cori_manipulation/ # Gripper and task logic
-├── cori_vision/ # Color sorting & perception
-├── cori_msgs/ # Custom ROS messages & services
-└── README.md # This file
-
-yaml
-Copy
-Edit
-
----
-
 ## 🔄 Development Roadmap
 
-- [x] Initial ROS 2 workspace setup
-- [x] Basic robot URDF and Gazebo model
+- [ ] Initial ROS 2 workspace setup
+- [ ] Basic robot URDF and Gazebo model
 - [ ] HSV-based laundry detection module
 - [ ] Mobile navigation in simulation
 - [ ] Gripper control (sim)
