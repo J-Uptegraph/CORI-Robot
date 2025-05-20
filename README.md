@@ -2,7 +2,8 @@
 
 **C.O.R.I.** stands for **Co-operative Organizational Robotic Intelligence** — a modular, ROS 2-based home assistant robot engineered to help automate household tasks like cleaning, sorting, and organization. This is a personal robotics R&D project focused on real-world autonomy, home integration, and emotionally intelligent design.
 
-> _Built with ROS 2. Built to function but designed to matter._
+> _Built to function but designed to matter._
+> Built with ROS 2. 
 
 ---
 
