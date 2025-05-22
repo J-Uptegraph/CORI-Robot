@@ -12,8 +12,7 @@ CORI aims to streamline domestic chores—starting with laundry sorting—by lev
 
 I read a quote once by Joanna Maciejewska where she stated,
 
-> “I want AI to do my laundry and dishes so I can do my art and writing,  
-> not to do my art and writing so I can do my laundry and dishes.”  
+> “I want AI to do my laundry and dishes so I can do my art and writing, not to do my art and writing so I can do my laundry and dishes.”  
 
 _So I built CORI for exactly that reason. — Johnathan Uptegraph_
 
