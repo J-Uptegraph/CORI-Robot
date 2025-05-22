@@ -4,10 +4,6 @@
 
 > _Built to function but designed to matter._
 
-![CORI prototype](assets/concept-art/CORI-concept-art.PNG)
-
----
-
 ## 🤖 Vision Statement
 
 CORI is more than a robot—it’s a step toward real-world, emotionally resonant automation. The goal is not just to build robots that move, but ones that help us live better.
@@ -27,6 +23,9 @@ So I built CORI for exactly that reason.”_
 - Serve as a **platform for learning, simulation, and real-world prototyping**
 
 The robot’s first goal is to autonomously **sort laundry by color**, navigating a mapped space and using a simple computer vision pipeline to detect and classify clothing.
+
+---
+
 
 ---
 
@@ -74,6 +73,10 @@ The robot’s first goal is to autonomously **sort laundry by color**, navigatin
 - [ ] Gripper control (simulation)  
 - [ ] Real-world prototype integration  
 - [ ] Task planning framework (BT or FSM)  
+
+---
+
+![CORI prototype](assets/concept-art/CORI-concept-art.PNG)
 
 ---
 
