@@ -4,7 +4,7 @@
 
 > _Built to function but designed to matter._
 
-![CORI prototype](assets/concept-art/IMG_3643.PNG)
+![CORI prototype](assets/concept-art/CORI-concept-art.PNG)
 
 ---
 
