@@ -12,8 +12,7 @@
 
 CORI is more than a robot—it’s a step toward real-world, emotionally resonant automation. The goal is not just to build robots that move, but ones that help us live better.
 
-> _“I built this to reclaim my free time, streamline the housekeeping process, and automate the most mundane parts of life.  
-I once read a quote: ‘I want AI to do my laundry and dishes so that I can do art and writing, not for AI to do my art and writing so that I can do my laundry and dishes.’  
+> _“ I once read a quote: ‘I want AI to do my laundry and dishes so that I can do art and writing, not for AI to do my art and writing so that I can do my laundry and dishes.’
 So I built CORI for exactly that reason.”_  
 > — Johnathan Uptegraph
 
