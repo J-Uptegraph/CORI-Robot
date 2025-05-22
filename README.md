@@ -10,11 +10,12 @@
 
 CORI aims to streamline domestic chores—starting with laundry sorting—by leveraging ROS 2 and simulation tools. The goal is to create a flexible platform for learning and prototyping, paving the way for practical home robotics.
 
-> I once read a quote by Joanna Maciejewska where she stated,
-> _“I want AI to do my laundry and dishes so I can do my art and writing,  
-> not to do my art and writing so I can do my laundry and dishes.”_
-> and I built CORI for exactly that reason.
-> — Johnathan Uptegraph
+> “I want AI to do my laundry and dishes so I can do my art and writing,  
+> not to do my art and writing so I can do my laundry and dishes.”  
+> — Joanna Maciejewska
+
+_So I built CORI for exactly that reason._  
+— Johnathan Uptegraph
 
 ## 🚀 Project Overview
 
