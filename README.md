@@ -1,4 +1,4 @@
-# Meet CORI [Co-operative Organizational Robotic Intelligence] The Chore Robot
+# Meet CORI The Chore Robot
 
 **C.O.R.I.** stands for **Co-operative Organizational Robotic Intelligence** — a modular, ROS 2–based home assistant robot designed to automate household tasks like laundry sorting. This is a personal robotics R&D project focused on building a foundation for real-world autonomy and home integration.
 
