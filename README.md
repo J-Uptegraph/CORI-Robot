@@ -17,7 +17,7 @@ _"I want AI to do my laundry and dishes so I can do my art and writing,
 
 so I decided to built CORI for exactly that reason.
 
-_-Johnathan Uptegraph_
+_- Johnathan Uptegraph_
 
 ---
 
