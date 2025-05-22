@@ -15,7 +15,6 @@ CORI aims to streamline domestic chores—starting with laundry sorting—by lev
 > not to do my art and writing so I can do my laundry and dishes.”_
 > and I built CORI for exactly that reason.
 > — Johnathan Uptegraph
----
 
 ## 🚀 Project Overview
 
