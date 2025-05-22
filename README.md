@@ -48,7 +48,7 @@ The robot’s first goal is to autonomously **sort laundry by color**, navigatin
 
 ---
 
-![CORI prototype](assets/concept-art/CORI-concept-art.PNG)
+![CORI prototype](assets/concept-art/cori-main-concept-art.png)
 
 ---
 
