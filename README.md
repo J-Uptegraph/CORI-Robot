@@ -48,6 +48,10 @@ The robot’s first goal is to autonomously **sort laundry by color**, navigatin
 
 ---
 
+![CORI prototype](assets/concept-art/CORI-concept-art.PNG)
+
+---
+
 ## 🛠️ Tech Stack
 
 | System       | Tools / Frameworks                       |
@@ -73,9 +77,6 @@ The robot’s first goal is to autonomously **sort laundry by color**, navigatin
 
 ---
 
-![CORI prototype](assets/concept-art/CORI-concept-art.PNG)
-
----
 
 ## 📜 License
 
