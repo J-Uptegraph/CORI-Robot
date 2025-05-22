@@ -26,9 +26,6 @@ The robot’s first goal is to autonomously **sort laundry by color**, navigatin
 
 ---
 
-
----
-
 ## 🧠 Key Features
 
 - **ROS 2 Native**  
