@@ -1,1 +1,0 @@
-Welcome to CORI, this is a test of the REPO functionality.
