@@ -1,0 +1,4 @@
+source;share/cori_description/local_setup.bash
+source;share/cori_description/local_setup.dsv
+source;share/cori_description/local_setup.sh
+source;share/cori_description/local_setup.zsh
