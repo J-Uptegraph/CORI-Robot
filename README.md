@@ -56,50 +56,6 @@ This initial phase focuses on:
 ![CORI prototype](assets/concept-art/cori-main-concept-art.png)
 
 ---
-stateDiagram-v2
-    [*] --> START
-    
-    START --> GET_HAMPER
-    
-    GET_HAMPER --> SORT_CLOTHES
-    GET_HAMPER --> ERROR : Can't find hamper
-    
-    SORT_CLOTHES --> LIGHTS_BIN : Light colored clothes
-    SORT_CLOTHES --> DARKS_BIN : Dark colored clothes
-    SORT_CLOTHES --> MORE_CLOTHES : Check if more to sort
-    
-    LIGHTS_BIN --> MORE_CLOTHES
-    DARKS_BIN --> MORE_CLOTHES
-    
-    MORE_CLOTHES --> SORT_CLOTHES : Yes, more clothes
-    MORE_CLOTHES --> CHECK_MACHINE : No more clothes
-    
-    CHECK_MACHINE --> LOAD_CLOTHES : Machine is free
-    CHECK_MACHINE --> WAIT : Machine is busy
-    
-    WAIT --> CHECK_MACHINE : Check again later
-    
-    LOAD_CLOTHES --> ADD_SOAP
-    LOAD_CLOTHES --> ERROR : Machine is broken
-    
-    ADD_SOAP --> START_WASH
-    ADD_SOAP --> ERROR : No soap available
-    
-    START_WASH --> WASHING
-    
-    WASHING --> DONE : Wash complete
-    WASHING --> ERROR : Machine error
-    
-    DONE --> MORE_LOADS : Check for more bins
-    
-    MORE_LOADS --> LOAD_CLOTHES : Yes, more to wash
-    MORE_LOADS --> FINISHED : All done!
-    
-    ERROR --> START : Try again
-    ERROR --> FINISHED : Give up
-    
-    FINISHED --> [*]
----
 
 ## 🛠️ Tech Stack
 
