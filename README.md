@@ -3,7 +3,7 @@
 
 > *Built to function but designed to matter.*
 
-> **Project Page:** [juptegraph.dev]([https://juptegraph.dev)
+**Project Page:** [juptegraph.dev]([https://juptegraph.dev)
 ---
 
 ## 🤖 Vision Statement
