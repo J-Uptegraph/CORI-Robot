@@ -1,35 +1,31 @@
 # Meet CORI
-
 **C.O.R.I.** stands for **Co-operative Organizational Robotic Intelligence** — a modular, ROS 2–based home assistant robot designed to automate household tasks like laundry sorting. This is a personal robotics R&D project focused on building a foundation for real-world autonomy and home integration.
 
-> _Built to function but designed to matter._
+> *Built to function but designed to matter.*
 
+> **Project Page:** [juptegraph.dev]([https://juptegraph.dev)
 ---
 
 ## 🤖 Vision Statement
-
 CORI aims to streamline domestic chores—starting with laundry sorting—by leveraging ROS 2 and simulation tools. The goal is to create a flexible platform for learning and prototyping, paving the way for practical home robotics.
 
 I read a quote once by Joanna Maciejewska where she stated,
+> "I want AI to do my laundry and dishes so I can do my art and writing, not to do my art and writing so I can do my laundry and dishes."  
 
-> “I want AI to do my laundry and dishes so I can do my art and writing, not to do my art and writing so I can do my laundry and dishes.”  
+*So I built CORI for exactly that reason.*
 
-_So I built CORI for exactly that reason._
-
-_— Johnathan Uptegraph_
+*— Johnathan Uptegraph*
 
 ## 🚀 Project Overview
-
 This initial phase focuses on:
-
 1. **ROS 2 Workspace Setup**  
-   - Install ROS 2 Humble  
+   - Install ROS 2 Jazzy  
    - Configure a `colcon` workspace  
    - Install dependencies
 
 2. **Basic Robot Model & Simulation**  
    - Create a simple URDF for a mobile base with a camera  
-   - Simulate it in Gazebo
+   - Simulate it in Gazebo Harmonic
 
 3. **Color-Based Laundry Sorting**  
    - Develop a ROS 2 node using OpenCV (HSV filtering)  
@@ -38,12 +34,11 @@ This initial phase focuses on:
 ---
 
 ## 🧠 Key Features
-
 - **ROS 2 Native**  
-  Built using ROS 2 Humble for modularity and scalability.
+  Built using ROS 2 Jazzy for modularity and scalability.
 
 - **Gazebo Simulation**  
-  Simulate a mobile base equipped with a camera in Gazebo + RViz.
+  Simulate a mobile base equipped with a camera in Gazebo Harmonic + RViz2.
 
 - **Color-Based Laundry Sorting**  
   Uses OpenCV (Python) with HSV filtering to classify laundry colors.
@@ -58,20 +53,18 @@ This initial phase focuses on:
 ---
 
 ## 🛠️ Tech Stack
-
-| **System**   | **Tools / Frameworks**            |
-| ------------ | --------------------------------- |
-| **OS**       | Ubuntu 22.04 / ROS 2 Humble       |
-| **Simulation** | Gazebo Classic / RViz           |
-| **Perception** | OpenCV (Python) for HSV filtering |
-| **Control**  | Python ROS 2 nodes & launch files |
+| **System**      | **Tools / Frameworks**           |
+| --------------- | --------------------------------- |
+| **O.S.**        | Ubuntu 22.04 / ROS 2 Jazzy       |
+| **Simulation**  | Gazebo Harmonic / RViz2           |
+| **Computer Vision** | OpenCV Python                 |
+| **Robot Control** | ROS 2 Nodes / Launch Files     |
 
 ---
 
 ## 🔄 Development Roadmap
-
-- [x] ROS 2 Humble install & workspace setup  
-- [ ] Basic robot URDF & Gazebo model  
+- [x] ROS 2 Jazzy install & workspace setup  
+- [ ] Basic robot URDF & Gazebo Harmonic model  
 - [ ] HSV-based laundry detection node  
 - [ ] (Future) Navigation & SLAM integration  
 - [ ] (Future) Manipulation & gripper control  
@@ -80,7 +73,6 @@ This initial phase focuses on:
 ---
 
 ## 📜 License
-
 MIT License © 2025 Johnathan Uptegraph  
 See [LICENSE](LICENSE) for full text.
 
@@ -90,8 +82,7 @@ See [LICENSE](LICENSE) for full text.
 
 ---
 
-- **Personal Site:** [juptegraph.dev](https://juptegraph.dev)  
-- **Simulation Logs:** _TBD_  
-- **Portfolio Project Page:** _Coming Soon_
+- **Simulation Logs:** *TBD*  
 
-> _Built to function but designed to matter._
+
+> *Built to function but designed to matter.*
