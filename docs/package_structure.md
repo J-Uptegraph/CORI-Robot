@@ -1,4 +1,4 @@
-## 🤖 CORI Robotics — Core Package Structure (MVP)
+## 🤖 CORI Robotics — Core Package Structure
 
 This document outlines the foundational ROS 2 packages that power CORI’s MVP: a laundry-sorting, household assistant robot built for real autonomy in constrained domestic spaces.
 
