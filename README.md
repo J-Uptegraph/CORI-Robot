@@ -55,7 +55,7 @@ This initial phase focuses on:
 
 ---
 
-![CORI prototype](assets/concept-art/cori-main-concept-art.png)
+![CORI prototype](assets/concept-art/cori.png)
 
 > 🌐 [**Project Page** → juptegraph.dev](https://juptegraph.dev)
 
