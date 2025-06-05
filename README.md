@@ -45,9 +45,10 @@ This initial phase focuses on:
   Architecture designed to support future modules like navigation, manipulation, and task planning.
 
 ---
-**Project Page:** [juptegraph.dev](https://juptegraph.dev)
+
 ![CORI prototype](assets/concept-art/cori-main-concept-art.png)
 
+> **Project Page:** [juptegraph.dev](https://juptegraph.dev)
 ---
 
 ## 🛠️ Tech Stack
