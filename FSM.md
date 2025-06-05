@@ -28,7 +28,6 @@
 ### 🎨 Color Sorting Algorithm
 - Convert RGB image of cloth to **HSV**
 - Mask for **white/light** and **dark** color ranges
-- Apply **K-Means clustering** if color is ambiguous
 - Return `color_label` and `confidence_score`
 
 ### 🧭 Navigation Stack
