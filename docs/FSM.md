@@ -1,3 +1,14 @@
+## 🧩 OVERVIEW OF THE FINITE STATE MACHINE FOR C.O.R.I.
+> “Built to function, designed to matter.”
+
+CORI isn’t just a task executor—it’s a step toward reclaiming your time. Built in ROS 2 with expandable logic and vision-based sorting, this finite state machine (FSM) serves as the heart of CORI’s decision-making. Every state is a small act of care. Every transition is a handoff between intention and action. Whether it’s identifying laundry colors or loading the washer, CORI's architecture reflects a belief:
+
+Robots should do the chores, so humans can do what actually matters.
+
+These are the first tasks—a starting point for something much bigger. Assistive. Modular. Human-centered.
+
+
+
 ## 🔄 FSM States & Transitions
 
 | **State**            | **Description**                                                    | **Transition Conditions**                                      |
