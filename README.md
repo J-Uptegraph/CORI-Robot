@@ -5,7 +5,8 @@ C.O.R.I. is a modular, ROS 2–based home assistant robot designed to automate h
 
 
 
-> **Built to function—but designed to matter.**  [**Project Page** → juptegraph.dev](https://juptegraph.dev)
+> **Built to function—but designed to matter.**
+  [**Project Page** → juptegraph.dev](https://juptegraph.dev)
 
 ---
 
