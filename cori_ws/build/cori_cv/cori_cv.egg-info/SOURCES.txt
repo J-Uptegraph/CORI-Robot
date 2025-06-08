@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+cori_cv/__init__.py
+cori_cv.egg-info/PKG-INFO
+cori_cv.egg-info/SOURCES.txt
+cori_cv.egg-info/dependency_links.txt
+cori_cv.egg-info/entry_points.txt
+cori_cv.egg-info/requires.txt
+cori_cv.egg-info/top_level.txt
+cori_cv.egg-info/zip-safe
+cori_cv/nodes/__init__.py
+cori_cv/nodes/laundry_color_detector.py
+launch/laundry_color_detector.launch.py
+resource/cori_cv
