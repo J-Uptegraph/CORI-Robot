@@ -2,130 +2,133 @@ import rclpy
 from rclpy.node import Node
 import cv2
 import numpy as np
-from sklearn.cluster import KMeans
 import time
+from collections import Counter
 
 class LaundryColorDetector(Node):
     def __init__(self):
         super().__init__('laundry_color_detector')
-        self.get_logger().info('Laundry Color Detector Initialized')
+        self.get_logger().info('Initializing Laundry Color Detector...')
 
-        # Attempt to connect to webcam
         self.cap = cv2.VideoCapture(0)
         if not self.cap.isOpened():
             self.get_logger().error('Failed to open webcam.')
-            return
+        else:
+            self.get_logger().info('Webcam initialized with full color.')
 
-        # Turn up exposure if supported
-        self.cap.set(cv2.CAP_PROP_AUTO_EXPOSURE, 0.25)  # Manual mode
-        self.cap.set(cv2.CAP_PROP_EXPOSURE, -4)         # Value may vary based on camera driver
-
-        # Timer for frame processing
-        self.timer = self.create_timer(0.1, self.process_frame)
-
-        # For temporal confidence tracking
-        self.last_detected = None
-        self.detection_start_time = None
+        self.timer = self.create_timer(1.0 / 30.0, self.process_frame)
+        self.class_counts = {
+            'lights': 0,
+            'darks': 0,
+            'colors': 0,
+            'unknown': 0
+        }
+        self.font = cv2.FONT_HERSHEY_SIMPLEX
+        self.bg_subtractor = cv2.createBackgroundSubtractorMOG2(history=300, varThreshold=50)
 
     def process_frame(self):
         ret, frame = self.cap.read()
         if not ret:
-            self.get_logger().warn('Webcam frame not available.')
+            self.get_logger().warn('Failed to capture frame from webcam.')
             return
 
-        # Preprocess image to find contours
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        blurred = cv2.GaussianBlur(gray, (7, 7), 0)
-        edged = cv2.Canny(blurred, 50, 150)
-        contours, _ = cv2.findContours(edged, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        frame = cv2.resize(frame, (1920, 1080))
+        fg_mask = self.bg_subtractor.apply(frame)
+        contours, _ = cv2.findContours(fg_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        output_frame = frame.copy()
 
-        best_detection = None
+        self.class_counts = {k: 0 for k in self.class_counts}
 
         for cnt in contours:
-            area = cv2.contourArea(cnt)
-            if area < 5000:
-                continue
-
             x, y, w, h = cv2.boundingRect(cnt)
-            roi = frame[y:y+h, x:x+w]
-
-            color = self.estimate_color(roi)
-            color_name, pile = self.classify_color(color)
-
-            aspect_ratio = h / float(w)
-            clothing_type = 'Unknown'
-
-            if area < 12000:
-                clothing_type = 'Sock'
-            elif 0.8 < aspect_ratio < 1.2:
-                clothing_type = 'Shirt'
-            elif aspect_ratio >= 1.5 and area > 30000:
-                clothing_type = 'Pants'
-            elif aspect_ratio < 0.8 and area > 20000:
-                clothing_type = 'Shorts'
-            elif area > 40000 and aspect_ratio < 1.5:
-                clothing_type = 'Sweatshirt'
-            elif aspect_ratio > 1.5 and area > 40000:
-                clothing_type = 'Sweatpants'
-
-            confidence = area / (frame.shape[0] * frame.shape[1]) * 100
-            if confidence < 1:
+            if w * h < 800:
                 continue
 
-            best_detection = {
-                'x': x, 'y': y, 'w': w, 'h': h,
-                'label': f"{clothing_type} | {color_name} | {confidence:.1f}% | {pile}",
-                'pile': pile
-            }
-            break  # Only consider the first valid contour
+            roi = frame[y:y+h, x:x+w]
+            avg_color = np.mean(roi.reshape(-1, 3), axis=0).astype(int)
+            color_name = self.get_color_name(avg_color)
+            pile = self.classify_pile(avg_color, color_name)
+            self.class_counts[pile] += 1
 
-        if best_detection:
-            if self.last_detected != best_detection['label']:
-                self.detection_start_time = time.time()
-                self.last_detected = best_detection['label']
-            elif time.time() - self.detection_start_time > 2.0:
-                self.get_logger().info(f"Sort to: {best_detection['pile']}")
+            color_box = (int(avg_color[0]), int(avg_color[1]), int(avg_color[2]))
+            label = f"{color_name.upper()} → {pile.upper()}"
+            cv2.rectangle(output_frame, (x, y), (x+w, y+h), color_box, 2)
+            cv2.putText(output_frame, label, (x, y - 10), self.font, 0.7, color_box, 2)
 
-            x, y, w, h = best_detection['x'], best_detection['y'], best_detection['w'], best_detection['h']
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-            cv2.putText(frame, best_detection['label'], (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,255,255), 2)
+        self.draw_summary_box(output_frame)
+        cv2.imshow('CORI Laundry Sorter [LIVE]', output_frame)
+        cv2.waitKey(1)
+
+    def classify_pile(self, bgr, name):
+        if name in ['white', 'yellow', 'light_gray']:
+            return 'lights'
+        elif name in ['black', 'navy', 'dark_gray', 'brown', 'gray', 'purple']:
+            return 'darks'
+        elif name in ['red', 'orange', 'green', 'blue', 'cyan', 'pink']:
+            return 'colors'
         else:
-            self.detection_start_time = None
-            self.last_detected = None
-            cv2.putText(frame, "No clothing detected", (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0,0,255), 2)
+            return 'unknown'
 
-        cv2.imshow('Laundry Color Detector', frame)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            self.cleanup()
-
-    def estimate_color(self, image):
-        image = cv2.resize(image, (50, 50))
-        pixels = image.reshape((-1, 3))
-        kmeans = KMeans(n_clusters=1, n_init='auto')
-        kmeans.fit(pixels)
-        return kmeans.cluster_centers_[0]
-
-    def classify_color(self, bgr):
+    def get_color_name(self, bgr):
         hsv = cv2.cvtColor(np.uint8([[bgr]]), cv2.COLOR_BGR2HSV)[0][0]
         h, s, v = hsv
 
-        if v > 200 and s < 40:
-            return 'Light', 'Whites/Lights'
-        elif v < 50:
-            return 'Dark', 'Darks'
-        else:
-            return 'Color', 'Colors'
+        if v < 40:
+            return 'black'
+        if s < 40 and v > 180:
+            return 'white'
+        if s < 40:
+            return 'gray'
 
-    def cleanup(self):
+        if h < 10 or h >= 170:
+            return 'red'
+        elif 10 <= h < 25:
+            return 'orange'
+        elif 25 <= h < 35:
+            return 'yellow'
+        elif 35 <= h < 85:
+            return 'green'
+        elif 85 <= h < 125:
+            return 'cyan'
+        elif 125 <= h < 145:
+            return 'blue'
+        elif 145 <= h < 170:
+            return 'purple'
+        else:
+            return 'unknown'
+
+    def draw_summary_box(self, frame):
+        x, y, w, h = 1600, 30, 300, 200
+        overlay = frame.copy()
+        cv2.rectangle(overlay, (x, y), (x + w, y + h), (0, 0, 0), -1)
+        cv2.addWeighted(overlay, 0.6, frame, 0.4, 0, frame)
+
+        lines = [
+            f"Total Articles: {sum(self.class_counts.values())}",
+            f"Lights: {self.class_counts['lights']}",
+            f"Darks: {self.class_counts['darks']}",
+            f"Colors: {self.class_counts['colors']}",
+            f"Unknown: {self.class_counts['unknown']}"
+        ]
+
+        for i, line in enumerate(lines):
+            cv2.putText(frame, line, (x + 15, y + 35 + i*30), self.font, 0.8, (255, 255, 255), 2)
+
+    def destroy_node(self):
         self.cap.release()
         cv2.destroyAllWindows()
+        super().destroy_node()
+
+def main():
+    rclpy.init()
+    detector = LaundryColorDetector()
+    try:
+        rclpy.spin(detector)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        detector.destroy_node()
         rclpy.shutdown()
-
-
-def main(args=None):
-    rclpy.init(args=args)
-    node = LaundryColorDetector()
-    rclpy.spin(node)
 
 if __name__ == '__main__':
     main()
