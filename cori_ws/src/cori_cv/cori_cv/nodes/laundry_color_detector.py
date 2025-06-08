@@ -8,7 +8,7 @@ import time
 class LaundryColorDetector(Node):
     def __init__(self):
         super().__init__('laundry_color_detector')
-        self.get_logger().info('🚀 Laundry Color Detector Initialized')
+        self.get_logger().info('Laundry Color Detector Initialized')
 
         # Attempt to connect to webcam
         self.cap = cv2.VideoCapture(0)
@@ -83,8 +83,8 @@ class LaundryColorDetector(Node):
             if self.last_detected != best_detection['label']:
                 self.detection_start_time = time.time()
                 self.last_detected = best_detection['label']
-            elif time.time() - self.detection_start_time > 0.5:
-                self.get_logger().info(f"🧺 Sort to: {best_detection['pile']}")
+            elif time.time() - self.detection_start_time > 2.0:
+                self.get_logger().info(f"Sort to: {best_detection['pile']}")
 
             x, y, w, h = best_detection['x'], best_detection['y'], best_detection['w'], best_detection['h']
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
