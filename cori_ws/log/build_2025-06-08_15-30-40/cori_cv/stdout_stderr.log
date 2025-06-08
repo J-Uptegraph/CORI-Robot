@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating cori_cv.egg-info
+writing cori_cv.egg-info/PKG-INFO
+writing dependency_links to cori_cv.egg-info/dependency_links.txt
+writing entry points to cori_cv.egg-info/entry_points.txt
+writing requirements to cori_cv.egg-info/requires.txt
+writing top-level names to cori_cv.egg-info/top_level.txt
+writing manifest file 'cori_cv.egg-info/SOURCES.txt'
+reading manifest file 'cori_cv.egg-info/SOURCES.txt'
+writing manifest file 'cori_cv.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori-cv.egg-link (link to .)
+
+Installed /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv
+running symlink_data
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/ament_index
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/ament_index/resource_index
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/ament_index/resource_index/packages
+symbolically linking /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/resource/cori_cv -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/ament_index/resource_index/packages
+symbolically linking /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/package.xml -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/cori_cv

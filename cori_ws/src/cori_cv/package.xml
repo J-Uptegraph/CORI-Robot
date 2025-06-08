@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>cori_cv</name>
+  <version>0.0.0</version>
+  <description>Color detection for laundry using OpenCV and ROS 2</description>
+  <maintainer email="johnnyup2@gmail.com">Johnathan Uptegraph</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>opencv-python</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
