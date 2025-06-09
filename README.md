@@ -4,7 +4,7 @@
 C.O.R.I. is a modular, ROS 2–based home assistant robot designed to automate household tasks like laundry sorting. This personal robotics R&D project lays the groundwork for real-world autonomy and home integration.
 
 [**🌐 Project Page → juptegraph.dev**](https://juptegraph.dev)  
-<img src="assets/concept-art/cori_portfolio_view.png" width="500"/>
+<img src="assets/concept-art/cori_portfolio_view.png" width="1000"/>
 
 ---
 
