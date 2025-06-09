@@ -64,8 +64,9 @@ This initial phase focuses on:
 ---
 
 ##  📢 Latest Update**
----
 ### 🧺 CORI Laundry Sorting — v1.0 Update (June 9, 2025)
+
+![CORI CORI Laundry Sorting Video](assets/videos/openCV_Color_Sort_Test.mp4)
 
 Finished the first version of CORI’s laundry color detection system. Here’s what it does:
 
@@ -85,7 +86,8 @@ Built in Python with OpenCV and ROS 2.
 Next step: Trigger scanning only when a new bin is presented or an item is picked. Vision is currently coming from a basic webcam—but the idea is that CORI will eventually scan from cameras in the palms before grasping.
 
 Progress is solid. 📈  
-<sub>¹ Considering a shift to Moonlight for more advanced clothing-type detection and low-level logic.</sub>
+
+> Considering a shift to Moondream instead of OpenCV for more advanced clothing-type detection and low-level logic.
 
 ---
 
