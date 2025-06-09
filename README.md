@@ -14,7 +14,6 @@ C.O.R.I. is a modular, ROS 2–based home assistant robot designed to automate h
 ## 🧠 Vision Statement
 
 > _"I want AI to do my laundry and dishes so I can do my art and writing, not to do my art and writing so I can do my laundry and dishes."_  
-> — Joanna Maciejewska
 
 So I built CORI for exactly that reason. The goal isn’t just automation—it’s an improvement in quality of life. By offloading tedious domestic tasks to a collaborative personal assistant, the aim is to buy back people’s time.
 
