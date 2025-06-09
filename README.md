@@ -70,9 +70,8 @@ This initial phase focuses on:
 <table>
   <tr>
     <td><img src="assets/gifs/openCV_Color_Sort_Test.gif" width="320"/></td>
-    <td>
-
-Finished the first version of **CORI’s laundry color detection system**.
+    <td> 
+       Finished the first version of **CORI’s laundry color detection system**.
 
 - **Reads live webcam feed** at ~60 FPS  
 - **Detects clothing items** in the frame  
@@ -98,13 +97,6 @@ Progress is solid. 📈
 </table>
 
 ---
-
-| **System Layer**     | **Tools / Frameworks**           |
-|----------------------|----------------------------------|
-| **OS**               | Ubuntu 22.04 / ROS 2 Jazzy       |
-| **Simulation**       | Gazebo Harmonic / RViz2          |
-| **Computer Vision**  | OpenCV (Python)                  |
-| **Robot Control**    | ROS 2 Nodes / Launch Files       |****
 
 ## 🛠️ Tech Stack
 
