@@ -7,7 +7,7 @@ C.O.R.I. is a modular, ROS 2–based home assistant robot designed to automate h
 ![CORI prototype](assets/concept-art/cori_portfolio_view.png)
 
 
-> **Built to function—but designed to matter.**
+> **Built to function, designed to matter.**
 
 ---
 
