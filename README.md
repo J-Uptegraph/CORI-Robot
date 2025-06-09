@@ -103,9 +103,9 @@ Progress is solid. 📈
 
 ## 🔄 Development Roadmap
 
-- [x] ROS 2 Jazzy install & workspace setup  
+- [x] ROS 2 Jazzy install & workspace setup
+- [X] HSV-based laundry detection node  
 - [ ] Mobile base URDF & Gazebo Harmonic model  
-- [ ] HSV-based laundry detection node  
 - [ ] (Future) Navigation & SLAM integration  
 - [ ] (Future) Manipulation & gripper control  
 - [ ] (Future) Task planning (Behavior Tree or FSM)
