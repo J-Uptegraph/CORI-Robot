@@ -1,6 +1,8 @@
 # 🤖 Meet C.O.R.I. 
-**Co-Operative Organizational Robotic Intelligence**              
+**Co-Operative Organizational Robotic Intelligence**  
 
+ [**Project Page** → juptegraph.dev](https://juptegraph.dev)
+![CORI prototype](assets/concept-art/cori_portfolio_view.png)
 
 C.O.R.I. is a modular, ROS 2–based home assistant robot designed to automate household tasks like laundry sorting. This personal robotics R&D project focuses on building a foundation for real-world autonomy and home integration.
 
@@ -55,10 +57,6 @@ This initial phase focuses on:
 
 - **Foundation for Expansion**  
   Architecture designed to support future modules for navigation, manipulation, and task planning.
-
----
- [**Project Page** → juptegraph.dev](https://juptegraph.dev)
-![CORI prototype](assets/concept-art/cori_portfolio_view.png)
 
 ---
 
