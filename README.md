@@ -63,6 +63,39 @@ This initial phase focuses on:
 
 ---
 
+##  📢 Latest Update**
+---
+### 🧺 CORI Laundry Sorting — v1.0 Update (June 9, 2025)
+
+Finished the first version of CORI’s laundry color detection system. Here’s what it does:
+
+- **Reads live webcam feed** at ~60 FPS  
+- **Detects clothing items** in the frame  
+- **Classifies by color:**  
+  - LIGHTS (e.g., white)  
+  - DARKS (e.g., black)  
+  - COLORS (e.g., red, blue, green)  
+- **Draws bounding boxes** around each item with the corresponding color  
+- **Displays a live summary** in the top-right corner showing:  
+  - Total items  
+  - Count per category
+
+Built in Python with OpenCV and ROS 2.
+
+Next step: Trigger scanning only when a new bin is presented or an item is picked. Vision is currently coming from a basic webcam—but the idea is that CORI will eventually scan from cameras in the palms before grasping.
+
+Progress is solid. 📈  
+<sub>¹ Considering a shift to Moonlight for more advanced clothing-type detection and low-level logic.</sub>
+
+---
+
+| **System Layer**     | **Tools / Frameworks**           |
+|----------------------|----------------------------------|
+| **OS**               | Ubuntu 22.04 / ROS 2 Jazzy       |
+| **Simulation**       | Gazebo Harmonic / RViz2          |
+| **Computer Vision**  | OpenCV (Python)                  |
+| **Robot Control**    | ROS 2 Nodes / Launch Files       |****
+
 ## 🛠️ Tech Stack
 
 | **System Layer**     | **Tools / Frameworks**           |
