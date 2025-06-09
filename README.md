@@ -6,9 +6,6 @@ C.O.R.I. is a modular, ROS 2–based home assistant robot designed to automate h
  [**Project Page** → juptegraph.dev](https://juptegraph.dev)
 ![CORI prototype](assets/concept-art/cori_portfolio_view.png)
 
-
-> **Built to function, designed to matter.**
-
 ---
 
 
