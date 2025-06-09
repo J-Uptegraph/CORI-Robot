@@ -66,7 +66,7 @@ This initial phase focuses on:
 ##  📢 Latest Update**
 ### 🧺 CORI Laundry Sorting — v1.0 Update (June 9, 2025)
 
-![CORI CORI Laundry Sorting Video](assets/videos/openCV_Color_Sort_Test.mp4)
+![CORI Laundry Sorting Video](assets/gifs/openCV_Color_Sort_Test.gif)
 
 Finished the first version of CORI’s laundry color detection system. Here’s what it does:
 
