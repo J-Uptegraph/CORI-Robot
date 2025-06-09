@@ -89,7 +89,7 @@ Built in Python with OpenCV and ROS 2.
 
 Progress is solid. 📈  
 
-> Considering a shift to Moondream instead of OpenCV for more advanced clothing-type detection and low-level logic.
+> Considering a shift to Moondream instead of OpenCV for more advanced clothing detection and low-level logic.
 
 </td>
   </tr>
