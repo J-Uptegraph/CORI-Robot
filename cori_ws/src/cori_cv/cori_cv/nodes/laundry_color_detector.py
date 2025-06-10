@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image, CameraInfo
@@ -14,11 +13,10 @@ from collections import deque
 import threading
 import queue
 
-
 class ProductionLaundryDetector(Node):
     def __init__(self):
-        super().__init__('production_laundry_detector')
-        self.get_logger().info('Production Laundry Detector v1.0 - Starting')
+        super().__init__('laundry_detector')
+        self.get_logger().info('Professional Laundry Detector starting...')
         
         # Core components
         self.bridge = CvBridge()
@@ -30,7 +28,7 @@ class ProductionLaundryDetector(Node):
         # ROS interfaces
         self.setup_ros_interfaces()
         
-        self.get_logger().info('Production Laundry Detector ready')
+        self.get_logger().info('Laundry Detector ready')
 
     def setup_parameters(self):
         """Production parameters - simple and effective"""
@@ -538,33 +536,18 @@ class ProductionLaundryDetector(Node):
             self.robot_busy = True
 
     def display_callback(self):
-        """Display results"""
+        """Display results - NO WINDOW VERSION"""
         if self.latest_rgb is None or self.shutdown_requested:
             return
         
-        # Create visualization
-        vis_frame = self.latest_rgb.copy()
+        # Just log detection info instead of showing window
+        if self.current_detections:
+            for i, detection in enumerate(self.current_detections):
+                if i == 0:  # Only log the best detection
+                    self.get_logger().info(f"DETECTED: {detection['color_name'].upper()} -> {detection['pile'].upper()} (conf: {detection['total_score']:.2f})")
         
-        # Draw detections
-        for i, detection in enumerate(self.current_detections):
-            self.draw_detection(vis_frame, detection, i == 0)
-        
-        # Draw status
-        self.draw_status(vis_frame)
-        
-        # Show frame
-        cv2.imshow('Production Laundry Detector v1.0', vis_frame)
-        
-        # Handle keyboard
-        key = cv2.waitKey(1) & 0xFF
-        if key == 27:  # ESC
-            self.get_logger().info("Shutdown requested by user")
-            self.shutdown_requested = True
-        elif key == ord(' '):  # Space - toggle background learning
-            self.bg_subtractor = cv2.createBackgroundSubtractorMOG2(
-                history=500, varThreshold=16, detectShadows=True
-            )
-            self.get_logger().info("Background model reset")
+        # Check for shutdown via parameter instead of keyboard
+        return
 
     def draw_detection(self, frame, detection, is_primary=False):
         """Draw detection visualization"""
@@ -673,7 +656,6 @@ class ProductionLaundryDetector(Node):
         except Exception as e:
             print(f"Error during node cleanup: {e}")
 
-
 def main():
     rclpy.init()
     detector = ProductionLaundryDetector()
@@ -687,7 +669,7 @@ def main():
             detector.get_logger().info("Shutting down gracefully...")
             
     except KeyboardInterrupt:
-        detector.get_logger().info("Keyboard interrupt received")
+        detector.get_logger().info("Keyboard interrupt")
     except Exception as e:
         detector.get_logger().error(f"Unexpected error: {e}")
     finally:
@@ -701,7 +683,6 @@ def main():
                 rclpy.shutdown()
         except Exception as e:
             print(f"Error during RCL shutdown: {e}")
-
 
 if __name__ == '__main__':
     main()
