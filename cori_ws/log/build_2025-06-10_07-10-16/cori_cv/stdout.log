@@ -1,0 +1,20 @@
+running egg_info
+writing ../../build/cori_cv/cori_cv.egg-info/PKG-INFO
+writing dependency_links to ../../build/cori_cv/cori_cv.egg-info/dependency_links.txt
+writing entry points to ../../build/cori_cv/cori_cv.egg-info/entry_points.txt
+writing requirements to ../../build/cori_cv/cori_cv.egg-info/requires.txt
+writing top-level names to ../../build/cori_cv/cori_cv.egg-info/top_level.txt
+reading manifest file '../../build/cori_cv/cori_cv.egg-info/SOURCES.txt'
+writing manifest file '../../build/cori_cv/cori_cv.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/laundry_color_detector.launch.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/cori_cv/launch
+running install_egg_info
+removing '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/cori_cv/cori_cv.egg-info to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv-0.0.0-py3.10.egg-info
+running install_scripts
+Installing laundry_color_detector script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/cori_cv
+writing list of installed files to '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/install.log'
