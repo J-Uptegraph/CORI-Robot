@@ -1,1 +1,1 @@
-/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_cv/setup.py
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/src/cori_cv/setup.py

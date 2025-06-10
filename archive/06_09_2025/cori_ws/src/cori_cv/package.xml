@@ -1,18 +1,23 @@
 <?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypelevel="warn"?>
 <package format="3">
   <name>cori_cv</name>
   <version>0.0.0</version>
-  <description>Computer vision node for CORI laundry sorting</description>
-  <maintainer email="johnnyup2@gmail.com">Johnathan Uptegraph</maintainer>
-  <license>MIT</license>
+  <description>CORI Computer Vision Package</description>
+  <maintainer email="jwuptegraph@gmail.com">Johnathan Uptegraph</maintainer>
+  <license>Apache License 2.0</license>
 
-  <buildtool_depend>ament_python</buildtool_depend>
-  <exec_depend>rclpy</exec_depend>
-  <exec_depend>opencv-python</exec_depend>
-  <exec_depend>numpy</exec_depend>
-  <exec_depend>scikit-learn</exec_depend>
-  <exec_depend>ament_index_python</exec_depend>
-  <exec_depend>PyYAML</exec_depend>
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>opencv2</depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
 
   <export>
     <build_type>ament_python</build_type>

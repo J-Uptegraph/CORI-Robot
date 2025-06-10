@@ -1,1 +1,1 @@
-PyYAML:ament_index_python:numpy:opencv-python:rclpy:scikit-learn
+cv_bridge:geometry_msgs:opencv2:rclpy:sensor_msgs:std_msgs

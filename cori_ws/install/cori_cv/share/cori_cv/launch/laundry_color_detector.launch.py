@@ -1,1 +1,0 @@
-/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/launch/laundry_color_detector.launch.py
