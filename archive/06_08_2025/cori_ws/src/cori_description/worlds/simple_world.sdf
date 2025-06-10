@@ -1,0 +1,500 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="simple_world">
+    <!-- Ground Plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Lighting -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Apartment Model -->
+    <model name="apartment">
+      <static>true</static>
+      <!-- Outer Walls (6m x 10m apartment) -->
+      <link name="outer_walls">
+        <visual name="north_wall_1_visual">
+          <pose>-1.5 5 1 0 0 0</pose>
+          <geometry><box><size>3 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="north_wall_1_collision">
+          <pose>-1.5 5 1 0 0 0</pose>
+          <geometry><box><size>3 0.1 2</size></box></geometry>
+        </collision>
+        <visual name="north_wall_2_visual">
+          <pose>1.5 5 1 0 0 0</pose>
+          <geometry><box><size>3 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="north_wall_2_collision">
+          <pose>1.5 5 1 0 0 0</pose>
+          <geometry><box><size>3 0.1 2</size></box></geometry>
+        </collision>
+        <visual name="south_wall_visual">
+          <pose>0 -5 1 0 0 0</pose>
+          <geometry><box><size>6 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="south_wall_collision">
+          <pose>0 -5 1 0 0 0</pose>
+          <geometry><box><size>6 0.1 2</size></box></geometry>
+        </collision>
+        <visual name="east_wall_1_visual">
+          <pose>3 2 1 0 0 1.57</pose>
+          <geometry><box><size>6 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="east_wall_1_collision">
+          <pose>3 2 1 0 0 1.57</pose>
+          <geometry><box><size>6 0.1 2</size></box></geometry>
+        </collision>
+        <visual name="east_wall_2_visual">
+          <pose>3 -2 1 0 0 1.57</pose>
+          <geometry><box><size>2 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="east_wall_2_collision">
+          <pose>3 -2 1 0 0 1.57</pose>
+          <geometry><box><size>2 0.1 2</size></box></geometry>
+        </collision>
+        <visual name="west_wall_1_visual">
+          <pose>-3 2.5 1 0 0 1.57</pose>
+          <geometry><box><size>5 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="west_wall_1_collision">
+          <pose>-3 2.5 1 0 0 1.57</pose>
+          <geometry><box><size>5 0.1 2</size></box></geometry>
+        </collision>
+        <visual name="west_wall_2_visual">
+          <pose>-3 -2.5 1 0 0 1.57</pose>
+          <geometry><box><size>5 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="west_wall_2_collision">
+          <pose>-3 -2.5 1 0 0 1.57</pose>
+          <geometry><box><size>5 0.1 2</size></box></geometry>
+        </collision>
+      </link>
+
+      <!-- Internal Walls -->
+      <link name="internal_walls">
+        <visual name="bedroom_wall_visual">
+          <pose>-1 2 1 0 0 0</pose>
+          <geometry><box><size>4 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="bedroom_wall_collision">
+          <pose>-1 2 1 0 0 0</pose>
+          <geometry><box><size>4 0.1 2</size></box></geometry>
+        </collision>
+        <visual name="closet_wall_1_visual">
+          <pose>-1.5 3 1 0 0 1.57</pose>
+          <geometry><box><size>2 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="closet_wall_1_collision">
+          <pose>-1.5 3 1 0 0 1.57</pose>
+          <geometry><box><size>2 0.1 2</size></box></geometry>
+        </collision>
+        <visual name="closet_wall_2_visual">
+          <pose>-2.5 2.5 1 0 0 0</pose>
+          <geometry><box><size>1 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="closet_wall_2_collision">
+          <pose>-2.5 2.5 1 0 0 0</pose>
+          <geometry><box><size>1 0.1 2</size></box></geometry>
+        </collision>
+        <visual name="bathroom_wall_1_visual">
+          <pose>-1 -1 1 0 0 0</pose>
+          <geometry><box><size>4 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="bathroom_wall_1_collision">
+          <pose>-1 -1 1 0 0 0</pose>
+          <geometry><box><size>4 0.1 2</size></box></geometry>
+        </collision>
+        <visual name="bathroom_wall_2_visual">
+          <pose>-1.5 -2 1 0 0 1.57</pose>
+          <geometry><box><size>2 0.1 2</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+        <collision name="bathroom_wall_2_collision">
+          <pose>-1.5 -2 1 0 0 1.57</pose>
+          <geometry><box><size>2 0.1 2</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Furniture for Bedroom -->
+    <model name="bedroom_bed">
+      <pose>-2 4 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>2 1.5 0.5</size></box></geometry>
+          <material><ambient>0.6 0.4 0.2 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>2 1.5 0.5</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+    <model name="bedroom_nightstand_1">
+      <pose>-2.5 4.5 0 0 0 1.57</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
+          <material><ambient>0.3 0.3 0.3 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+    <model name="bedroom_nightstand_2">
+      <pose>-1.5 4.5 0 0 0 1.57</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
+          <material><ambient>0.3 0.3 0.3 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Furniture for Living Room -->
+    <model name="living_room_sofa">
+      <pose>2 1 0 0 0 1.57</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>2 1 0.5</size></box></geometry>
+          <material><ambient>0.7 0.7 0.7 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>2 1 0.5</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+    <model name="living_room_coffee_table">
+      <pose>1 0.5 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1 0.5 0.3</size></box></geometry>
+          <material><ambient>0.5 0.3 0.2 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>1 0.5 0.3</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+    <model name="living_room_tv">
+      <pose>0 2 0 0 0 3.14</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1 0.2 0.5</size></box></geometry>
+          <material><ambient>0.2 0.2 0.2 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>1 0.2 0.5</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+    <model name="living_room_desk">
+      <pose>2.5 -1 0 0 0 1.57</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1 0.5 0.7</size></box></geometry>
+          <material><ambient>0.4 0.3 0.2 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>1 0.5 0.7</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Furniture for Kitchen -->
+    <model name="kitchen_counter">
+      <pose>2 -4 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>2 1 0.9</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>2 1 0.9</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+    <model name="bar_stools">
+      <pose>1.5 -3 0 0 0 0</pose>
+      <link name="stool_1">
+        <visual name="visual">
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry><box><size>0.3 0.3 1</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry><box><size>0.3 0.3 1</size></box></geometry>
+        </collision>
+      </link>
+      <link name="stool_2">
+        <visual name="visual">
+          <pose>0.5 0 0.5 0 0 0</pose>
+          <geometry><box><size>0.3 0.3 1</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <pose>0.5 0 0.5 0 0 0</pose>
+          <geometry><box><size>0.3 0.3 1</size></box></geometry>
+        </collision>
+      </link>
+      <link name="stool_3">
+        <visual name="visual">
+          <pose>1 0 0.5 0 0 0</pose>
+          <geometry><box><size>0.3 0.3 1</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <pose>1 0 0.5 0 0 0</pose>
+          <geometry><box><size>0.3 0.3 1</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Furniture for Bathroom -->
+    <model name="toilet">
+      <pose>-2 -1.5 0 0 0 1.57</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.7</size></box></geometry>
+          <material><ambient>0.9 0.9 0.9 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.5 0.5 0.7</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+    <model name="sink">
+      <pose>-2 -2.5 0 0 0 1.57</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
+          <material><ambient>0.9 0.9 0.9 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+    <model name="bathtub">
+      <pose>-1 -2.5 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.5 0.7 0.5</size></box></geometry>
+          <material><ambient>0.9 0.9 0.9 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>1.5 0.7 0.5</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Mechanical Closet -->
+    <model name="washer">
+      <pose>-2 -4 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.7 0.7 1</size></box></geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.7 0.7 1</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Containers with Colored Blocks in Living Room -->
+    <model name="container_1">
+      <pose>-1 0 0 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1 1 0.5</size></box></geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>1 1 0.5</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+    <model name="container_2">
+      <pose>-1 -1 0 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1 1 0.5</size></box></geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>1 1 0.5</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Colored Blocks in Container 1 -->
+    <model name="red_block_1">
+      <pose>-1.2 0.2 0.6 0 0 0</pose>
+      <static>false</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+        </collision>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.0001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0001</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <model name="green_block_1">
+      <pose>-1 0 0.6 0 0 0</pose>
+      <static>false</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+          <material><ambient>0 1 0 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+        </collision>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.0001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0001</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <model name="blue_block_1">
+      <pose>-0.8 -0.2 0.6 0 0 0</pose>
+      <static>false</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+          <material><ambient>0 0 1 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+        </collision>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.0001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0001</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+
+    <!-- Colored Blocks in Container 2 -->
+    <model name="red_block_2">
+      <pose>-1.2 -1.2 0.6 0 0 0</pose>
+      <static>false</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+        </collision>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.0001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0001</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <model name="green_block_2">
+      <pose>-1 -1 0.6 0 0 0</pose>
+      <static>false</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+          <material><ambient>0 1 0 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+        </collision>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.0001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0001</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+    <model name="blue_block_2">
+      <pose>-0.8 -0.8 0.6 0 0 0</pose>
+      <static>false</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+          <material><ambient>0 0 1 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.2 0.2 0.2</size></box></geometry>
+        </collision>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.0001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0001</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001</izz>
+          </inertia>
+        </inertial>
+      </link>
+    </model>
+  </world>
+</sdf>

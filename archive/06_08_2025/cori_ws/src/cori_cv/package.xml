@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>cori_cv</name>
+  <version>0.0.0</version>
+  <description>Computer vision node for CORI laundry sorting</description>
+  <maintainer email="johnnyup2@gmail.com">Johnathan Uptegraph</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>opencv-python</exec_depend>
+  <exec_depend>numpy</exec_depend>
+  <exec_depend>scikit-learn</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>PyYAML</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
