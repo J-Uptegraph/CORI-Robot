@@ -55,40 +55,14 @@ This initial phase includes:
 
 ---
 
-## 📢 Latest Updates [v1.1 – GUI + Bounding Boxes Stable](updates/v1.1_update.md)
+## 📢 Project Updates
 
-<table>
-<tr>
-<td><img src="assets/gifs/openCV_Color_Sort_Test.gif" width="320"/></td>
-<td>
-
-Finished the first version of **CORI’s laundry color detection system**:
-
-- Reads live webcam feed at ~60 FPS  
-- Detects clothing items in-frame  
-- Classifies by color:  
-  - LIGHTS (e.g., white)  
-  - DARKS (e.g., black)  
-  - COLORS (e.g., red, blue, green)  
-- Draws bounding boxes using the assigned color  
-- Displays a live summary in the top-right showing:  
-  - Total items  
-  - Count per category
-
-Built in Python with OpenCV and ROS 2.
-
-**Next steps:** Enable scanning only when a new bin is presented or an item is picked. Vision is currently sourced from a basic webcam, but the long-term plan is for CORI to scan items using palm-mounted cameras before grasping.
-
-Progress is solid. 📈  
-
-> Considering a shift to Moondream for advanced clothing-type detection and low-level logic.
-
-</td>
-</tr>
-</table>
+| Version | Date         | Description                                     | Link                                                    |
+|---------|--------------|-------------------------------------------------|---------------------------------------------------------|
+| `v1.1`  | June 11, 2025 | GUI + bounding boxes stable at 30 FPS          | [View v1.1](docs/project_updates/v1.1_update.md)        |
+| `v1.0`  | June 9, 2025  | First version of laundry color detection system | [View v1.0](docs/project_updates/v1.0_update.md)        |
 
 ---
-
 ## 🛠️ Tech Stack
 
 | **System Layer**     | **Tools / Frameworks**           |
