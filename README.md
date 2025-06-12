@@ -55,7 +55,7 @@ This initial phase includes:
 
 ---
 
-## 📢 Latest Update – v1.0 (June 9, 2025)
+## 📢 Latest Updates [v1.1 – GUI + Bounding Boxes Stable](updates/v1.1_update.md)
 
 <table>
 <tr>
