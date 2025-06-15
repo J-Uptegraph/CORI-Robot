@@ -1,0 +1,8 @@
+[0.249s] WARNING:colcon.colcon_core.package_selection:ignoring unknown package 'cori_bringup' in --packages-select
+[0.302s] ERROR:colcon:colcon build: Duplicate package names not supported:
+- cori_description:
+  - archive/06_05_2025/cori_ws/src/cori_description
+  - archive/06_08_2025/cori_ws/src/cori_description
+  - archive/06_09_2025/cori_ws/src/cori_description
+  - archive/06_13_2025/cori_ws/src/cori_description
+  - cori_ws/src/cori_description
