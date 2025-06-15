@@ -1,2 +1,1 @@
-source;share/cori_description/environment/ament_prefix_path.sh
-source;share/cori_description/environment/path.sh
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description/ament_cmake_environment_hooks/local_setup.dsv

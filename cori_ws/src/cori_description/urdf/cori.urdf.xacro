@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<robot name="cori_robot">
+  <material name="light_grey">
+    <color rgba="0.8 0.8 0.8 1.0"/>
+  </material>
+  
+  <material name="dark_grey">
+    <color rgba="0.4 0.4 0.4 1.0"/>
+  </material>
+  
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.25 0.18 0.35"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.25 0.18 0.35"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="8.5"/>
+      <inertia ixx="0.2" ixy="0" ixz="0" iyy="0.3" iyz="0" izz="0.15"/>
+    </inertial>
+  </link>
+  
+  <link name="head_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.20 0.12 0.08"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.20 0.12 0.08"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.2"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.015" iyz="0" izz="0.02"/>
+    </inertial>
+  </link>
+  
+  <joint name="head_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="head_link"/>
+    <origin xyz="0 0 0.22" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="50" velocity="2.0"/>
+  </joint>
+  
+  <link name="left_shoulder_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.08"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.08"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.5"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.005"/>
+    </inertial>
+  </link>
+  
+  <joint name="left_shoulder_pan_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="left_shoulder_link"/>
+    <origin xyz="0 0.13 0.12" rpy="1.57 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="100" velocity="2.0"/>
+  </joint>
+  
+  <link name="right_shoulder_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.08"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.04" length="0.08"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.5"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.005"/>
+    </inertial>
+  </link>
+  
+  <joint name="right_shoulder_pan_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="right_shoulder_link"/>
+    <origin xyz="0 -0.13 0.12" rpy="1.57 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="100" velocity="2.0"/>
+  </joint>
+  
+  <gazebo reference="base_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  
+  <gazebo reference="head_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  
+  <gazebo reference="left_shoulder_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  
+  <gazebo reference="right_shoulder_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+</robot>
