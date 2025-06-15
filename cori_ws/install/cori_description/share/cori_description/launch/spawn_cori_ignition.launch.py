@@ -1,0 +1,1 @@
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/launch/spawn_cori_ignition.launch.py

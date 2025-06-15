@@ -310,14 +310,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "launch" "DESTINATION" "share/cori_description/")
-ament_cmake_symlink_install_directory("/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description" DIRECTORY "launch" "DESTINATION" "share/cori_description/")
-
-# install(DIRECTORY "urdf" "DESTINATION" "share/cori_description/")
-ament_cmake_symlink_install_directory("/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description" DIRECTORY "urdf" "DESTINATION" "share/cori_description/")
-
-# install(DIRECTORY "worlds" "DESTINATION" "share/cori_description/")
-ament_cmake_symlink_install_directory("/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description" DIRECTORY "worlds" "DESTINATION" "share/cori_description/")
+# install(DIRECTORY "launch" "urdf" "worlds" "DESTINATION" "share/cori_description")
+ament_cmake_symlink_install_directory("/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description" DIRECTORY "launch" "urdf" "worlds" "DESTINATION" "share/cori_description")
 
 # install(FILES "/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cori_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description" FILES "/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cori_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

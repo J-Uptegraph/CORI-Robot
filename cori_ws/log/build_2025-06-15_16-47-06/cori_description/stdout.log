@@ -1,0 +1,18 @@
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description//launch/spawn_cori.launch.py
+-- Up-to-date symlink: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description//launch/spawn_cori_ignition.launch.py
+-- Up-to-date symlink: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description//urdf/cori.urdf.xacro
+-- Up-to-date symlink: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description//worlds/laundry_world.sdf
+-- Up-to-date symlink: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description//worlds/simple_world.sdf
+-- Up-to-date symlink: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description//urdf/cori.urdf.xacro
