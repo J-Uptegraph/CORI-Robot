@@ -59,8 +59,10 @@ This initial phase includes:
 
 | Version | Date         | Description                                     | Link                                                    |
 |---------|--------------|-------------------------------------------------|---------------------------------------------------------|
+| `v1.2`  | June 15, 2025  | First Render of CORI + Laundry World in Gazebo | [View v1.2](docs/project_updates/v1.2_update.md)       |
 | `v1.1`  | June 11, 2025 | GUI + bounding boxes stable at 30 FPS          | [View v1.1](docs/project_updates/v1.1_update.md)        |
 | `v1.0`  | June 9, 2025  | First version of laundry color detection system | [View v1.0](docs/project_updates/v1.0_update.md)        |
+
 
 ---
 ## 🛠️ Tech Stack
