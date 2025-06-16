@@ -1,4 +1,4 @@
-# 🤖 CORI: Cooperative Intelligence Platform
+# 🤖 CORI: Cooperative Organizational Robotic Intelligence
 ## Building the Future of Human-Robot Interaction
 
 > _"Version 1.0 proves the robot can see. Version 2.0 proves it can learn. Version 3.0 proves it can truly help."_
