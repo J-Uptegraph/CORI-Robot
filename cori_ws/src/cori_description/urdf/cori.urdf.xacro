@@ -345,7 +345,7 @@
     <xacro:joint_properties/>
     <origin xyz="0 0 0.14" rpy="0 0 0"/>
   </joint>
-  
+
   <link name="right_arm_forearm">
     <visual>
       <geometry>
