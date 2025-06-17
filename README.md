@@ -141,14 +141,14 @@ This isn't about replacing people. **It's about building robots that understand 
 
 ## 📜 License
 
-MIT License © 2025 Johnathan Uptegraph  
-See [LICENSE](LICENSE) for full terms.
+Copyright (c) 2025 Johnathan Uptegraph  
+All rights reserved.
 
-> ⚠️ All visual assets, robot designs, and documentation are the intellectual property of Johnathan Uptegraph. This repository is for educational and personal portfolio use only.
+This software and associated documentation files are proprietary and confidential. Unauthorized copying, distribution, modification, or commercial use is strictly prohibited.
 
----
+> ⚠️ **Important Notice:** This project contains proprietary technology developed by Johnathan Uptegraph. While the code is visible for demonstration purposes, all rights are reserved. All visual assets, robot designs, and documentation are the intellectual property of Johnathan Uptegraph.
 
-- **Simulation Logs:** *Coming soon*
+For licensing inquiries: jwuptegraph@gmail.com
 
 ---
 
