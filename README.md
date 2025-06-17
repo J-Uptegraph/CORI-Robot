@@ -87,6 +87,58 @@ This initial phase includes:
 
 ---
 
+## 🔮 Vision for the Future
+
+Most household robots follow commands. **CORI adapts with you.**
+
+Where others automate tasks, CORI forms a relationship, remembering, and collaborating. It doesn't just act; it listens, asks, and grows with you.
+
+## Phase 1: Recognition ✅
+**"Teaching CORI to see"**
+
+- Real-time object detection, color classification, and basic sorting logic
+- Built in ROS 2 with a functioning Gazebo simulation pipeline
+- **Result:** A fully working perception-to-action loop at 30 FPS
+
+## Phase 2: Adaptation 🚧
+**"Teaching CORI to learn with you"**
+
+- Learns user preferences (e.g., blue shirt with white trim = wash separately)
+- Engages in cooperative decision-making ("I think this is a dark—do you agree?")
+- Remembers context, energy levels, time of day
+- Handles uncertainty with confidence scores and natural-language explanations
+
+## Phase 3: Generalized Cooperation 🔮
+**"Teaching CORI to truly help"**
+
+- Offers personalized meal prep advice based on stress or habits
+- Suggests cleaning routines based on patterns, schedules, or moods
+- Becomes a reliable partner across kitchen, laundry, home, and health
+- Evolves from **tool → assistant → teammate**
+
+## ❤️ Core Beliefs
+
+- **Memory Engine:** Learns your routines, context, and corrections
+- **Communication Layer:** Uses natural language and emotional cues to engage
+- **Task Modules:** Kitchen, laundry, wellness, and household organization
+- **Learning Core:** Cross-task adaptation, uncertainty handling, reinforcement over time
+
+## 🤝 Why It Matters
+
+We don't need smarter assistants. **We need better teammates.**
+
+CORI builds a relationship—not just a pipeline.
+
+- Helps when you're overwhelmed
+- Asks when it's unsure
+- Remembers how you like things done
+- Evolves to fit your life
+
+This isn't about replacing people. **It's about building robots that understand us.**
+
+---
+
+
 ## 📜 License
 
 MIT License © 2025 Johnathan Uptegraph  
