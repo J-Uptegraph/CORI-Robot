@@ -21,7 +21,7 @@ Built with ROS 2, Gazebo, and simulation tooling, CORI is both a functional robo
 <td><img src="assets/gifs/openCV_GUI_Darkroom_Test_Cropped.gif" width="100%"/></td>
 </tr>
 <tr>
-<td align="center"><b>CORI Model rendered in Blender</b></td>
+<td align="center"><b>CORI Model Rendered in Blender</b></td>
 <td align="center"><b>CORI's Color SortingCV in Darkroom</b></td>
 </tr>
 </table>
