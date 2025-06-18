@@ -8,8 +8,6 @@ That’s why I built CORI. The goal isn’t just automation—it’s improving q
 
 Built with ROS 2, Gazebo, and simulation tooling, CORI is both a functional robotics platform and a deeply personal project—a place to prototype assistive intelligence that learns, adapts, and helps people reclaim the hours they never meant to spend sorting their socks.
 
-— *Johnathan Uptegraph*
-
 [**🌐 Project Page → juptegraph.dev**](https://juptegraph.dev)  
 <img src="assets/concept-art/cori_portfolio_view.png" width="1000"/>
 
