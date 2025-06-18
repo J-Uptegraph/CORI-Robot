@@ -13,11 +13,26 @@ Built with ROS 2, Gazebo, and simulation tooling, CORI is both a functional robo
 
 ---
 
-## 📢 Project Updates
+## 📢 Latest Updates
+
+<table>
+<tr>
+<td><img src="assets/gifs/CORI_Blender_Model_v1_Render_Cropped.gif" width="100%"/></td>
+<td><img src="assets/gifs/openCV_GUI_Darkroom_Test_Cropped.gif" width="100%"/></td>
+</tr>
+<tr>
+<td align="center"><b>CORI Model rendered in Blender</b></td>
+<td align="center"><b>CORI's Color SortingCV in Darkroom</b></td>
+</tr>
+</table>
+
+---
+
+## 🔧 Update Log
 
 | Version | Date         | Description                                     | Link                                                    |
 |---------|--------------|-------------------------------------------------|---------------------------------------------------------|
-| `v1.2`  | June 15, 2025  | First Render of CORI + Laundry World in Gazebo | [View v1.2](docs/project_updates/v1.2_update.md)       |
+| `v1.2`  | June 15, 2025 | First Render of CORI + Laundry World in Gazebo | [View v1.2](docs/project_updates/v1.2_update.md)       |
 | `v1.1`  | June 11, 2025 | GUI + bounding boxes stable at 30 FPS          | [View v1.1](docs/project_updates/v1.1_update.md)        |
 | `v1.0`  | June 9, 2025  | First version of laundry color detection system | [View v1.0](docs/project_updates/v1.0_update.md)        |
 
