@@ -1,1 +1,1 @@
-/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description/ament_cmake_environment_hooks/ament_prefix_path.dsv
+prepend-non-duplicate;AMENT_PREFIX_PATH;

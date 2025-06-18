@@ -44,9 +44,7 @@
 <link name="full_body_collision">
   <collision>
     <geometry>
-      <mesh filename="meshes/CORI_Solid.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
+<mesh filename="/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/CORI_Solid.stl" scale="0.001 0.001 0.001"/>  </collision>
 </link>
 
 <joint name="body_collision_joint" type="fixed">

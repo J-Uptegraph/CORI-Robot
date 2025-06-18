@@ -1,3 +1,0 @@
-[console_scripts]
-laundry_color_detector = cori_cv.laundry_color_detector:main
-
