@@ -1,8 +1,9 @@
 # 🤖 Meet C.O.R.I.  
 **Cooperative Organizational Robotic Intelligence**  
-C.O.R.I. is a modular, ROS 2–based home assistant robot designed to automate household tasks like laundry sorting. This personal robotics R&D project lays the groundwork for real-world autonomy and home integration.
 
 > _"I want AI to do my laundry and dishes so I can do my art and writing, not to do my art and writing so I can do my laundry and dishes."_
+
+C.O.R.I. is a modular, ROS 2–based home assistant robot designed to automate household tasks like laundry sorting. This personal robotics R&D project lays the groundwork for real-world autonomy and home integration.
 
 That’s why I built CORI. The goal isn’t just automation—it’s improving quality of life. By offloading tedious domestic tasks to a collaborative personal assistant, the aim is to buy back time.
 
