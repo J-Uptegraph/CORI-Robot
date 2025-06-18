@@ -19,6 +19,7 @@ endif()
 # Install directories
 install(DIRECTORY
   launch
+  meshes
   urdf
   worlds
   DESTINATION share/${PROJECT_NAME}

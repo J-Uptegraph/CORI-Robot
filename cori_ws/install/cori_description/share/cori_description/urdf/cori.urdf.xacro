@@ -44,7 +44,9 @@
 <link name="full_body_collision">
   <collision>
     <geometry>
-<mesh filename="/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/CORI_Solid.stl" scale="0.001 0.001 0.001"/>  </collision>
+      <!-- <mesh filename="/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/meshes/CORI_Solid.stl"/>     -->
+    </geometry>
+  </collision>
 </link>
 
 <joint name="body_collision_joint" type="fixed">
@@ -581,7 +583,7 @@
 <!-- Gazebo Configuration -->
 <gazebo>
   <plugin name="ignition::gazebo::systems::JointStatePublisher" filename="ignition-gazebo-joint-state-publisher-system"/>
-  <plugin name="ignition::gazebo::systems::JointPositionController" filename="ignition-gazebo-joint-position-controller-system"/>
+  <!-- <plugin name="ignition::gazebo::systems::JointPositionController" filename="ignition-gazebo-joint-position-controller-system"/> -->
 </gazebo>
 
 </robot>

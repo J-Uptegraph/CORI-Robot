@@ -21,6 +21,7 @@ def generate_launch_description():
     # Process Xacro file to generate URDF
     try:
         robot_desc = xacro.process_file(xacro_file).toxml()
+        print("DEBUG - Processed URDF contains:", robot_desc[:1000])  # Print first 1000 chars
     except Exception as e:
         raise RuntimeError(f"Failed to process Xacro file: {str(e)}")
 
@@ -63,3 +64,4 @@ def generate_launch_description():
 
 if __name__ == '__main__':
     generate_launch_description()
+
