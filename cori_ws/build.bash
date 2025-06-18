@@ -25,10 +25,6 @@ else
     exit 1
 fi
 
-# Copy meshes to install directory
-echo "📂 Copying meshes to install directory..."
-cp -r src/cori_description/meshes install/cori_description/share/cori_description/
-
 # Source the workspace
 echo "📦 Sourcing workspace..."
 source install/setup.bash

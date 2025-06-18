@@ -45,6 +45,7 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cori_description" TYPE DIRECTORY FILES
     "/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/launch"
+    "/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/meshes"
     "/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/urdf"
     "/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/worlds"
     )
