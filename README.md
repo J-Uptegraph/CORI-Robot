@@ -6,7 +6,7 @@ C.O.R.I. is a modular, ROS 2–based home assistant robot designed to automate h
 
 That’s exactly why I built CORI. 
 
-This isn't about automating tasks—it's about reclaiming your time and energy by simplifying the same mundane tasks we've been doing since the 60s. CORI is here to buy back your time so you can focus on what truly matters. Instead of replacing human connection, it creates space for more of it. But it's also about building trust through collaboration, routine adaptation, and behavioral modeling. Right now CORI just sorts laundry, but soon, he will unload your groceries, take out your trash, and adapt to your schedule, so you can focus on what's important to you.
+This isn't about automating tasks—it's about reclaiming time and energy by simplifying the same mundane tasks we've been doing by hand since the 60s. CORI is here to buy back time so we can focus on what truly matters. Instead of replacing human connection, it creates space for more of it. CORI's future will be centered around collaboration and adaptive behavior through behavioral modeling and pattern recongition, with the sole focus of improving quality of life. Right now CORI just sorts laundry, but soon, he will unload your groceries, take out your trash, and streamline the parts of your schedule, finally freeing up more of your time so you can focus on what's important to you.
 
 ---
 
