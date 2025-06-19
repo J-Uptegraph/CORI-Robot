@@ -6,9 +6,6 @@ C.O.R.I. is a modular, ROS 2–based home assistant robot designed to automate h
 
 That’s why I built CORI. The goal isn’t just automation—it’s improving quality of life. 
 
-[**🌐 Project Page → juptegraph.dev**](https://juptegraph.dev)  
-<img src="assets/concept-art/cori_portfolio_view.png" width="1000"/>
-
 ---
 
 ## 📢 Latest Updates
@@ -69,7 +66,7 @@ That’s why I built CORI. The goal isn’t just automation—it’s improving q
 This initial phase includes:
 
 1. **ROS 2 Workspace Setup**  
-   - Install ROS 2 Jazzy  
+   - Install ROS 2  
    - Configure a `colcon` workspace  
    - Install dependencies
 
@@ -86,7 +83,7 @@ This initial phase includes:
 ## ✨ Key Features
 
 - **ROS 2 Native**  
-  Modular architecture built with ROS 2 Jazzy for flexibility and scalability.
+  Modular architecture built with ROS 2 for flexibility and scalability.
 
 - **Gazebo Simulation**  
   Simulates a mobile robot with an RGB camera in Gazebo Harmonic and RViz2.
@@ -102,7 +99,7 @@ This initial phase includes:
 
 | **System Layer**     | **Tools / Frameworks**           |
 |----------------------|----------------------------------|
-| **Operating System** | Ubuntu 22.04 + ROS 2 Jazzy       |
+| **Operating System** | Ubuntu 22.04 + ROS 2       |
 | **Simulation**       | Gazebo Harmonic, RViz2           |
 | **Computer Vision**  | OpenCV (Python)                  |
 | **Robot Control**    | rclpy, Launch Files              |
@@ -111,7 +108,7 @@ This initial phase includes:
 
 ## 🔄 Development Roadmap
 
-- [x] ROS 2 Jazzy install & workspace setup  
+- [x] ROS 2 install & workspace setup  
 - [x] HSV-based laundry detection node  
 - [ ] Mobile base URDF + Gazebo Harmonic model  
 - [ ] (Future) Navigation + SLAM integration  
@@ -141,7 +138,7 @@ Where others automate tasks, CORI forms a relationship, remembering, and collabo
 - Remembers context, energy levels, time of day
 - Handles uncertainty with confidence scores and natural-language explanations
 
-## Phase 3: Generalized Cooperation 🔮
+## Phase 3: Human Cooperation 🤝
 **"Teaching CORI to truly help"**
 
 - Offers personalized meal prep advice based on stress or habits
@@ -156,7 +153,7 @@ Where others automate tasks, CORI forms a relationship, remembering, and collabo
 - **Task Modules:** Kitchen, laundry, wellness, and household organization
 - **Learning Core:** Cross-task adaptation, uncertainty handling, reinforcement over time
 
-## 🤝 Why It Matters
+## 💫 Why It Matters
 
 We don't need smarter assistants. **We need better teammates.**
 
