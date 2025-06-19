@@ -43,6 +43,10 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cori_description/meshes/" TYPE DIRECTORY FILES "/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/meshes/" FILES_MATCHING REGEX "/[^/]*\\.stl$")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cori_description" TYPE DIRECTORY FILES
     "/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/launch"
     "/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/meshes"
