@@ -1,1 +1,0 @@
-Package 'cori_bringup' not found: "package 'cori_bringup' not found, searching: ['/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description', '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv', '/opt/ros/humble']"
