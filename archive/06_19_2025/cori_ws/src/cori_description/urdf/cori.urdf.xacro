@@ -1,0 +1,681 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cori">
+
+  <!-- Materials -->
+  <material name="body_material">
+    <color rgba="0.82 0.81 0.78 1.0"/> <!-- Light gray for body -->
+  </material>
+  
+  <material name="joint_material">
+    <color rgba="0.35 0.35 0.35 1.0"/> <!-- Dark gray for joints -->
+  </material>
+  
+  <material name="screen_material">
+    <color rgba="0.05 0.05 0.05 1.0"/> <!-- Black for screen -->
+  </material>
+  
+  <material name="eye_material">
+    <color rgba="1.0 1.0 1.0 1.0"/> <!-- White for eyes -->
+  </material>
+
+  <material name="invisible">
+    <color rgba="0.0 0.0 0.0 0.0"/> <!-- Transparent -->
+  </material>
+
+  <!-- Base Link -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.15" length="0.05"/>
+      </geometry>
+      <material name="invisible"/> <!-- Make base invisible -->
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.15" length="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Full Body Collision Link - THIS WILL SHOW YOUR STL MESH -->
+  <link name="full_body_collision">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/meshes/CORI_Solid.stl" scale="0.03 0.03 0.03"/>
+      </geometry>
+      <material name="body_material"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/meshes/CORI_Solid.stl" scale="0.03 0.03 0.03"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="50.0"/>
+      <inertia ixx="2.0" ixy="0.0" ixz="0.0" iyy="2.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+  <!-- Joint connecting base to full body -->
+  <joint name="base_to_body" type="fixed">
+    <parent link="base_link"/>
+    <child link="full_body_collision"/>
+    <origin xyz="-0.07 0 0.025" rpy="0 0 1.57"/>
+  </joint>
+
+  <!-- Torso - Made invisible -->
+  <link name="torso">
+    <visual>
+      <geometry>
+        <cylinder radius="0.12" length="0.25"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="5.0"/>
+      <inertia ixx="0.05" ixy="0.0" ixz="0.0" iyy="0.05" iyz="0.0" izz="0.02"/>
+    </inertial>
+  </link>
+
+  <joint name="body_to_torso" type="fixed">
+    <parent link="full_body_collision"/>
+    <child link="torso"/>
+    <origin xyz="0 0 0.125" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Head - Made invisible -->
+  <link name="head">
+    <visual>
+      <geometry>
+        <sphere radius="0.08"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <joint name="torso_to_head" type="revolute">
+    <parent link="torso"/>
+    <child link="head"/>
+    <origin xyz="0 0 0.15" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- Screen - Made invisible -->
+  <link name="screen">
+    <visual>
+      <geometry>
+        <box size="0.05 0.03 0.01"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="head_to_screen" type="fixed">
+    <parent link="head"/>
+    <child link="screen"/>
+    <origin xyz="0.07 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Eyes - Made invisible -->
+  <link name="left_eye">
+    <visual>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="head_to_left_eye" type="fixed">
+    <parent link="head"/>
+    <child link="left_eye"/>
+    <origin xyz="0.06 0.02 0.02" rpy="0 0 0"/>
+  </joint>
+
+  <link name="right_eye">
+    <visual>
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="head_to_right_eye" type="fixed">
+    <parent link="head"/>
+    <child link="right_eye"/>
+    <origin xyz="0.06 -0.02 0.02" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Left Arm Chain - Made invisible -->
+  <link name="left_arm_upper">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.15"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="torso_to_left_arm" type="revolute">
+    <parent link="torso"/>
+    <child link="left_arm_upper"/>
+    <origin xyz="0 0.14 0.1" rpy="1.57 0 6.28"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+  </joint>
+
+  <link name="left_arm_elbow">
+    <visual>
+      <geometry>
+        <sphere radius="0.025"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="left_arm_to_elbow" type="revolute">
+    <parent link="left_arm_upper"/>
+    <child link="left_arm_elbow"/>
+    <origin xyz="0 0 0.075" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-2.0" upper="2.0" effort="10" velocity="1"/>
+  </joint>
+
+  <link name="left_arm_forearm">
+    <visual>
+      <geometry>
+        <cylinder radius="0.025" length="0.12"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.8"/>
+      <inertia ixx="0.008" ixy="0.0" ixz="0.0" iyy="0.008" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="left_elbow_to_forearm" type="revolute">
+    <parent link="left_arm_elbow"/>
+    <child link="left_arm_forearm"/>
+    <origin xyz="0 0 0.06" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.5" upper="1.5" effort="10" velocity="1"/>
+  </joint>
+
+  <link name="left_hand_palm">
+    <visual>
+      <geometry>
+        <box size="0.06 0.04 0.02"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.3"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="left_forearm_to_hand" type="revolute">
+    <parent link="left_arm_forearm"/>
+    <child link="left_hand_palm"/>
+    <origin xyz="0 0 0.08" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="5" velocity="1"/>
+  </joint>
+
+  <!-- Left Fingers - Made invisible -->
+  <link name="left_finger_1">
+    <visual>
+      <geometry>
+        <cylinder radius="0.005" length="0.03"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.02"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="left_palm_to_finger1" type="revolute">
+    <parent link="left_hand_palm"/>
+    <child link="left_finger_1"/>
+    <origin xyz="0.03 0.015 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="1.5" effort="1" velocity="1"/>
+  </joint>
+
+  <link name="left_finger_2">
+    <visual>
+      <geometry>
+        <cylinder radius="0.005" length="0.03"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.02"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="left_palm_to_finger2" type="revolute">
+    <parent link="left_hand_palm"/>
+    <child link="left_finger_2"/>
+    <origin xyz="0.03 0.005 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="1.5" effort="1" velocity="1"/>
+  </joint>
+
+  <link name="left_finger_3">
+    <visual>
+      <geometry>
+        <cylinder radius="0.005" length="0.03"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.02"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="left_palm_to_finger3" type="revolute">
+    <parent link="left_hand_palm"/>
+    <child link="left_finger_3"/>
+    <origin xyz="0.03 -0.005 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="1.5" effort="1" velocity="1"/>
+  </joint>
+
+  <link name="left_finger_4">
+    <visual>
+      <geometry>
+        <cylinder radius="0.005" length="0.03"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.02"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="left_palm_to_finger4" type="revolute">
+    <parent link="left_hand_palm"/>
+    <child link="left_finger_4"/>
+    <origin xyz="0.03 -0.015 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="1.5" effort="1" velocity="1"/>
+  </joint>
+
+  <!-- Right Arm Chain - Made invisible -->
+  <link name="right_arm_upper">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.15"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="torso_to_right_arm" type="revolute">
+    <parent link="torso"/>
+    <child link="right_arm_upper"/>
+    <origin xyz="0 -0.14 0.1" rpy="1.57 0 6.28"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+  </joint>
+
+  <link name="right_arm_elbow">
+    <visual>
+      <geometry>
+        <sphere radius="0.025"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="right_arm_to_elbow" type="revolute">
+    <parent link="right_arm_upper"/>
+    <child link="right_arm_elbow"/>
+    <origin xyz="0 0 0.075" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-2.0" upper="2.0" effort="10" velocity="1"/>
+  </joint>
+
+  <link name="right_arm_forearm">
+    <visual>
+      <geometry>
+        <cylinder radius="0.025" length="0.12"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.8"/>
+      <inertia ixx="0.008" ixy="0.0" ixz="0.0" iyy="0.008" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="right_elbow_to_forearm" type="revolute">
+    <parent link="right_arm_elbow"/>
+    <child link="right_arm_forearm"/>
+    <origin xyz="0 0 0.06" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.5" upper="1.5" effort="10" velocity="1"/>
+  </joint>
+
+  <link name="right_hand_palm">
+    <visual>
+      <geometry>
+        <box size="0.06 0.04 0.02"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.3"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="right_forearm_to_hand" type="revolute">
+    <parent link="right_arm_forearm"/>
+    <child link="right_hand_palm"/>
+    <origin xyz="0 0 0.08" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="5" velocity="1"/>
+  </joint>
+
+  <!-- Right Fingers - Made invisible -->
+  <link name="right_finger_1">
+    <visual>
+      <geometry>
+        <cylinder radius="0.005" length="0.03"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.02"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="right_palm_to_finger1" type="revolute">
+    <parent link="right_hand_palm"/>
+    <child link="right_finger_1"/>
+    <origin xyz="0.03 0.015 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="1.5" effort="1" velocity="1"/>
+  </joint>
+
+  <link name="right_finger_2">
+    <visual>
+      <geometry>
+        <cylinder radius="0.005" length="0.03"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.02"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="right_palm_to_finger2" type="revolute">
+    <parent link="right_hand_palm"/>
+    <child link="right_finger_2"/>
+    <origin xyz="0.03 0.005 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="1.5" effort="1" velocity="1"/>
+  </joint>
+
+  <link name="right_finger_3">
+    <visual>
+      <geometry>
+        <cylinder radius="0.005" length="0.03"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.02"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="right_palm_to_finger3" type="revolute">
+    <parent link="right_hand_palm"/>
+    <child link="right_finger_3"/>
+    <origin xyz="0.03 -0.005 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="1.5" effort="1" velocity="1"/>
+  </joint>
+
+  <link name="right_finger_4">
+    <visual>
+      <geometry>
+        <cylinder radius="0.005" length="0.03"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.02"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="right_palm_to_finger4" type="revolute">
+    <parent link="right_hand_palm"/>
+    <child link="right_finger_4"/>
+    <origin xyz="0.03 -0.015 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="1.5" effort="1" velocity="1"/>
+  </joint>
+
+  <!-- Left Leg Chain - Made invisible -->
+  <link name="left_leg_hip">
+    <visual>
+      <geometry>
+        <sphere radius="0.04"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="torso_to_left_leg" type="revolute">
+    <parent link="torso"/>
+    <child link="left_leg_hip"/>
+    <origin xyz="0 0.08 -0.125" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.57" upper="1.57" effort="20" velocity="1"/>
+  </joint>
+
+  <link name="left_leg_thigh">
+    <visual>
+      <geometry>
+        <cylinder radius="0.035" length="0.2"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.02" ixy="0.0" ixz="0.0" iyy="0.02" iyz="0.0" izz="0.002"/>
+    </inertial>
+  </link>
+
+  <joint name="left_hip_to_thigh" type="revolute">
+    <parent link="left_leg_hip"/>
+    <child link="left_leg_thigh"/>
+    <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.0" upper="2.5" effort="20" velocity="1"/>
+  </joint>
+
+  <link name="left_leg_shin">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.18"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="1.5"/>
+      <inertia ixx="0.015" ixy="0.0" ixz="0.0" iyy="0.015" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="left_thigh_to_shin" type="revolute">
+    <parent link="left_leg_thigh"/>
+    <child link="left_leg_shin"/>
+    <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.5" upper="0" effort="15" velocity="1"/>
+  </joint>
+
+  <link name="left_foot">
+    <visual>
+      <geometry>
+        <box size="0.12 0.06 0.03"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.002" iyz="0.0" izz="0.002"/>
+    </inertial>
+  </link>
+
+  <joint name="left_shin_to_foot" type="revolute">
+    <parent link="left_leg_shin"/>
+    <child link="left_foot"/>
+    <origin xyz="0 0 -0.09" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="0.5" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- Right Leg Chain - Made invisible -->
+  <link name="right_leg_hip">
+    <visual>
+      <geometry>
+        <sphere radius="0.04"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="torso_to_right_leg" type="revolute">
+    <parent link="torso"/>
+    <child link="right_leg_hip"/>
+    <origin xyz="0 -0.08 -0.125" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.57" upper="1.57" effort="20" velocity="1"/>
+  </joint>
+
+  <link name="right_leg_thigh">
+    <visual>
+      <geometry>
+        <cylinder radius="0.035" length="0.2"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.02" ixy="0.0" ixz="0.0" iyy="0.02" iyz="0.0" izz="0.002"/>
+    </inertial>
+  </link>
+
+  <joint name="right_hip_to_thigh" type="revolute">
+    <parent link="right_leg_hip"/>
+    <child link="right_leg_thigh"/>
+    <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.0" upper="2.5" effort="20" velocity="1"/>
+  </joint>
+
+  <link name="right_leg_shin">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.18"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="1.5"/>
+      <inertia ixx="0.015" ixy="0.0" ixz="0.0" iyy="0.015" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="right_thigh_to_shin" type="revolute">
+    <parent link="right_leg_thigh"/>
+    <child link="right_leg_shin"/>
+    <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.5" upper="0" effort="15" velocity="1"/>
+  </joint>
+
+  <link name="right_foot">
+    <visual>
+      <geometry>
+        <box size="0.12 0.06 0.03"/>
+      </geometry>
+      <material name="invisible"/>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.002" iyz="0.0" izz="0.002"/>
+    </inertial>
+  </link>
+
+  <joint name="right_shin_to_foot" type="revolute">
+    <parent link="right_leg_shin"/>
+    <child link="right_foot"/>
+    <origin xyz="0 0 -0.09" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="0.5" effort="10" velocity="1"/>
+  </joint>
+
+</robot>
