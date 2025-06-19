@@ -26,7 +26,7 @@ This isn't about automating tasks—it's about reclaiming your time and energy b
       <td width="50%" align="center">
         <img src="assets/gifs/Physical_Multicolor_Test_Book_Demo.gif" height="400px"/>
         <br><b>Physical Demo</b><br>
-        <em>Color Detection Using Camera on Multi-Colored Book</em>
+        <em>30FPS Detection Using Camera on Multi-Colored Book</em>
       </td>
       <td width="50%" align="center">
         <img src="assets/gifs/Virtual_Multicolor_Test_Book_Demo.gif" height="400px"/>
