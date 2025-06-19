@@ -4,7 +4,9 @@ C.O.R.I. is a modular, ROS 2–based home assistant robot designed to automate h
 
 > _"I want AI to do my laundry and dishes so I can do my art and writing, not to do my art and writing so I can do my laundry and dishes."_
 
-That’s exactly why I built CORI. The goal isn’t just automating tasks—it’s about buying back time, and improving quality of life through human-robot interaction.
+That’s exactly why I built CORI. 
+
+This isn't about automating tasks—it's about reclaiming your time and energy by simplifying the same mundane tasks we've been doing since the 60s. CORI is designed so you can focus on what truly matters to you. Instead of replacing human connection, it creates space for more of it. But it's also about building trust through collaboration, routine adaptation, and behavioral modeling. Sure, right now CORI just sorts laundry, but soon, he will feed your pets, take out your trash, and adapt to your schedule, giving you more time to focus on whatever makes you happy.
 
 ---
 
@@ -94,6 +96,7 @@ This initial phase includes:
 - **Scalable Design**  
   Structured to support future modules for navigation, manipulation, and behavior planning.
 
+---
 
 ## 🛠️ Tech Stack
 
@@ -103,14 +106,15 @@ This initial phase includes:
 | **Simulation**       | Gazebo Harmonic, RViz2           |
 | **Computer Vision**  | OpenCV (Python)                  |
 | **Robot Control**    | rclpy, Launch Files              |
+| **Phase 2+**    | TensorFlow, PyTorch, Behavior Trees    |
 
 ---
 
 ## 🔄 Development Roadmap
 
 - [x] ROS 2 install & workspace setup  
-- [x] HSV-based laundry detection node  
-- [ ] Mobile base URDF + Gazebo Harmonic model  
+- [x] Mobile base URDF + Gazebo Harmonic model
+- [x] Color detection GUI at 30 FPS              
 - [ ] (Future) Navigation + SLAM integration  
 - [ ] (Future) Arm manipulation + gripper control  
 - [ ] (Future) Task planning (Behavior Tree or FSM)
@@ -123,12 +127,16 @@ Most household robots follow commands. **CORI adapts with you.**
 
 Where others automate tasks, CORI forms a relationship, remembering, and collaborating. It doesn't just act; it listens, asks, and grows with you.
 
-## Phase 1: Recognition ✅
+---
+
+## Phase 1: Recognition ✅ *(Completed on June 19th, 2025)*
 **"Teaching CORI to see"**
 
 - Real-time object detection, color classification, and basic sorting logic
 - Built in ROS 2 with a functioning Gazebo simulation pipeline
 - **Result:** A fully working perception-to-action loop at 30 FPS
+
+---
 
 ## Phase 2: Adaptation 🚧
 **"Teaching CORI to learn with you"**
@@ -138,6 +146,8 @@ Where others automate tasks, CORI forms a relationship, remembering, and collabo
 - Remembers context, energy levels, time of day
 - Handles uncertainty with confidence scores and natural-language explanations
 
+---
+
 ## Phase 3: Human Cooperation 🤝
 **"Teaching CORI to truly help"**
 
@@ -145,6 +155,8 @@ Where others automate tasks, CORI forms a relationship, remembering, and collabo
 - Suggests cleaning routines based on patterns, schedules, or moods
 - Becomes a reliable partner across kitchen, laundry, home, and health
 - Evolves from **tool → assistant → teammate**
+
+---
 
 ## ❤️ Core Beliefs
 
@@ -170,6 +182,8 @@ This isn't about replacing people. **It's about building robots that understand 
 
 [**🌐 Project Page → juptegraph.dev**](https://juptegraph.dev)  
 <img src="assets/concept-art/cori_portfolio_view.png" width="1000"/>
+
+---
 
 ## 📜 License
 
