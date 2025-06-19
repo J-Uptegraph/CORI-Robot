@@ -40,13 +40,17 @@
   </inertial>
 </link>
 
-<!-- Full Body Collision Link using STL -->
+<!-- Full Body Collision Link - FIXED -->
 <link name="full_body_collision">
   <collision>
     <geometry>
-      <!-- <mesh filename="/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/meshes/CORI_Solid.stl"/>     -->
+      <box size="0.4 0.3 1.5"/>
     </geometry>
   </collision>
+  <inertial>
+    <mass value="5.0"/>
+    <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+  </inertial>
 </link>
 
 <joint name="body_collision_joint" type="fixed">
