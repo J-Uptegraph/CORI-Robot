@@ -1,3 +1,4 @@
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//CORI_Solid.stl
 /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/launch/display_rviz.launch.py
 /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/launch/spawn_cori_ignition.launch.py
 /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/launch/spawn_cori.launch.py
