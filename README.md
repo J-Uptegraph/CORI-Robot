@@ -13,16 +13,42 @@ That’s why I built CORI. The goal isn’t just automation—it’s improving q
 
 ## 📢 Latest Updates
 
-<table>
-<tr>
-<td><img src="assets/gifs/CORI_Blender_Model_v1_Render_Cropped.gif" width="100%"/></td>
-<td><img src="assets/gifs/openCV_GUI_Darkroom_Test_Cropped.gif" width="100%"/></td>
-</tr>
-<tr>
-<td align="center"><b>CORI Model Rendered in Blender</b></td>
-<td align="center"><b>CORI's Color SortingCV in Darkroom</b></td>
-</tr>
-</table>
+  <div align="center">
+  <table>
+   <tr>
+      <td colspan="2" align="center">
+        <br>
+        <img src="assets/gifs/CORI_Full_Body_Gravity_Demo.gif" width="70%"/>
+        <br><b>Environment Gravity Demo</b><br>
+        <em>CORI Full Body Render with Darks, Lights, Color Hampers + Table and Virtual Clothing with Gravity</em>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" align="center">
+        <img src="assets/gifs/Physical_Multicolor_Test_Book_Demo.gif" height="400px"/>
+        <br><b>Physical Demo</b><br>
+        <em>Color Detection Using Camera on Multi-Colored Book</em>
+      </td>
+      <td width="50%" align="center">
+        <img src="assets/gifs/Virtual_Multicolor_Test_Book_Demo.gif" height="400px"/>
+        <br><b>Virtual Demo</b><br>
+        <em>Output from CORI's Model in Gazebo to Console</em>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" align="center">
+        <br>
+        <img src="assets/gifs/CORI_Blender_Model_v1_Render_Cropped.gif" width="100%"/>
+        <br><b>CORI Model Rendered in Blender</b><br>
+      </td>
+      <td width="50%" align="center">
+        <br>
+        <img src="assets/gifs/openCV_GUI_Darkroom_Test_Cropped.gif" width="100%"/>
+        <br><b>CORI's Color Sorting CV in Darkroom</b><br>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
@@ -30,9 +56,10 @@ That’s why I built CORI. The goal isn’t just automation—it’s improving q
 
 | Version | Date         | Description                                     | Link                                                    |
 |---------|--------------|-------------------------------------------------|---------------------------------------------------------|
+| `v1.3`  | June 19, 2025 | Completed Color Sorting Vision + Gazebo Connection  | [View v1.3](docs/project_updates/v1.3_update.md)       |
 | `v1.2`  | June 15, 2025 | First Render of CORI + Laundry World in Gazebo | [View v1.2](docs/project_updates/v1.2_update.md)       |
-| `v1.1`  | June 11, 2025 | GUI + bounding boxes stable at 30 FPS          | [View v1.1](docs/project_updates/v1.1_update.md)        |
-| `v1.0`  | June 9, 2025  | First version of laundry color detection system | [View v1.0](docs/project_updates/v1.0_update.md)        |
+| `v1.1`  | June 11, 2025 | GUI + bounding boxes stable at 30 FPS          | [View v1.1](docs/project_updates/v1.1_update.md)       |
+| `v1.0`  | June 9, 2025  | First version of laundry color detection system | [View v1.0](docs/project_updates/v1.0_update.md)      |
 
 ---
 
