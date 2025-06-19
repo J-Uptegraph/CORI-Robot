@@ -168,6 +168,8 @@ This isn't about replacing people. **It's about building robots that understand 
 
 ---
 
+[**🌐 Project Page → juptegraph.dev**](https://juptegraph.dev)  
+<img src="assets/concept-art/cori_portfolio_view.png" width="1000"/>
 
 ## 📜 License
 
@@ -179,6 +181,7 @@ This software and associated documentation files are proprietary and confidentia
 > ⚠️ **Important Notice:** This project contains proprietary technology developed by Johnathan Uptegraph. While the code is visible for demonstration purposes, all rights are reserved. All visual assets, robot designs, and documentation are the intellectual property of Johnathan Uptegraph.
 
 For licensing inquiries: jwuptegraph@gmail.com
+
 
 ---
 
