@@ -26,7 +26,7 @@ setup(
         'console_scripts': [
             'laundry_color_detector = cori_cv.laundry_color_detector:main',
             'simple_color_detector = cori_cv.simple_color_detector:main',
-	        'color_display = cori_cv.color_display:main', 
+	        'color_display = cori_cv.color_display:main','object_detection = cori_cv.object_detection:main' 
         ],
     },
 )

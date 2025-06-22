@@ -485,4 +485,15 @@
     </plugin>
   </gazebo>
 
+  <!-- IGNITION GAZEBO JOINT POSITION CONTROLLER -->
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>head_joint</joint_name>
+      <topic>/model/cori/joint/head_joint/cmd_pos</topic>
+      <p_gain>1000</p_gain>
+      <i_gain>100</i_gain>
+      <d_gain>10</d_gain>
+    </plugin>
+  </gazebo>
+
 </robot>

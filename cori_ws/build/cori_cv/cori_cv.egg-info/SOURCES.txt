@@ -10,6 +10,7 @@ setup.py
 ../../build/cori_cv/cori_cv.egg-info/zip-safe
 cori_cv/__init__.py
 cori_cv/color_display.py
+cori_cv/object_detection.py
 cori_cv/simple_color_detector.py
 launch/laundry_color_detector.launch.py
 resource/cori_cv
