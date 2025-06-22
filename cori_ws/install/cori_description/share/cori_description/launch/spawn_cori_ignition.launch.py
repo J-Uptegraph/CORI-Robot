@@ -44,17 +44,17 @@ def generate_launch_description():
         output='screen',
         parameters=[{'robot_description': robot_desc, 'use_sim_time': True}]
     )
-
     # Spawn Robot in Gazebo
     spawn_cori = Node(
         package='ros_gz_sim',
         executable='create',
         name='spawn_cori',
-        arguments=['-name', 'cori', '-topic', 'robot_description'],
+        arguments=['-name', 'cori', '-topic', 'robot_description',
+                '-x', '0', '-y', '0', '-z', '5', 
+                '-R', '0', '-P', '0', '-Y', '1.57'],
         output='screen',
         parameters=[{'use_sim_time': True}]
     )
-
     # Launch Description
     return LaunchDescription([
         gz_sim,

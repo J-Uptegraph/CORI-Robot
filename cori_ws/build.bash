@@ -31,11 +31,12 @@ echo ""
 echo "🎯 Choose what to run:"
 echo "1) 🚀 Full system (Gazebo + Webcam + Color Detection)"
 echo "2) 🎮 Just Gazebo simulation"
-echo "3) 📷 Just webcam color detection"
-echo "4) 🧹 Kill all ROS processes and exit"
-echo "5) 🚪 Exit"
+echo "3) 🦾 Manual Control Mode (No Input Lag!)"
+echo "4) 📷 Just webcam color detection"
+echo "5) 🧹 Kill all ROS processes and exit"
+echo "6) 🚪 Exit"
 echo ""
-read -p "Enter choice [1-5]: " choice
+read -p "Enter choice [1-6]: " choice
 
 case $choice in
     1)
@@ -142,6 +143,74 @@ case $choice in
         ;;
         
     3)
+        echo "🦾 Manual Control Mode - No Input Lag!"
+        echo "📋 This launches CORI for manual manipulation:"
+        echo "   🎮 Gazebo with CORI"
+        echo "   🚫 NO automatic joint control"
+        echo "   ✋ Click and drag CORI freely!"
+        echo ""
+        echo "⚠️  Press Ctrl+C to stop"
+        echo ""
+        
+        # Function to kill manual control processes
+        cleanup_manual() {
+            echo ""
+            echo "🛑 Stopping manual control..."
+            pkill -f "ign gazebo" 2>/dev/null || true
+            pkill -f "robot_state_publisher" 2>/dev/null || true
+            pkill -f "ros_gz_sim" 2>/dev/null || true
+            sleep 2
+            echo "✅ Manual control stopped"
+            exit 0
+        }
+        
+        # Kill any existing joint state publishers first
+        echo "🧹 Killing any existing joint state publishers..."
+        sudo pkill -f joint_state_publisher 2>/dev/null || true
+        sleep 1
+        
+        # Set trap for cleanup
+        trap cleanup_manual SIGINT
+        
+        # Start Gazebo in background
+        echo "🎮 Starting Gazebo..."
+        ign gazebo /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/worlds/laundry_world.sdf &
+        GAZEBO_PID=$!
+        
+        echo "⏳ Waiting for Gazebo to load..."
+        sleep 6
+        
+        # Start robot state publisher in background
+        echo "🤖 Starting robot state publisher..."
+        ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$(xacro src/cori_description/urdf/cori.urdf.xacro)" &
+        RSP_PID=$!
+        
+        echo "⏳ Waiting for robot description..."
+        sleep 3
+        
+        # Spawn CORI
+        echo "🚀 Spawning CORI..."
+        ros2 run ros_gz_sim create -name cori -topic robot_description
+        
+        echo ""
+        echo "🎉 CORI is ready for manual control!"
+        echo "✋ Click and drag any part of CORI in Gazebo"
+        echo "🚫 No input lag - he stays exactly where you put him!"
+        echo "⚠️  Press Ctrl+C to stop"
+        echo ""
+        
+        # Keep the script running and wait for Ctrl+C
+        while true; do
+            sleep 1
+            # Check if Gazebo is still running
+            if ! ps -p $GAZEBO_PID > /dev/null 2>&1; then
+                echo "🛑 Gazebo closed, shutting down..."
+                cleanup_manual
+            fi
+        done
+        ;;
+        
+    4)
         echo "📷 Starting webcam color detection system..."
         echo ""
         
@@ -166,7 +235,7 @@ case $choice in
         kill $WEBCAM_PID $BRIDGE_PID 2>/dev/null
         ;;
         
-    4)
+    5)
         echo "🧹 Killing all ROS processes and resetting camera..."
         
         # Comprehensive cleanup
@@ -193,7 +262,7 @@ case $choice in
         exit 0
         ;;
         
-    5)
+    6)
         echo "👋 Exiting..."
         exit 0
         ;;
