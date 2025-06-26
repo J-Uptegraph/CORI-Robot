@@ -8,7 +8,6 @@ setup.py
 ../../build/cori_cv/cori_cv.egg-info/requires.txt
 ../../build/cori_cv/cori_cv.egg-info/top_level.txt
 ../../build/cori_cv/cori_cv.egg-info/zip-safe
-cori_cv/__init__.py
 cori_cv/color_display.py
 cori_cv/object_detection.py
 cori_cv/simple_color_detector.py

@@ -100,17 +100,15 @@
         </collision>
         <visual name="visual">
           <geometry>
-            <box><size>0.4 0.4 0.5</size></box>
+            <mesh>
+              <uri>file:///home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/models/Laundry_Hamper.stl</uri>
+              <scale>0.01 0.01 0.01</scale>
+            </mesh>
           </geometry>
           <material>
-            <script>
-              <uri>file://media/materials/textures/perforated_texture.png</uri>
-              <name>perforated_black</name>
-            </script>
             <ambient>0.1 0.1 0.1 1</ambient>
             <diffuse>0.1 0.1 0.1 1</diffuse>
             <specular>0.2 0.2 0.2 1</specular>
-            <shininess>0.3</shininess>
           </material>
         </visual>
       </link>
@@ -128,17 +126,15 @@
         </collision>
         <visual name="visual">
           <geometry>
-            <box><size>0.4 0.4 0.5</size></box>
+            <mesh>
+              <uri>file:///home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/models/Laundry_Hamper.stl</uri>
+              <scale>0.01 0.01 0.01</scale>
+            </mesh>
           </geometry>
           <material>
-            <script>
-              <uri>file://media/materials/textures/perforated_texture.png</uri>
-              <name>perforated_orange</name>
-            </script>
             <ambient>1 0.5 0 1</ambient>
             <diffuse>1 0.5 0 1</diffuse>
             <specular>0.3 0.2 0 1</specular>
-            <shininess>0.3</shininess>
           </material>
         </visual>
       </link>
@@ -156,17 +152,15 @@
         </collision>
         <visual name="visual">
           <geometry>
-            <box><size>0.4 0.4 0.5</size></box>
+            <mesh>
+              <uri>file:///home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/models/Laundry_Hamper.stl</uri>
+              <scale>0.01 0.01 0.01</scale>
+            </mesh>
           </geometry>
           <material>
-            <script>
-              <uri>file://media/materials/textures/perforated_texture.png</uri>
-              <name>perforated_white</name>
-            </script>
             <ambient>1 1 1 1</ambient>
             <diffuse>1 1 1 1</diffuse>
             <specular>0.3 0.3 0.3 1</specular>
-            <shininess>0.3</shininess>
           </material>
         </visual>
       </link>
@@ -179,6 +173,14 @@
       <link name="link">
         <inertial>
           <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
         </inertial>
         <collision name="collision">
           <geometry>
@@ -204,6 +206,14 @@
       <link name="link">
         <inertial>
           <mass>0.05</mass>
+          <inertia>
+            <ixx>0.0001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0001</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001</izz>
+          </inertia>
         </inertial>
         <collision name="collision">
           <geometry>
@@ -229,6 +239,14 @@
       <link name="link">
         <inertial>
           <mass>0.05</mass>
+          <inertia>
+            <ixx>0.0001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0001</iyy>
+            <iyz>0</iyz>
+            <izz>0.0001</izz>
+          </inertia>
         </inertial>
         <collision name="collision">
           <geometry>
@@ -254,6 +272,14 @@
       <link name="link">
         <inertial>
           <mass>0.1</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.001</iyy>
+            <iyz>0</iyz>
+            <izz>0.001</izz>
+          </inertia>
         </inertial>
         <collision name="collision">
           <geometry>
@@ -279,6 +305,14 @@
       <link name="link">
         <inertial>
           <mass>0.15</mass>
+          <inertia>
+            <ixx>0.0015</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0015</iyy>
+            <iyz>0</iyz>
+            <izz>0.0015</izz>
+          </inertia>
         </inertial>
         <collision name="collision">
           <geometry>
@@ -304,6 +338,14 @@
       <link name="link">
         <inertial>
           <mass>0.2</mass>
+          <inertia>
+            <ixx>0.002</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.002</iyy>
+            <iyz>0</iyz>
+            <izz>0.002</izz>
+          </inertia>
         </inertial>
         <collision name="collision">
           <geometry>
