@@ -126,7 +126,7 @@
   <joint name="torso_to_left_upper_arm" type="fixed">
     <parent link="torso"/>
     <child link="left_upper_arm"/>
-    <!-- Active Testing  -->
+    <!-- Active Testing -->
     <origin xyz="-0.07 0 0" rpy="0 0.15 0"/>  <!-- Zero distance -->
   </joint>
 
