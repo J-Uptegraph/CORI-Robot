@@ -148,7 +148,7 @@ class DemoDisplay(Node):
         print()
         print("   This is exactly how warehouse robots and autonomous")
         print("   vehicles combine multiple data sources for intelligent")
-        print("   decision making! 🚗🤖")
+        print("   decision making! 🚗 🤖")
         print()
         
         # Footer

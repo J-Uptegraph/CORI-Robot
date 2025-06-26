@@ -71,8 +71,8 @@
   <joint name="head_joint" type="revolute">
     <parent link="torso"/>
     <child link="head"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
-    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0.0" rpy="0 0 0"/> 
+    <axis xyz="0 0 1"/>  <!-- Fixed: inverted Z axis for correct direction -->
     <limit lower="-1.8" upper="1.8" effort="80" velocity="2.5"/>
     <dynamics damping="1.8" friction="0.9"/>
   </joint>
@@ -100,7 +100,7 @@
   <joint name="torso_to_pelvis" type="fixed">
     <parent link="torso"/>
     <child link="pelvis"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your spacing -->
   </joint>
 
   <link name="left_upper_arm">
@@ -123,11 +123,13 @@
     </inertial>
   </link>
 
-  <joint name="torso_to_left_upper_arm" type="fixed">
+  <joint name="left_shoulder_joint" type="revolute">
     <parent link="torso"/>
     <child link="left_upper_arm"/>
-    <!-- Active Testing -->
-    <origin xyz="-0.07 0 0" rpy="0 0.15 0"/>  <!-- Zero distance -->
+    <origin xyz="-0.07 0 0" rpy="0 0.15 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="1 0 0"/>  <!-- Shoulder rotation -->
+    <limit lower="-2.0" upper="2.0" effort="50" velocity="2.0"/>
+    <dynamics damping="1.0" friction="0.5"/>
   </joint>
 
   <link name="left_forearm">
@@ -150,10 +152,13 @@
     </inertial>
   </link>
 
-  <joint name="left_upper_arm_to_forearm" type="fixed">
+  <joint name="left_elbow_joint" type="revolute">
     <parent link="left_upper_arm"/>
     <child link="left_forearm"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="0 1 0"/>  <!-- Elbow bend -->
+    <limit lower="-1.5" upper="1.5" effort="30" velocity="2.0"/>
+    <dynamics damping="0.8" friction="0.3"/>
   </joint>
 
   <link name="left_hand">
@@ -176,10 +181,13 @@
     </inertial>
   </link>
 
-  <joint name="left_forearm_to_hand" type="fixed">
+  <joint name="left_wrist_joint" type="revolute">
     <parent link="left_forearm"/>
     <child link="left_hand"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="0 0 1"/>  <!-- Wrist rotation -->
+    <limit lower="-1.0" upper="1.0" effort="20" velocity="2.0"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <link name="right_upper_arm">
@@ -198,15 +206,17 @@
     <inertial>
       <mass value="0.9"/>
       <origin xyz="0 0 -0.065"/>
-      <inertia ixx="0.015" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.00"/>
+      <inertia ixx="0.015" ixy="0.0" ixz="0.0" iyy="0.015" iyz="0.0" izz="0.008"/>
     </inertial>
   </link>
 
-  <joint name="torso_to_right_upper_arm" type="fixed">
+  <joint name="right_shoulder_joint" type="revolute">
     <parent link="torso"/>
     <child link="right_upper_arm"/>
-    <!-- Actively Testing -->
-    <origin xyz="0.07 0 0" rpy="0 -0.15 0"/>  <!-- Zero distance -->
+    <origin xyz="0.07 0 0" rpy="0 -0.15 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="1 0 0"/>  <!-- Shoulder rotation -->
+    <limit lower="-2.0" upper="2.0" effort="50" velocity="2.0"/>
+    <dynamics damping="1.0" friction="0.5"/>
   </joint>
 
   <link name="right_forearm">
@@ -229,10 +239,13 @@
     </inertial>
   </link>
 
-  <joint name="right_upper_arm_to_forearm" type="fixed">
+  <joint name="right_elbow_joint" type="revolute">
     <parent link="right_upper_arm"/>
     <child link="right_forearm"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="0 1 0"/>  <!-- Elbow bend -->
+    <limit lower="-1.5" upper="1.5" effort="30" velocity="2.0"/>
+    <dynamics damping="0.8" friction="0.3"/>
   </joint>
 
   <link name="right_hand">
@@ -255,10 +268,13 @@
     </inertial>
   </link>
 
-  <joint name="right_forearm_to_hand" type="fixed">
+  <joint name="right_wrist_joint" type="revolute">
     <parent link="right_forearm"/>
     <child link="right_hand"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="0 0 1"/>  <!-- Wrist rotation -->
+    <limit lower="-1.0" upper="1.0" effort="20" velocity="2.0"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <link name="left_thigh">
@@ -281,10 +297,13 @@
     </inertial>
   </link>
 
-  <joint name="pelvis_to_left_thigh" type="fixed">
+  <joint name="left_hip_joint" type="revolute">
     <parent link="pelvis"/>
     <child link="left_thigh"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="1 0 0"/>  <!-- Hip forward/back -->
+    <limit lower="-1.0" upper="1.0" effort="60" velocity="1.5"/>
+    <dynamics damping="1.5" friction="0.7"/>
   </joint>
 
   <link name="left_shin">
@@ -307,10 +326,13 @@
     </inertial>
   </link>
 
-  <joint name="left_thigh_to_shin" type="fixed">
+  <joint name="left_knee_joint" type="revolute">
     <parent link="left_thigh"/>
     <child link="left_shin"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="0 1 0"/>  <!-- Knee bend -->
+    <limit lower="-1.5" upper="0.1" effort="40" velocity="1.5"/>
+    <dynamics damping="1.2" friction="0.6"/>
   </joint>
 
   <link name="left_knee">
@@ -336,7 +358,7 @@
   <joint name="left_shin_to_knee" type="fixed">
     <parent link="left_shin"/>
     <child link="left_knee"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
   </joint>
 
   <link name="left_foot">
@@ -359,10 +381,13 @@
     </inertial>
   </link>
 
-  <joint name="left_knee_to_foot" type="fixed">
+  <joint name="left_ankle_joint" type="revolute">
     <parent link="left_knee"/>
     <child link="left_foot"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="0 1 0"/>  <!-- Ankle up/down -->
+    <limit lower="-0.5" upper="0.5" effort="25" velocity="1.5"/>
+    <dynamics damping="0.8" friction="0.4"/>
   </joint>
 
   <link name="right_thigh">
@@ -385,10 +410,13 @@
     </inertial>
   </link>
 
-  <joint name="pelvis_to_right_thigh" type="fixed">
+  <joint name="right_hip_joint" type="revolute">
     <parent link="pelvis"/>
     <child link="right_thigh"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="1 0 0"/>  <!-- Hip forward/back -->
+    <limit lower="-1.0" upper="1.0" effort="60" velocity="1.5"/>
+    <dynamics damping="1.5" friction="0.7"/>
   </joint>
 
   <link name="right_shin">
@@ -411,10 +439,13 @@
     </inertial>
   </link>
 
-  <joint name="right_thigh_to_shin" type="fixed">
+  <joint name="right_knee_joint" type="revolute">
     <parent link="right_thigh"/>
     <child link="right_shin"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="0 1 0"/>  <!-- Knee bend -->
+    <limit lower="-1.5" upper="0.1" effort="40" velocity="1.5"/>
+    <dynamics damping="1.2" friction="0.6"/>
   </joint>
 
   <link name="right_knee">
@@ -440,7 +471,7 @@
   <joint name="right_shin_to_knee" type="fixed">
     <parent link="right_shin"/>
     <child link="right_knee"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
   </joint>
 
   <link name="right_foot">
@@ -463,10 +494,13 @@
     </inertial>
   </link>
 
-  <joint name="right_knee_to_foot" type="fixed">
+  <joint name="right_ankle_joint" type="revolute">
     <parent link="right_knee"/>
     <child link="right_foot"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Zero distance -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <axis xyz="0 1 0"/>  <!-- Ankle up/down -->
+    <limit lower="-0.5" upper="0.5" effort="25" velocity="1.5"/>
+    <dynamics damping="0.8" friction="0.4"/>
   </joint>
 
   <gazebo reference="base_link">
@@ -483,6 +517,7 @@
     <material>Gazebo/Blue</material>
   </gazebo>
 
+  <!-- Joint Controllers for ALL movable joints -->
   <gazebo>
     <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
       <joint_name>head_joint</joint_name>
@@ -494,9 +529,140 @@
   </gazebo>
 
   <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>left_shoulder_joint</joint_name>
+      <topic>/model/cori/joint/left_shoulder_joint/cmd_pos</topic>
+      <p_gain>2000</p_gain>
+      <i_gain>200</i_gain>
+      <d_gain>60</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>left_elbow_joint</joint_name>
+      <topic>/model/cori/joint/left_elbow_joint/cmd_pos</topic>
+      <p_gain>1500</p_gain>
+      <i_gain>150</i_gain>
+      <d_gain>45</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>left_wrist_joint</joint_name>
+      <topic>/model/cori/joint/left_wrist_joint/cmd_pos</topic>
+      <p_gain>1000</p_gain>
+      <i_gain>100</i_gain>
+      <d_gain>30</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>right_shoulder_joint</joint_name>
+      <topic>/model/cori/joint/right_shoulder_joint/cmd_pos</topic>
+      <p_gain>2000</p_gain>
+      <i_gain>200</i_gain>
+      <d_gain>60</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>right_elbow_joint</joint_name>
+      <topic>/model/cori/joint/right_elbow_joint/cmd_pos</topic>
+      <p_gain>1500</p_gain>
+      <i_gain>150</i_gain>
+      <d_gain>45</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>right_wrist_joint</joint_name>
+      <topic>/model/cori/joint/right_wrist_joint/cmd_pos</topic>
+      <p_gain>1000</p_gain>
+      <i_gain>100</i_gain>
+      <d_gain>30</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>left_hip_joint</joint_name>
+      <topic>/model/cori/joint/left_hip_joint/cmd_pos</topic>
+      <p_gain>2500</p_gain>
+      <i_gain>250</i_gain>
+      <d_gain>75</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>left_knee_joint</joint_name>
+      <topic>/model/cori/joint/left_knee_joint/cmd_pos</topic>
+      <p_gain>2000</p_gain>
+      <i_gain>200</i_gain>
+      <d_gain>60</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>left_ankle_joint</joint_name>
+      <topic>/model/cori/joint/left_ankle_joint/cmd_pos</topic>
+      <p_gain>1200</p_gain>
+      <i_gain>120</i_gain>
+      <d_gain>36</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>right_hip_joint</joint_name>
+      <topic>/model/cori/joint/right_hip_joint/cmd_pos</topic>
+      <p_gain>2500</p_gain>
+      <i_gain>250</i_gain>
+      <d_gain>75</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>right_knee_joint</joint_name>
+      <topic>/model/cori/joint/right_knee_joint/cmd_pos</topic>
+      <p_gain>2000</p_gain>
+      <i_gain>200</i_gain>
+      <d_gain>60</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>right_ankle_joint</joint_name>
+      <topic>/model/cori/joint/right_ankle_joint/cmd_pos</topic>
+      <p_gain>1200</p_gain>
+      <i_gain>120</i_gain>
+      <d_gain>36</d_gain>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
     <plugin filename="ignition-gazebo-joint-state-publisher-system" name="ignition::gazebo::systems::JointStatePublisher">
       <joint_name>head_joint</joint_name>
-      <topic>joint_states</topic>
+      <joint_name>left_shoulder_joint</joint_name>
+      <joint_name>left_elbow_joint</joint_name>
+      <joint_name>left_wrist_joint</joint_name>
+      <joint_name>right_shoulder_joint</joint_name>
+      <joint_name>right_elbow_joint</joint_name>
+      <joint_name>right_wrist_joint</joint_name>
+      <joint_name>left_hip_joint</joint_name>
+      <joint_name>left_knee_joint</joint_name>
+      <joint_name>left_ankle_joint</joint_name>
+      <joint_name>right_hip_joint</joint_name>
+      <joint_name>right_knee_joint</joint_name>
+      <joint_name>right_ankle_joint</joint_name>
     </plugin>
   </gazebo>
 
