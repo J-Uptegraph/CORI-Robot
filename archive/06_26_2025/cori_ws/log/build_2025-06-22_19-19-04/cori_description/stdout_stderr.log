@@ -1,0 +1,89 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description
+-- Install configuration: ""
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_pelvis.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_left_shin.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_right_foot.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_left_knee.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_left_forearm.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_left_thigh.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_right_hand.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_right_upper_arm.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_torso.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_right_forearm.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_right_knee.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_left_hand.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_right_shin.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_right_thigh.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_left_upper_arm.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_head.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//cori_body_v1.0/cori_left_foot.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//mesh archive
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes//CORI_Solid.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/launch
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/launch/display_rviz.launch.py
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/launch/spawn_cori_ignition.launch.py
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/launch/spawn_cori.launch.py
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_pelvis.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_left_shin.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_right_foot.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_left_knee.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_left_forearm.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_left_thigh.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_right_hand.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_right_upper_arm.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_torso.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_right_forearm.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_right_knee.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_left_hand.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_right_shin.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_right_thigh.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_left_upper_arm.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_head.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/cori_body_v1.0/cori_left_foot.stl
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/mesh archive
+-- Up-to-date: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/meshes/CORI_Solid.stl
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/urdf
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/urdf/cori.urdf.xacro
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/worlds
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/worlds/laundry_world.sdf
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/worlds/simple_world.sdf
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/ament_index/resource_index/package_run_dependencies/cori_description
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/ament_index/resource_index/parent_prefix_path/cori_description
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/environment/ament_prefix_path.sh
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/environment/ament_prefix_path.dsv
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/environment/path.sh
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/environment/path.dsv
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/local_setup.bash
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/local_setup.sh
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/local_setup.zsh
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/local_setup.dsv
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.dsv
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/ament_index/resource_index/packages/cori_description
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/cmake/cori_descriptionConfig.cmake
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/cmake/cori_descriptionConfig-version.cmake
+-- Installing: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.xml
