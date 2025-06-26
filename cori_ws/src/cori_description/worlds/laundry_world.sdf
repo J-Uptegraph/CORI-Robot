@@ -104,7 +104,7 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/textures/perforated_texture.png</uri>
+              <uri>file:///home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/models/Laundry_Hamper.stl</uri>
               <name>perforated_black</name>
             </script>
             <ambient>0.1 0.1 0.1 1</ambient>
@@ -132,7 +132,7 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/textures/perforated_texture.png</uri>
+              <uri>file:///home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/models/Laundry_Hamper.stl</uri>
               <name>perforated_orange</name>
             </script>
             <ambient>1 0.5 0 1</ambient>
@@ -160,7 +160,7 @@
           </geometry>
           <material>
             <script>
-              <uri>file://media/materials/textures/perforated_texture.png</uri>
+              <uri>file:///home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/models/Laundry_Hamper.stl</uri>
               <name>perforated_white</name>
             </script>
             <ambient>1 1 1 1</ambient>

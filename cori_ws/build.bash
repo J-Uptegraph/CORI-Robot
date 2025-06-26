@@ -1,11 +1,17 @@
 #!/bin/bash
-# CORI Robot Complete Build and Run Script
-echo "🤖 CORI Robot - Complete Build and Run Script"
-echo "=============================================="
+# CORI Robot Complete Build and Run Script + Sensor Fusion
+echo "🤖 CORI Robot - Enhanced Build Script with Sensor Fusion"
+echo "========================================================="
 
 # Navigate to workspace
 cd /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws
 echo "📁 Current directory: $(pwd)"
+
+# Check if sensor fusion files exist
+FUSION_FILES_EXIST=true
+if [ ! -f "src/cori_cv/cori_cv/sensor_fusion/spatial_database.py" ]; then
+    FUSION_FILES_EXIST=false
+fi
 
 # Clean previous build (optional)
 echo "🧹 Cleaning previous build..."
@@ -33,10 +39,14 @@ echo "1) 🚀 Full system (Gazebo + Webcam + Color Detection)"
 echo "2) 🎮 Just Gazebo simulation"
 echo "3) 🦾 Manual Control Mode (No Input Lag!)"
 echo "4) 📷 Just webcam color detection"
-echo "5) 🧹 Kill all ROS processes and exit"
-echo "6) 🚪 Exit"
+if [ "$FUSION_FILES_EXIST" = true ]; then
+    echo "5) 🧠 SENSOR FUSION DEMO (Gazebo + Camera + Smart Head Movement)"
+    echo "6) 🗃️  View Spatial Database"
+fi
+echo "7) 🧹 Kill all ROS processes and exit"
+echo "8) 🚪 Exit"
 echo ""
-read -p "Enter choice [1-6]: " choice
+read -p "Enter choice [1-8]: " choice
 
 case $choice in
     1)
@@ -133,6 +143,120 @@ case $choice in
         
         # If we get here, user stopped the color display
         cleanup
+        ;;
+
+    5)
+        if [ "$FUSION_FILES_EXIST" = false ]; then
+            echo "❌ Sensor fusion files not found!"
+            echo "📝 Please ensure sensor fusion scripts are in src/cori_cv/cori_cv/sensor_fusion/"
+            exit 1
+        fi
+        
+        echo ""
+        echo "🧠 CORI SENSOR FUSION DEMONSTRATION"
+        echo "==================================="
+        echo ""
+        echo "🎯 This demo shows PRODUCTION ROBOTICS techniques:"
+        echo "   📡 Physical camera detects real-world colors"
+        echo "   🗃️  Spatial database predicts object locations"
+        echo "   🤖 CORI's head moves to predicted positions"
+        echo "   🧠 System learns and adapts over time"
+        echo ""
+        echo "📊 DEMO SEQUENCE:"
+        echo "   1. Hold RED object → CORI looks LEFT (14°)"
+        echo "   2. Hold BLUE object → CORI looks RIGHT (-16°)"
+        echo "   3. Hold GREEN object → CORI looks STRAIGHT (0°)"
+        echo "   4. Database confidence increases with each success"
+        echo ""
+        
+        read -p "🚀 Start sensor fusion demo? [y/N]: " confirm
+        if [[ ! $confirm =~ ^[Yy]$ ]]; then
+            echo "👋 Demo cancelled"
+            exit 0
+        fi
+        
+        # Function to cleanup sensor fusion
+        cleanup_fusion() {
+            echo ""
+            echo "🛑 Stopping sensor fusion demo..."
+            pkill -f "sensor_fusion_demo.py" 2>/dev/null || true
+            pkill -f "demo_display.py" 2>/dev/null || true
+            pkill -f "ros2 launch cori_description" 2>/dev/null || true
+            pkill -f "ros2 launch cori_cv" 2>/dev/null || true
+            pkill -f "simple_color_detector" 2>/dev/null || true
+            pkill -f "ign gazebo" 2>/dev/null || true
+            sleep 3
+            echo "✅ Sensor fusion demo stopped"
+            exit 0
+        }
+        
+        trap cleanup_fusion SIGINT
+        
+        # Clean up any existing processes
+        echo "🧹 Cleaning up existing processes..."
+        pkill -f "ros2 launch" 2>/dev/null || true
+        pkill -f "ros2 run" 2>/dev/null || true
+        pkill -f "sensor_fusion" 2>/dev/null || true
+        pkill -f "ign gazebo" 2>/dev/null || true
+        sleep 3
+        
+        # Initialize database
+        echo "🗃️  Initializing spatial database..."
+        python3 src/cori_cv/cori_cv/sensor_fusion/spatial_database.py
+        
+        # Start Gazebo
+        echo "🎮 Starting Gazebo with CORI..."
+        ros2 launch cori_description spawn_cori_ignition.launch.py &
+        GAZEBO_PID=$!
+        sleep 8
+        
+        # Start camera via your existing launch system
+        echo "📷 Starting camera system..."
+        ros2 launch cori_cv laundry_color_detector.launch.py &
+        CAMERA_PID=$!
+        sleep 5
+        
+        # Check what camera topics are available
+        echo "🔍 Checking camera topics..."
+        ros2 topic list | grep -E "(image|camera)" || echo "No camera topics found yet, continuing..."
+        
+        # Start sensor fusion demo
+        echo "🧠 Starting sensor fusion processing..."
+        python3 src/cori_cv/cori_cv/sensor_fusion/sensor_fusion_demo.py &
+        FUSION_PID=$!
+        sleep 2
+        
+        # Start display (foreground)
+        echo "🖥️  Starting demo display..."
+        echo ""
+        echo "🎯 HOLD COLORED OBJECTS IN FRONT OF CAMERA:"
+        echo "   🔴 RED object → Watch CORI look LEFT"
+        echo "   🔵 BLUE object → Watch CORI look RIGHT" 
+        echo "   🟢 GREEN object → Watch CORI look STRAIGHT"
+        echo "   ⚪ WHITE object → Watch CORI look slightly LEFT"
+        echo ""
+        echo "📊 Watch the spatial database learn and adapt!"
+        echo "⚠️  Press Ctrl+C to stop the demo"
+        echo ""
+        
+        python3 src/cori_cv/cori_cv/sensor_fusion/demo_display.py
+        
+        cleanup_fusion
+        ;;
+
+    8)
+        if [ "$FUSION_FILES_EXIST" = false ]; then
+            echo "❌ Sensor fusion files not found!"
+            exit 1
+        fi
+        
+        echo "🗃️  SPATIAL DATABASE MANAGEMENT"
+        echo "==============================="
+        echo ""
+        echo "📊 Displaying spatial database..."
+        python3 src/cori_cv/cori_cv/sensor_fusion/spatial_database.py
+        echo ""
+        echo "💾 Database file: database/cori_spatial_database.json"
         ;;
         
     2)
@@ -245,15 +369,15 @@ case $choice in
         pkill -f "v4l2_camera" 2>/dev/null || true
         pkill -f "robot_state_publisher" 2>/dev/null || true
         pkill -f "cori_cv" 2>/dev/null || true
+        pkill -f "sensor_fusion" 2>/dev/null || true
+        pkill -f "spatial_database" 2>/dev/null || true
         
         # Wait for processes to die
         sleep 3
         
         # Reset USB camera driver (simulates unplug/replug)
         echo "🔄 Resetting USB camera driver..."
-        sudo modprobe -r uvcvideo 2>/dev/null || true
         sleep 2
-        sudo modprobe uvcvideo 2>/dev/null || true
         sleep 2
         
         echo "✅ All ROS processes killed and camera reset"
@@ -267,6 +391,33 @@ case $choice in
         exit 0
         ;;
         
+    7)
+        echo "🧹 Killing all ROS processes and resetting camera..."
+        
+        # Comprehensive cleanup
+        pkill -f "ros2" 2>/dev/null || true
+        pkill -f "ign gazebo" 2>/dev/null || true
+        pkill -f "gz sim" 2>/dev/null || true
+        pkill -f "v4l2_camera" 2>/dev/null || true
+        pkill -f "robot_state_publisher" 2>/dev/null || true
+        pkill -f "cori_cv" 2>/dev/null || true
+        pkill -f "sensor_fusion" 2>/dev/null || true
+        pkill -f "spatial_database" 2>/dev/null || true
+        
+        sleep 3
+        
+        echo "🔄 Resetting USB camera driver..."
+        sleep 2
+        sleep 2
+        
+        echo "✅ All ROS processes killed and camera reset"
+        exit 0
+        ;;
+        
+    8)
+        echo "👋 Exiting..."
+        exit 0
+        ;;
     *)
         echo "❌ Invalid choice. Exiting..."
         exit 1
