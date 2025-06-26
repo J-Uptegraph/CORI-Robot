@@ -1,7 +1,7 @@
 #!/bin/bash
-# CORI Robot Complete Build and Run Script + Sensor Fusion
-echo "🤖 CORI Robot - Enhanced Build Script with Sensor Fusion"
-echo "========================================================="
+# CORI Robot Complete Build and Run Script + Sensor Fusion + Laundry Assistant
+echo "🤖 CORI Robot - Enhanced Build Script with Sensor Fusion & Laundry Assistant"
+echo "============================================================================"
 
 # Navigate to workspace
 cd /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws
@@ -43,10 +43,11 @@ if [ "$FUSION_FILES_EXIST" = true ]; then
     echo "5) 🧠 SENSOR FUSION DEMO (Gazebo + Camera + Smart Head Movement)"
     echo "6) 🗃️  View Spatial Database"
 fi
-echo "7) 🧹 Kill all ROS processes and exit"
-echo "8) 🚪 Exit"
+echo "7) 🧺 CORI Laundry Sorting Assistant"
+echo "8) 🧹 Kill all ROS processes and exit"
+echo "9) 🚪 Exit"
 echo ""
-read -p "Enter choice [1-8]: " choice
+read -p "Enter choice [1-9]: " choice
 
 case $choice in
     1)
@@ -143,6 +144,106 @@ case $choice in
         
         # If we get here, user stopped the color display
         cleanup
+        ;;
+
+    2)
+        echo "🎮 Launching CORI robot in Ignition Gazebo..."
+        echo "⚠️  Press Ctrl+C to stop the simulation"
+        echo ""
+        ros2 launch cori_description spawn_cori_ignition.launch.py
+        ;;
+        
+    3)
+        echo "🦾 Manual Control Mode - No Input Lag!"
+        echo "📋 This launches CORI for manual manipulation:"
+        echo "   🎮 Gazebo with CORI"
+        echo "   🚫 NO automatic joint control"
+        echo "   ✋ Click and drag CORI freely!"
+        echo ""
+        echo "⚠️  Press Ctrl+C to stop"
+        echo ""
+        
+        # Function to kill manual control processes
+        cleanup_manual() {
+            echo ""
+            echo "🛑 Stopping manual control..."
+            pkill -f "ign gazebo" 2>/dev/null || true
+            pkill -f "robot_state_publisher" 2>/dev/null || true
+            pkill -f "ros_gz_sim" 2>/dev/null || true
+            sleep 2
+            echo "✅ Manual control stopped"
+            exit 0
+        }
+        
+        # Kill any existing joint state publishers first
+        echo "🧹 Killing any existing joint state publishers..."
+        sudo pkill -f joint_state_publisher 2>/dev/null || true
+        sleep 1
+        
+        # Set trap for cleanup
+        trap cleanup_manual SIGINT
+        
+        # Start Gazebo in background
+        echo "🎮 Starting Gazebo..."
+        ign gazebo /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/worlds/laundry_world.sdf &
+        GAZEBO_PID=$!
+        
+        echo "⏳ Waiting for Gazebo to load..."
+        sleep 6
+        
+        # Start robot state publisher in background
+        echo "🤖 Starting robot state publisher..."
+        ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$(xacro src/cori_description/urdf/cori.urdf.xacro)" &
+        RSP_PID=$!
+        
+        echo "⏳ Waiting for robot description..."
+        sleep 3
+        
+        # Spawn CORI
+        echo "🚀 Spawning CORI..."
+        ros2 run ros_gz_sim create -name cori -topic robot_description
+        
+        echo ""
+        echo "🎉 CORI is ready for manual control!"
+        echo "✋ Click and drag any part of CORI in Gazebo"
+        echo "🚫 No input lag - he stays exactly where you put him!"
+        echo "⚠️  Press Ctrl+C to stop"
+        echo ""
+        
+        # Keep the script running and wait for Ctrl+C
+        while true; do
+            sleep 1
+            # Check if Gazebo is still running
+            if ! ps -p $GAZEBO_PID > /dev/null 2>&1; then
+                echo "🛑 Gazebo closed, shutting down..."
+                cleanup_manual
+            fi
+        done
+        ;;
+        
+    4)
+        echo "📷 Starting webcam color detection system..."
+        echo ""
+        
+        # Start webcam
+        echo "📷 Starting webcam..."
+        ros2 launch cori_cv laundry_color_detector.launch.py &
+        WEBCAM_PID=$!
+        sleep 3
+        
+        # Start color detection bridge
+        echo "🎨 Starting color detection..."
+        ros2 run cori_cv simple_color_detector &
+        BRIDGE_PID=$!
+        sleep 2
+        
+        # Start color display
+        echo "👋 Hold colored objects in front of your webcam!"
+        ros2 run cori_cv color_display
+        
+        # Cleanup
+        echo "🛑 Stopping webcam processes..."
+        kill $WEBCAM_PID $BRIDGE_PID 2>/dev/null
         ;;
 
     5)
@@ -244,7 +345,7 @@ case $choice in
         cleanup_fusion
         ;;
 
-    8)
+    6)
         if [ "$FUSION_FILES_EXIST" = false ]; then
             echo "❌ Sensor fusion files not found!"
             exit 1
@@ -258,108 +359,74 @@ case $choice in
         echo ""
         echo "💾 Database file: database/cori_spatial_database.json"
         ;;
-        
-    2)
-        echo "🎮 Launching CORI robot in Ignition Gazebo..."
-        echo "⚠️  Press Ctrl+C to stop the simulation"
+
+    7)
         echo ""
-        ros2 launch cori_description spawn_cori_ignition.launch.py
-        ;;
-        
-    3)
-        echo "🦾 Manual Control Mode - No Input Lag!"
-        echo "📋 This launches CORI for manual manipulation:"
-        echo "   🎮 Gazebo with CORI"
-        echo "   🚫 NO automatic joint control"
-        echo "   ✋ Click and drag CORI freely!"
+        echo "🧺 CORI LAUNDRY SORTING ASSISTANT"
+        echo "================================="
         echo ""
-        echo "⚠️  Press Ctrl+C to stop"
+        echo "🤖 This launches CORI's intelligent laundry sorting system:"
+        echo "   📚 Learns your sorting preferences over time"
+        echo "   🧠 Gets smarter with each item (Learning → Tentative → Confident)"
+        echo "   🗂️  Sorts into: Lights, Darks, Colors"
+        echo "   💾 Saves progress to spatial database"
+        echo ""
+        echo "📋 HOW TO USE:"
+        echo "   • CORI asks: 'What is this?'"
+        echo "   • You respond: 'green pants', 'white shirt', 'blue jeans'"
+        echo "   • CORI learns and gets better at sorting"
         echo ""
         
-        # Function to kill manual control processes
-        cleanup_manual() {
+        read -p "🚀 Start laundry sorting assistant? [y/N]: " confirm
+        if [[ ! $confirm =~ ^[Yy]$ ]]; then
+            echo "👋 Laundry assistant cancelled"
+            exit 0
+        fi
+        
+        echo ""
+        echo "🧺 Starting CORI Laundry Assistant..."
+        echo "📁 Navigating to CORI CV directory..."
+        
+        # Navigate to the correct directory
+        cd src/cori_cv/cori_cv/
+        
+        # Check if the laundry assistant exists
+        if [ ! -f "cori_simulator.py" ]; then
+            echo "❌ Laundry assistant not found!"
+            echo "📝 Please ensure cori_simulator.py is in src/cori_cv/cori_cv/"
+            exit 1
+        fi
+        
+        echo "✅ Found laundry assistant"
+        echo "🚀 Launching CORI Laundry Sorting Assistant..."
+        echo ""
+        echo "🎯 TIPS:"
+        echo "   • Start with basic items: 'red shirt', 'blue jeans'"
+        echo "   • CORI learns from your corrections"
+        echo "   • Type 'quit' to stop sorting"
+        echo "   • Progress is saved automatically"
+        echo ""
+        echo "⚠️  Press Ctrl+C to exit anytime"
+        echo ""
+        
+        # Function to cleanup laundry assistant
+        cleanup_laundry() {
             echo ""
-            echo "🛑 Stopping manual control..."
-            pkill -f "ign gazebo" 2>/dev/null || true
-            pkill -f "robot_state_publisher" 2>/dev/null || true
-            pkill -f "ros_gz_sim" 2>/dev/null || true
-            sleep 2
-            echo "✅ Manual control stopped"
+            echo "🛑 Stopping laundry assistant..."
+            echo "💾 Your progress has been saved!"
             exit 0
         }
         
-        # Kill any existing joint state publishers first
-        echo "🧹 Killing any existing joint state publishers..."
-        sudo pkill -f joint_state_publisher 2>/dev/null || true
-        sleep 1
-        
         # Set trap for cleanup
-        trap cleanup_manual SIGINT
+        trap cleanup_laundry SIGINT
         
-        # Start Gazebo in background
-        echo "🎮 Starting Gazebo..."
-        ign gazebo /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/worlds/laundry_world.sdf &
-        GAZEBO_PID=$!
+        # Start the laundry assistant
+        python3 cori_simulator.py
         
-        echo "⏳ Waiting for Gazebo to load..."
-        sleep 6
-        
-        # Start robot state publisher in background
-        echo "🤖 Starting robot state publisher..."
-        ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$(xacro src/cori_description/urdf/cori.urdf.xacro)" &
-        RSP_PID=$!
-        
-        echo "⏳ Waiting for robot description..."
-        sleep 3
-        
-        # Spawn CORI
-        echo "🚀 Spawning CORI..."
-        ros2 run ros_gz_sim create -name cori -topic robot_description
-        
-        echo ""
-        echo "🎉 CORI is ready for manual control!"
-        echo "✋ Click and drag any part of CORI in Gazebo"
-        echo "🚫 No input lag - he stays exactly where you put him!"
-        echo "⚠️  Press Ctrl+C to stop"
-        echo ""
-        
-        # Keep the script running and wait for Ctrl+C
-        while true; do
-            sleep 1
-            # Check if Gazebo is still running
-            if ! ps -p $GAZEBO_PID > /dev/null 2>&1; then
-                echo "🛑 Gazebo closed, shutting down..."
-                cleanup_manual
-            fi
-        done
+        cleanup_laundry
         ;;
         
-    4)
-        echo "📷 Starting webcam color detection system..."
-        echo ""
-        
-        # Start webcam
-        echo "📷 Starting webcam..."
-        ros2 launch cori_cv laundry_color_detector.launch.py &
-        WEBCAM_PID=$!
-        sleep 3
-        
-        # Start color detection bridge
-        echo "🎨 Starting color detection..."
-        ros2 run cori_cv simple_color_detector &
-        BRIDGE_PID=$!
-        sleep 2
-        
-        # Start color display
-        echo "👋 Hold colored objects in front of your webcam!"
-        ros2 run cori_cv color_display
-        
-        # Cleanup
-        echo "🛑 Stopping webcam processes..."
-        kill $WEBCAM_PID $BRIDGE_PID 2>/dev/null
-        ;;
-        
-    5)
+    8)
         echo "🧹 Killing all ROS processes and resetting camera..."
         
         # Comprehensive cleanup
@@ -386,35 +453,7 @@ case $choice in
         exit 0
         ;;
         
-    6)
-        echo "👋 Exiting..."
-        exit 0
-        ;;
-        
-    7)
-        echo "🧹 Killing all ROS processes and resetting camera..."
-        
-        # Comprehensive cleanup
-        pkill -f "ros2" 2>/dev/null || true
-        pkill -f "ign gazebo" 2>/dev/null || true
-        pkill -f "gz sim" 2>/dev/null || true
-        pkill -f "v4l2_camera" 2>/dev/null || true
-        pkill -f "robot_state_publisher" 2>/dev/null || true
-        pkill -f "cori_cv" 2>/dev/null || true
-        pkill -f "sensor_fusion" 2>/dev/null || true
-        pkill -f "spatial_database" 2>/dev/null || true
-        
-        sleep 3
-        
-        echo "🔄 Resetting USB camera driver..."
-        sleep 2
-        sleep 2
-        
-        echo "✅ All ROS processes killed and camera reset"
-        exit 0
-        ;;
-        
-    8)
+    9)
         echo "👋 Exiting..."
         exit 0
         ;;
