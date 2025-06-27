@@ -6,20 +6,56 @@
   },
   "objects": {},
   "laundry_data": {
-    "total_items_sorted": 20,
+    "total_items_sorted": 31,
     "hamper_counts": {
-      "Lights": 3,
-      "Darks": 1,
-      "Colors": 16
+      "Lights": 4,
+      "Darks": 5,
+      "Colors": 22
     },
     "learning_database": {
       "red": "Colors",
-      "blue": "Colors",
+      "blue": "Darks",
       "green": "Colors",
       "purple": "Colors",
       "white": "Lights"
     },
-    "user_corrections": [],
+    "user_corrections": [
+      {
+        "color": "blue",
+        "wrong_category": "Colors",
+        "right_category": "Darks",
+        "reason": "Because they are dark enough to ruin the colors, the blue dye is bad for the color shirts",
+        "timestamp": 1751049413.4190674
+      },
+      {
+        "color": "green",
+        "wrong_category": "Colors",
+        "right_category": "Lights",
+        "reason": "it's light green",
+        "timestamp": 1751049440.2869887
+      },
+      {
+        "color": "blue",
+        "wrong_category": "Darks",
+        "right_category": "Colors",
+        "reason": "it's a light blue and I don't want the dye from the jeans to ruin it",
+        "timestamp": 1751049537.1747105
+      },
+      {
+        "color": "blue",
+        "wrong_category": "Colors",
+        "right_category": "Darks",
+        "reason": "Because it has dye in it",
+        "timestamp": 1751049556.0720284
+      },
+      {
+        "color": "green",
+        "wrong_category": "Lights",
+        "right_category": "Colors",
+        "reason": "because its dark green",
+        "timestamp": 1751049586.6859756
+      }
+    ],
     "confidence_level": "learning",
     "custom_colors": {},
     "sorted_items_history": [
@@ -141,6 +177,72 @@
         "item_name": "Green Shirt",
         "category": "Colors",
         "timestamp": 1751045386.6952455,
+        "color": "green"
+      },
+      {
+        "item_name": "Red Pants",
+        "category": "Colors",
+        "timestamp": 1751049368.075051,
+        "color": "red"
+      },
+      {
+        "item_name": "Purple Pants",
+        "category": "Colors",
+        "timestamp": 1751049387.142096,
+        "color": "purple"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Darks",
+        "timestamp": 1751049391.8514268,
+        "color": "blue"
+      },
+      {
+        "item_name": "Red Pants",
+        "category": "Colors",
+        "timestamp": 1751049418.701768,
+        "color": "red"
+      },
+      {
+        "item_name": "Green Shirt",
+        "category": "Lights",
+        "timestamp": 1751049423.871201,
+        "color": "green"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Darks",
+        "timestamp": 1751049507.2052245,
+        "color": "blue"
+      },
+      {
+        "item_name": "Blue Shirt",
+        "category": "Colors",
+        "timestamp": 1751049516.8308609,
+        "color": "blue"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Darks",
+        "timestamp": 1751049543.0098858,
+        "color": "blue"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Darks",
+        "timestamp": 1751049559.6432345,
+        "color": "blue"
+      },
+      {
+        "item_name": "Red Pants",
+        "category": "Colors",
+        "timestamp": 1751049565.9672031,
+        "color": "red"
+      },
+      {
+        "item_name": "Green Shirt",
+        "category": "Colors",
+        "timestamp": 1751049570.7372026,
         "color": "green"
       }
     ]
