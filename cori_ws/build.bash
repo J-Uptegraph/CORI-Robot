@@ -1,7 +1,7 @@
 #!/bin/bash
-# CORI Robot Complete Build and Run Script + Sensor Fusion + Laundry Assistant
-echo "🤖 CORI Robot - Enhanced Build Script with Sensor Fusion & Laundry Assistant"
-echo "============================================================================"
+# CORI Robot Complete Build and Run Script + Sensor Fusion + Laundry Assistant + Unified Integration
+echo "🤖 CORI Robot - Enhanced Build Script with Unified Integration System"
+echo "======================================================================"
 
 # Navigate to workspace
 cd /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws
@@ -11,6 +11,12 @@ echo "📁 Current directory: $(pwd)"
 FUSION_FILES_EXIST=true
 if [ ! -f "src/cori_cv/cori_cv/sensor_fusion/spatial_database.py" ]; then
     FUSION_FILES_EXIST=false
+fi
+
+# Check if integration files exist
+INTEGRATION_EXISTS=true
+if [ ! -f "src/tools/cori_ignition_integration.py" ]; then
+    INTEGRATION_EXISTS=false
 fi
 
 # Clean previous build (optional)
@@ -35,19 +41,22 @@ source install/setup.bash
 
 echo ""
 echo "🎯 Choose what to run:"
-echo "1) 🚀 Full system (Gazebo + Webcam + Color Detection)"
-echo "2) 🎮 Just Gazebo simulation"
-echo "3) 🦾 Manual Control Mode (No Input Lag!)"
-echo "4) 📷 Just webcam color detection"
+echo "1)  🚀 Full system (Gazebo + Webcam + Color Detection)"
+echo "2)  🎮 Just Gazebo simulation"
+echo "3)  🦾 Manual Control Mode (No Input Lag!)"
+echo "4)  📷 Just webcam color detection"
 if [ "$FUSION_FILES_EXIST" = true ]; then
-    echo "5) 🧠 SENSOR FUSION DEMO (Gazebo + Camera + Smart Head Movement)"
-    echo "6) 🗃️  View Spatial Database"
+    echo "5)  🧠 SENSOR FUSION DEMO (Gazebo + Camera + Smart Head Movement)"
+    echo "6)  🗃️  View Spatial Database"
 fi
-echo "7) 🧺 CORI Laundry Sorting Assistant"
-echo "8) 🧹 Kill all ROS processes and exit"
-echo "9) 🚪 Exit"
+echo "7)  🧺 CORI Laundry Sorting Assistant"
+echo "8)  🧹 Kill all ROS processes and exit"
+echo "9)  🚪 Exit"
+if [ "$INTEGRATION_EXISTS" = true ]; then
+    echo "10) 🔗 UNIFIED INTEGRATION MODE (All-in-One Smart System)"
+fi
 echo ""
-read -p "Enter choice [1-9]: " choice
+read -p "Enter choice [1-10]: " choice
 
 case $choice in
     1)
@@ -438,6 +447,7 @@ case $choice in
         pkill -f "cori_cv" 2>/dev/null || true
         pkill -f "sensor_fusion" 2>/dev/null || true
         pkill -f "spatial_database" 2>/dev/null || true
+        pkill -f "cori_ignition_integration" 2>/dev/null || true
         
         # Wait for processes to die
         sleep 3
@@ -457,6 +467,145 @@ case $choice in
         echo "👋 Exiting..."
         exit 0
         ;;
+
+    10)
+        if [ "$INTEGRATION_EXISTS" = false ]; then
+            echo "❌ Unified integration not found!"
+            echo "📝 Please ensure cori_ignition_integration.py is in src/tools/"
+            exit 1
+        fi
+        
+        echo ""
+        echo "🔗 CORI UNIFIED INTEGRATION SYSTEM"
+        echo "=================================="
+        echo ""
+        echo "🎯 This launches the complete integrated CORI system:"
+        echo "   🎮 Gazebo simulation with CORI robot"
+        echo "   📷 Camera detection and processing"
+        echo "   🧠 Unified database with spatial learning"
+        echo "   🤖 Smart head movement based on detections"
+        echo "   🧺 Laundry assistant with camera integration"
+        echo "   🗃️  All data shared between components"
+        echo ""
+        echo "🚀 INTEGRATION FEATURES:"
+        echo "   • Camera sees color → Robot head turns to look"
+        echo "   • Database learns object locations over time"
+        echo "   • Laundry sorting gets smarter with visual input"
+        echo "   • All components work together seamlessly"
+        echo ""
+        
+        read -p "🚀 Start unified integration system? [y/N]: " confirm
+        if [[ ! $confirm =~ ^[Yy]$ ]]; then
+            echo "👋 Integration cancelled"
+            exit 0
+        fi
+        
+        # Function to cleanup integration
+        cleanup_integration() {
+            echo ""
+            echo "🛑 Stopping unified integration system..."
+            pkill -f "cori_ignition_integration.py" 2>/dev/null || true
+            pkill -f "ros2 launch cori_description" 2>/dev/null || true
+            pkill -f "ros2 launch cori_cv" 2>/dev/null || true
+            pkill -f "ign gazebo" 2>/dev/null || true
+            pkill -f "gz sim" 2>/dev/null || true
+            pkill -f "laundry_color_detector" 2>/dev/null || true
+            sleep 3
+            echo "✅ Integration system stopped"
+            echo "💾 All data has been saved to unified database"
+            exit 0
+        }
+        
+        trap cleanup_integration SIGINT
+        
+        # Clean up any existing processes
+        echo "🧹 Cleaning up existing processes..."
+        pkill -f "ros2 launch" 2>/dev/null || true
+        pkill -f "ros2 run" 2>/dev/null || true
+        pkill -f "ign gazebo" 2>/dev/null || true
+        pkill -f "cori_ignition" 2>/dev/null || true
+        sleep 3
+        
+        echo "✅ Found integration script in src/tools/"
+        echo ""
+        
+        # Step 1: Start Gazebo with CORI
+        echo "🎮 Step 1/4: Starting Gazebo simulation..."
+        ros2 launch cori_description spawn_cori_ignition.launch.py &
+        GAZEBO_PID=$!
+        
+        echo "⏳ Waiting for Gazebo to fully load..."
+        sleep 10
+        
+        # Check if Gazebo started properly
+        if ! ps -p $GAZEBO_PID > /dev/null; then
+            echo "❌ Gazebo failed to start!"
+            exit 1
+        fi
+        echo "✅ Gazebo running with CORI robot"
+        
+        # Step 2: Start camera system
+        echo "📷 Step 2/4: Starting camera system..."
+        ros2 launch cori_cv laundry_color_detector.launch.py &
+        CAMERA_PID=$!
+        
+        echo "⏳ Waiting for camera to initialize..."
+        sleep 6
+        
+        # Check if camera started
+        if ! ps -p $CAMERA_PID > /dev/null; then
+            echo "❌ Camera system failed to start!"
+            kill $GAZEBO_PID 2>/dev/null
+            exit 1
+        fi
+        echo "✅ Camera system active"
+        
+        # Step 3: Verify ROS topics are available
+        echo "🔍 Step 3/4: Verifying system integration..."
+        
+        # Check for required topics
+        echo "   Checking camera topics..."
+        if ! timeout 5 ros2 topic list | grep -q "/camera/color/image_raw"; then
+            echo "   ⚠️  Camera topic not found, but continuing..."
+        else
+            echo "   ✅ Camera topics found"
+        fi
+        
+        echo "   Checking robot joint topics..."
+        if ! timeout 5 ros2 topic list | grep -q "head_pan_joint"; then
+            echo "   ⚠️  Robot joint topics not found, but continuing..."
+        else
+            echo "   ✅ Robot joint topics found"
+        fi
+        
+        echo "✅ System verification complete"
+        
+        # Step 4: Start unified integration system
+        echo "🔗 Step 4/4: Starting unified integration system..."
+        echo ""
+        echo "🎯 INTEGRATION READY!"
+        echo "===================="
+        echo ""
+        echo "📋 WHAT YOU CAN DO NOW:"
+        echo "   1. 📷 Test camera detection (hold colored objects)"
+        echo "   2. 🤖 Test robot movement (manual control)"
+        echo "   3. 🧺 Use integrated laundry sorting"
+        echo "   4. 🗃️  View unified database statistics"
+        echo "   5. 🔄 Switch between operation modes"
+        echo ""
+        echo "⚠️  Press Ctrl+C to stop the entire system"
+        echo ""
+        
+        # Navigate to integration script directory
+        cd src/tools/
+        
+        # Start the integration system (this will show the menu)
+        python3 cori_ignition_integration.py
+        
+        # If we get here, the integration system exited normally
+        cleanup_integration
+        ;;
+        
     *)
         echo "❌ Invalid choice. Exiting..."
         exit 1
