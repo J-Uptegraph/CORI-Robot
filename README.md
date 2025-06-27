@@ -11,7 +11,53 @@ This isn't about automating tasks—it's about reclaiming our time and energy by
 
 ---
 
+## 🔧 Update Log
+
+| Version | Date         | Description                                     | Link                                                    |
+|---------|--------------|-------------------------------------------------|---------------------------------------------------------|
+| `v1.5`  | June 27, 2025 | CORI Laundry Sorting Intelligence & Adaptive Learning | [View v1.5](docs/project_updates/v1.5_update.md)       |
+| `v1.4`  | June 24, 2025 | Independent Joint Controled URDF               | [View v1.4](docs/project_updates/v1.4_update.md)       |
+| `v1.3`  | June 19, 2025 | Vision + Gazebo Connection 🎉 MVP Achieved 🎉 | [View v1.3](docs/project_updates/v1.3_update.md)       |
+| `v1.2`  | June 15, 2025 | First Render of CORI + Laundry World in Gazebo | [View v1.2](docs/project_updates/v1.2_update.md)       |
+| `v1.1`  | June 11, 2025 | GUI + bounding boxes stable at 30 FPS          | [View v1.1](docs/project_updates/v1.1_update.md)       |
+| `v1.0`  | June 9, 2025  | First version of laundry color detection system | [View v1.0](docs/project_updates/v1.0_update.md)      |
+
+---
+
 ## 📢 Latest Updates
+  <div align="center">
+    <table>      
+      <tr>
+        <td colspan="2" align="center">
+          <br><br>
+          <img src="assets/gifs/CORI_Terminal_Joint_Control.gif" width="90%"/>
+          <br><b>CORI Simulation Environment</b><br>
+          <em>Full System Integration with Gazebo Simulation</em>
+        </td>
+      </tr>
+        <td width="50%" align="center">
+          <br><br>
+          <img src="assets/imgs/CORI_Sorting_Memories_Database.png" height="400px"/>
+          <br><b>Adaptive Learning Database</b><br>
+          <em>Persistent Memory System with Confidence Scoring</em>
+        </td>
+        <td width="50%" align="center">
+          <br><br>
+          <img src="assets/imgs/CORI_Hamper_Breakdown.png" height="400px"/>
+          <br><b>Hamper Contents Breakdown</b><br>
+          <em>Detailed Sorting History & Item Tracking</em>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <img src="assets/gifs/CORI_Sorting_Interface.gif" width="90%"/>
+          <br><b>Conversational Interface</b><br>
+          <em>Natural Language Interaction & Decision Support</em>
+        </td>
+      </tr>
+      <tr>
+    </table>
+  </div>
 
   <div align="center">
   <table>
@@ -49,19 +95,6 @@ This isn't about automating tasks—it's about reclaiming our time and energy by
     </tr>
   </table>
 </div>
-
----
-
-## 🔧 Update Log
-
-| Version | Date         | Description                                     | Link                                                    |
-|---------|--------------|-------------------------------------------------|---------------------------------------------------------|
-| `v1.5`  | June 27, 2025 | CORI Laundry Sorting Intelligence & Adaptive Learning | [View v1.5](docs/project_updates/v1.5_update.md)       |
-| `v1.4`  | June 24, 2025 | Independent Joint Controled URDF               | [View v1.4](docs/project_updates/v1.4_update.md)       |
-| `v1.3`  | June 19, 2025 | Vision + Gazebo Connection 🎉 MVP Achieved 🎉 | [View v1.3](docs/project_updates/v1.3_update.md)       |
-| `v1.2`  | June 15, 2025 | First Render of CORI + Laundry World in Gazebo | [View v1.2](docs/project_updates/v1.2_update.md)       |
-| `v1.1`  | June 11, 2025 | GUI + bounding boxes stable at 30 FPS          | [View v1.1](docs/project_updates/v1.1_update.md)       |
-| `v1.0`  | June 9, 2025  | First version of laundry color detection system | [View v1.0](docs/project_updates/v1.0_update.md)      |
 
 ---
 
