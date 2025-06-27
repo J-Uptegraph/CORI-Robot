@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "created": "2025-06-27 11:48:28",
+    "description": "CORI Spatial Object Database",
+    "version": "3.0"
+  },
+  "objects": {},
+  "laundry_data": {
+    "total_items_sorted": 20,
+    "hamper_counts": {
+      "Lights": 3,
+      "Darks": 1,
+      "Colors": 16
+    },
+    "learning_database": {
+      "red": "Colors",
+      "blue": "Colors",
+      "green": "Colors",
+      "purple": "Colors",
+      "white": "Lights"
+    },
+    "user_corrections": [],
+    "confidence_level": "learning",
+    "custom_colors": {},
+    "sorted_items_history": [
+      {
+        "item_name": "Red Shirt",
+        "category": "Colors",
+        "timestamp": 1751039321.8368607,
+        "color": "red"
+      },
+      {
+        "item_name": "Red Shirt",
+        "category": "Colors",
+        "timestamp": 1751039333.004388,
+        "color": "red"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Darks",
+        "timestamp": 1751039339.7704,
+        "color": "blue"
+      },
+      {
+        "item_name": "Blue Shirt",
+        "category": "Colors",
+        "timestamp": 1751039363.4822462,
+        "color": "blue"
+      },
+      {
+        "item_name": "Green Pants",
+        "category": "Colors",
+        "timestamp": 1751039382.1791277,
+        "color": "green"
+      },
+      {
+        "item_name": "Green Shirt",
+        "category": "Colors",
+        "timestamp": 1751039391.6596847,
+        "color": "green"
+      },
+      {
+        "item_name": "Purple Socks",
+        "category": "Colors",
+        "timestamp": 1751039400.6643307,
+        "color": "purple"
+      },
+      {
+        "item_name": "White Shirt",
+        "category": "Lights",
+        "timestamp": 1751039409.6303136,
+        "color": "white"
+      },
+      {
+        "item_name": "White Pants",
+        "category": "Lights",
+        "timestamp": 1751039414.290021,
+        "color": "white"
+      },
+      {
+        "item_name": "Red Shirt",
+        "category": "Colors",
+        "timestamp": 1751039429.658199,
+        "color": "red"
+      },
+      {
+        "item_name": "Green Pants",
+        "category": "Colors",
+        "timestamp": 1751039438.7341552,
+        "color": "green"
+      },
+      {
+        "item_name": "White Shirt",
+        "category": "Lights",
+        "timestamp": 1751039445.7003505,
+        "color": "white"
+      },
+      {
+        "item_name": "Green Socks",
+        "category": "Colors",
+        "timestamp": 1751039454.6393793,
+        "color": "green"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Colors",
+        "timestamp": 1751039460.3551488,
+        "color": "blue"
+      },
+      {
+        "item_name": "Red Pants",
+        "category": "Colors",
+        "timestamp": 1751039470.4149365,
+        "color": "red"
+      },
+      {
+        "item_name": "Red Shirt",
+        "category": "Colors",
+        "timestamp": 1751041500.5389743,
+        "color": "red"
+      },
+      {
+        "item_name": "Green Pants",
+        "category": "Colors",
+        "timestamp": 1751041508.8143604,
+        "color": "green"
+      },
+      {
+        "item_name": "Red Pants",
+        "category": "Colors",
+        "timestamp": 1751042248.531161,
+        "color": "red"
+      },
+      {
+        "item_name": "Purple Pants",
+        "category": "Colors",
+        "timestamp": 1751042270.997866,
+        "color": "purple"
+      },
+      {
+        "item_name": "Green Shirt",
+        "category": "Colors",
+        "timestamp": 1751045386.6952455,
+        "color": "green"
+      }
+    ]
+  }
+}

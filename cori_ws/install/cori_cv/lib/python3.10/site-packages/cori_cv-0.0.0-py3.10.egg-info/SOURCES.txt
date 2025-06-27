@@ -11,6 +11,7 @@ setup.py
 cori_cv/color_display.py
 cori_cv/cori_simulator.py
 cori_cv/database_manager.py
+cori_cv/joint_controller.py
 cori_cv/object_detection.py
 cori_cv/simple_color_detector.py
 launch/laundry_color_detector.launch.py
