@@ -1,0 +1,670 @@
+🤖 CORI SYSTEM INFORMATION REPORT
+Generated: Fri 27 Jun 2025 12:05:23 PM EDT
+Host: juptegraph-laptop
+User: juptegraph
+Current Directory: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/tools
+================================================================
+
+▶ Linux Distribution
+Command: lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04.5 LTS
+Release:	22.04
+Codename:	jammy
+✅ Success
+
+▶ Kernel Version
+Command: uname -a
+Linux juptegraph-laptop 6.8.0-60-generic #63~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 22 19:00:15 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+✅ Success
+
+▶ System Architecture
+Command: arch
+x86_64
+✅ Success
+
+▶ Available Memory
+Command: free -h
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       6.6Gi        14Gi       1.5Gi       9.4Gi        22Gi
+Swap:          2.0Gi          0B       2.0Gi
+✅ Success
+
+▶ Disk Space
+Command: df -h /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme1n1p2  1.8T   38G  1.7T   3% /
+✅ Success
+
+▶ Python3 Version
+Command: python3 --version
+Python 3.10.12
+✅ Success
+
+▶ Python3 Location
+Command: which python3
+/usr/bin/python3
+✅ Success
+
+▶ Pip3 Version
+Command: pip3 --version
+pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
+✅ Success
+
+▶ Pip3 Location
+Command: which pip3
+/usr/bin/pip3
+✅ Success
+
+▶ Active Virtual Environment
+Command: echo $VIRTUAL_ENV
+
+✅ Success
+
+▶ Python Path
+Command: python3 -c 'import sys; print("\n".join(sys.path))'
+
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages
+/opt/ros/humble/lib/python3.10/site-packages
+/opt/ros/humble/local/lib/python3.10/dist-packages
+/usr/lib/python310.zip
+/usr/lib/python3.10
+/usr/lib/python3.10/lib-dynload
+/home/juptegraph/.local/lib/python3.10/site-packages
+/usr/local/lib/python3.10/dist-packages
+/usr/lib/python3/dist-packages
+✅ Success
+
+▶ ROS2 Version
+Command: ros2 --version
+❌ Failed: usage: ros2 [-h] [--use-python-default-buffering]
+            Call `ros2 <command> -h` for more detailed usage. ...
+ros2: error: unrecognized arguments: --version
+
+▶ ROS2 Distribution
+Command: echo $ROS_DISTRO
+humble
+✅ Success
+
+▶ ROS2 Location
+Command: which ros2
+/opt/ros/humble/bin/ros2
+✅ Success
+
+▶ ROS2 Environment Variables
+Command: env | grep ROS
+ROS_VERSION=2
+ROS_PYTHON_VERSION=3
+ROS_LOCALHOST_ONLY=0
+ROS_DISTRO=humble
+✅ Success
+
+▶ Available ROS2 Packages (first 10)
+Command: ros2 pkg list | head -10
+ackermann_msgs
+ackermann_steering_controller
+action_msgs
+action_tutorials_cpp
+action_tutorials_interfaces
+action_tutorials_py
+actionlib_msgs
+actuator_msgs
+admittance_controller
+ament_cmake
+Traceback (most recent call last):
+  File "/opt/ros/humble/bin/ros2", line 33, in <module>
+    sys.exit(load_entry_point('ros2cli==0.18.12', 'console_scripts', 'ros2')())
+  File "/opt/ros/humble/lib/python3.10/site-packages/ros2cli/cli.py", line 91, in main
+    rc = extension.main(parser=parser, args=args)
+  File "/opt/ros/humble/lib/python3.10/site-packages/ros2pkg/command/pkg.py", line 37, in main
+    return extension.main(args=args)
+  File "/opt/ros/humble/lib/python3.10/site-packages/ros2pkg/verb/list.py", line 24, in main
+    print(pkg_name)
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+✅ Success
+
+▶ ROS2 Topics (if any)
+Command: timeout 3 ros2 topic list
+/parameter_events
+/rosout
+✅ Success
+
+▶ ROS2 Nodes (if any)
+Command: timeout 3 ros2 node list
+
+✅ Success
+
+▶ Gazebo Version
+Command: gazebo --version
+❌ Failed: /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/tools/cori_info_collector.sh: line 21: gazebo: command not found
+
+▶ Gazebo Location
+Command: which gazebo
+❌ Failed: 
+
+▶ Gazebo Models Path
+Command: echo $GAZEBO_MODEL_PATH
+
+✅ Success
+
+▶ Gazebo Plugins Path
+Command: echo $GAZEBO_PLUGIN_PATH
+
+✅ Success
+
+▶ Video Devices
+Command: ls -la /dev/video* 2>/dev/null || echo 'No video devices found'
+crw-rw----+ 1 root video 81, 0 Jun 27 09:39 /dev/video0
+crw-rw----+ 1 root video 81, 1 Jun 27 09:39 /dev/video1
+✅ Success
+
+▶ USB Devices
+Command: lsusb | grep -i camera || echo 'No USB cameras found'
+No USB cameras found
+✅ Success
+
+▶ V4L2 Utils Check
+Command: which v4l2-ctl
+/usr/bin/v4l2-ctl
+✅ Success
+
+▶ Camera Device Info
+Command: v4l2-ctl --list-devices 2>/dev/null || echo 'v4l-utils not installed'
+NexiGo N60 FHD Webcam : NexiGo  (usb-0000:00:14.0-6):
+	/dev/video0
+	/dev/video1
+	/dev/media0
+✅ Success
+
+▶ OpenCV
+Command: python3 -c 'import cv2; print(f"OpenCV: {cv2.__version__}")' 2>/dev/null || echo 'OpenCV not installed'
+OpenCV: 4.5.4
+✅ Success
+
+▶ NumPy
+Command: python3 -c 'import numpy; print(f"NumPy: {numpy.__version__}")' 2>/dev/null || echo 'NumPy not installed'
+NumPy: 1.26.4
+✅ Success
+
+▶ ROS2 Python (rclpy)
+Command: python3 -c 'import rclpy; print("rclpy available")' 2>/dev/null || echo 'rclpy not installed'
+rclpy available
+✅ Success
+
+▶ CV Bridge
+Command: python3 -c 'from cv_bridge import CvBridge; print("cv_bridge available")' 2>/dev/null || echo 'cv_bridge not installed'
+cv_bridge available
+✅ Success
+
+▶ All Installed Packages
+Command: pip3 list
+Package                              Version
+------------------------------------ ----------------
+ackermann-msgs                       2.0.2
+action-msgs                          1.2.1
+action-tutorials-interfaces          0.20.5
+action-tutorials-py                  0.20.5
+actionlib-msgs                       4.9.0
+actuator-msgs                        0.0.1
+ament-cmake-test                     1.3.11
+ament-copyright                      0.12.12
+ament-cppcheck                       0.12.12
+ament-cpplint                        0.12.12
+ament-flake8                         0.12.12
+ament-index-python                   1.4.0
+ament-lint                           0.12.12
+ament-lint-cmake                     0.12.12
+ament-package                        0.14.1
+ament-pep257                         0.12.12
+ament-uncrustify                     0.12.12
+ament-xmllint                        0.12.12
+angles                               1.15.0
+appdirs                              1.4.4
+apturl                               0.5.2
+argcomplete                          1.8.1
+attrs                                21.2.0
+Babel                                2.8.0
+bcrypt                               3.2.0
+beautifulsoup4                       4.10.0
+beniget                              0.4.1
+blinker                              1.4
+Brlapi                               0.8.3
+Brotli                               1.0.9
+builtin-interfaces                   1.2.1
+camera-calibration                   3.0.8
+catkin-pkg-modules                   1.0.0
+certifi                              2020.6.20
+chardet                              4.0.0
+click                                8.0.3
+colcon-argcomplete                   0.3.3
+colcon-bash                          0.5.0
+colcon-cd                            0.2.1
+colcon-cmake                         0.2.29
+colcon-common-extensions             0.3.0
+colcon-core                          0.19.0
+colcon-defaults                      0.2.9
+colcon-devtools                      0.3.0
+colcon-installed-package-information 0.2.1
+colcon-library-path                  0.2.1
+colcon-metadata                      0.2.5
+colcon-notification                  0.3.0
+colcon-output                        0.2.13
+colcon-override-check                0.0.1
+colcon-package-information           0.4.0
+colcon-package-selection             0.2.10
+colcon-parallel-executor             0.3.0
+colcon-pkg-config                    0.1.0
+colcon-powershell                    0.4.0
+colcon-python-setup-py               0.2.9
+colcon-recursive-crawl               0.2.3
+colcon-ros                           0.5.0
+colcon-test-result                   0.3.8
+colcon-zsh                           0.5.0
+colorama                             0.4.4
+command-not-found                    0.3
+composition-interfaces               1.2.1
+control-msgs                         4.8.0
+controller-manager                   2.51.0
+controller-manager-msgs              2.51.0
+cori-cv                              0.0.0
+cov-core                             1.15.0
+coverage                             6.2
+cryptography                         3.4.8
+cupshelpers                          1.0
+cv-bridge                            3.2.1
+cycler                               0.11.0
+dbus-python                          1.2.18
+decorator                            4.4.2
+defer                                1.0.6
+demo-nodes-py                        0.20.5
+diagnostic-msgs                      4.9.0
+distlib                              0.3.4
+distro                               1.7.0
+distro-info                          1.1+ubuntu0.2
+docutils                             0.17.1
+domain-coordinator                   0.10.0
+duplicity                            0.8.21
+empy                                 3.3.4
+evdev                                1.4.0
+example-interfaces                   0.9.3
+examples-rclpy-executors             0.15.3
+examples-rclpy-minimal-action-client 0.15.3
+examples-rclpy-minimal-action-server 0.15.3
+examples-rclpy-minimal-client        0.15.3
+examples-rclpy-minimal-publisher     0.15.3
+examples-rclpy-minimal-service       0.15.3
+examples-rclpy-minimal-subscriber    0.15.3
+fasteners                            0.14.1
+flake8                               4.0.1
+fonttools                            4.29.1
+fs                                   2.4.12
+future                               0.18.2
+gast                                 0.5.2
+generate-parameter-library-py        0.5.0
+geometry-msgs                        4.9.0
+git-filter-repo                      2.47.0
+gps-msgs                             2.1.0
+html5lib                             1.1
+httplib2                             0.20.2
+idna                                 3.3
+image-geometry                       3.2.1
+importlib-metadata                   4.6.4
+iniconfig                            1.1.1
+interactive-markers                  2.3.2
+jeepney                              0.7.1
+Jinja2                               3.0.3
+joblib                               1.5.1
+joint-state-publisher                2.4.0
+joint-state-publisher-gui            2.4.0
+keyring                              23.5.0
+kiwisolver                           1.3.2
+language-selector                    0.1
+lark                                 1.1.1
+laser-geometry                       2.4.0
+launch                               1.0.9
+launch-ros                           0.19.9
+launch-testing                       1.0.9
+launch-testing-ros                   0.19.9
+launch-xml                           1.0.9
+launch-yaml                          1.0.9
+launchpadlib                         1.10.16
+lazr.restfulclient                   0.14.4
+lazr.uri                             1.0.6
+libevdev                             0.5
+lifecycle-msgs                       1.2.1
+lockfile                             0.12.2
+logging-demo                         0.20.5
+louis                                3.20.0
+lxml                                 4.8.0
+lz4                                  3.1.3+dfsg
+macaroonbakery                       1.3.1
+Mako                                 1.1.3
+map-msgs                             2.1.0
+MarkupSafe                           2.0.1
+matplotlib                           3.5.1
+mccabe                               0.6.1
+meson                                0.61.2
+message-filters                      4.3.7
+monotonic                            1.6
+more-itertools                       8.10.0
+mpi4py                               3.1.3
+mpmath                               0.0.0
+nav-msgs                             4.9.0
+netifaces                            0.11.0
+nose2                                0.9.2
+notify2                              0.3
+numpy                                1.26.4
+oauthlib                             3.2.0
+olefile                              0.46
+openrgb-python                       0.3.3
+osrf-pycommon                        2.1.6
+packaging                            21.3
+paramiko                             2.9.3
+pcl-msgs                             1.0.0
+pendulum-msgs                        0.20.5
+pexpect                              4.8.0
+Pillow                               9.0.1
+pip                                  22.0.2
+pluggy                               0.13.0
+ply                                  3.11
+protobuf                             3.12.4
+psutil                               5.9.0
+ptyprocess                           0.7.0
+py                                   1.10.0
+pybind11                             2.9.1
+pycairo                              1.20.1
+pycodestyle                          2.8.0
+pycups                               2.0.1
+pydocstyle                           6.1.1
+pydot                                1.4.2
+pyflakes                             2.4.0
+Pygments                             2.11.2
+PyGObject                            3.42.1
+pygraphviz                           1.7
+PyJWT                                2.3.0
+pymacaroons                          0.13.0
+PyNaCl                               1.5.0
+pyparsing                            2.4.7
+PyQt5                                5.15.6
+PyQt5-sip                            12.9.1
+pyRFC3339                            1.1
+pytest                               6.2.5
+pytest-cov                           3.0.0
+python-apt                           2.4.0+ubuntu4
+python-dateutil                      2.8.1
+python-debian                        0.1.43+ubuntu1.1
+python-qt-binding                    1.1.2
+python-xlib                          0.29
+pythran                              0.10.0
+pytz                                 2022.1
+pyudev                               0.22.0
+pyxdg                                0.27
+PyYAML                               5.4.1
+qt-dotgraph                          2.2.4
+qt-gui                               2.2.4
+qt-gui-cpp                           2.2.4
+qt-gui-py-common                     2.2.4
+quality-of-service-demo-py           0.20.5
+rcl-interfaces                       1.2.1
+rclpy                                3.3.16
+rcutils                              5.1.6
+reportlab                            3.6.8
+requests                             2.25.1
+resource-retriever                   3.1.3
+rmw-dds-common                       1.6.0
+roman                                3.3
+ros-gz-interfaces                    0.244.20
+ros2action                           0.18.12
+ros2bag                              0.15.14
+ros2cli                              0.18.12
+ros2component                        0.18.12
+ros2controlcli                       2.51.0
+ros2doctor                           0.18.12
+ros2interface                        0.18.12
+ros2launch                           0.19.9
+ros2lifecycle                        0.18.12
+ros2multicast                        0.18.12
+ros2node                             0.18.12
+ros2param                            0.18.12
+ros2pkg                              0.18.12
+ros2run                              0.18.12
+ros2service                          0.18.12
+ros2topic                            0.18.12
+rosbag2-interfaces                   0.15.14
+rosbag2-py                           0.15.14
+rosdep                               0.25.1
+rosdep-modules                       0.25.1
+rosdistro-modules                    1.0.1
+rosgraph-msgs                        1.2.1
+rosidl-adapter                       3.1.6
+rosidl-cli                           3.1.6
+rosidl-cmake                         3.1.6
+rosidl-generator-c                   3.1.6
+rosidl-generator-cpp                 3.1.6
+rosidl-generator-py                  0.14.4
+rosidl-parser                        3.1.6
+rosidl-runtime-py                    0.9.3
+rosidl-typesupport-c                 2.0.2
+rosidl-typesupport-cpp               2.0.2
+rosidl-typesupport-fastrtps-c        2.2.2
+rosidl-typesupport-fastrtps-cpp      2.2.2
+rosidl-typesupport-introspection-c   3.1.6
+rosidl-typesupport-introspection-cpp 3.1.6
+rospkg-modules                       1.6.0
+rpyutils                             0.2.1
+rqt-action                           2.0.1
+rqt-bag                              1.1.5
+rqt-bag-plugins                      1.1.5
+rqt-console                          2.0.3
+rqt-graph                            1.3.1
+rqt-gui                              1.1.7
+rqt-gui-py                           1.1.7
+rqt-msg                              1.2.0
+rqt-plot                             1.1.5
+rqt-publisher                        1.5.0
+rqt-py-common                        1.1.7
+rqt-py-console                       1.0.2
+rqt-reconfigure                      1.1.2
+rqt-service-caller                   1.0.5
+rqt-shell                            1.0.2
+rqt-srv                              1.0.3
+rqt-topic                            1.5.0
+scikit-learn                         1.7.0
+scipy                                1.8.0
+screen-resolution-extra              0.0.0
+SecretStorage                        3.3.1
+semver                               2.10.2
+sensor-msgs                          4.9.0
+sensor-msgs-py                       4.9.0
+setuptools                           59.6.0
+shape-msgs                           4.9.0
+six                                  1.16.0
+snowballstemmer                      2.2.0
+soupsieve                            2.3.1
+sros2                                0.10.6
+statistics-msgs                      1.2.1
+std-msgs                             4.9.0
+std-srvs                             4.9.0
+stereo-msgs                          4.9.0
+sympy                                1.9
+systemd-python                       234
+teleop-twist-keyboard                2.4.0
+tf2-geometry-msgs                    0.25.13
+tf2-kdl                              0.25.13
+tf2-msgs                             0.25.13
+tf2-py                               0.25.13
+tf2-ros-py                           0.25.13
+tf2-sensor-msgs                      0.25.13
+tf2-tools                            0.25.13
+theora-image-transport               2.5.3
+threadpoolctl                        3.6.0
+toml                                 0.10.2
+topic-monitor                        0.20.5
+trajectory-msgs                      4.9.0
+turtlesim                            1.4.2
+typeguard                            2.2.2
+ubuntu-drivers-common                0.0.0
+ubuntu-pro-client                    8001
+ufoLib2                              0.13.1
+ufw                                  0.36.1
+unattended-upgrades                  0.1
+unicodedata2                         14.0.0
+unique-identifier-msgs               2.2.1
+urllib3                              1.26.5
+usb-creator                          0.3.7
+vcstool                              0.3.0
+vision-msgs                          4.1.1
+visualization-msgs                   4.9.0
+wadllib                              1.3.6
+webencodings                         0.5.1
+wheel                                0.37.1
+xacro                                2.0.13
+xdg                                  5
+xkit                                 0.0.0
+zipp                                 1.0.0
+✅ Success
+
+▶ Current Directory Contents
+total 164
+drwxrwxr-x 2 juptegraph juptegraph  4096 Jun 27 12:05 .
+drwxrwxr-x 6 juptegraph juptegraph  4096 Jun 27 11:48 ..
+-rw-rw-r-- 1 juptegraph juptegraph 80662 Jun 27 11:16 cori_ignition_database.json
+-rwxrwxr-x 1 juptegraph juptegraph 14786 Jun 27 11:23 cori_ignition_integration.py
+-rwxrwxr-x 1 juptegraph juptegraph  9461 Jun 27 11:04 cori_info_collector.sh
+-rw-rw-r-- 1 juptegraph juptegraph 26067 Jun 27 11:04 cori_system_info_20250626_183320.txt
+-rw-rw-r-- 1 juptegraph juptegraph 19456 Jun 27 12:05 cori_system_info_20250627_120523.txt
+✅ Found
+
+▶ ROS2 Workspace (~/colcon_ws)
+❌ Not found: /home/juptegraph/colcon_ws
+
+▶ Alternative Workspace (~/ros2_ws)
+❌ Not found: /home/juptegraph/ros2_ws
+
+▶ Development Directory (~/dev)
+❌ Not found: /home/juptegraph/dev
+
+▶ CORI Files in Current Directory
+❌ Not found: *.py
+
+▶ CORI Text Files
+❌ Not found: *.txt
+
+▶ Database Directory
+❌ Not found: database
+
+▶ Find CORI Directories
+Command: find ~ -name '*cori*' -type d 2>/dev/null | head -10
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/log/build_2025-06-09_20-14-50/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/log/build_2025-06-09_20-24-39/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/log/build_2025-06-09_20-24-38/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/log/build_2025-06-09_20-33-20/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/install/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/install/cori_cv/share/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/install/cori_cv/lib/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/src/cori_cv
+✅ Success
+
+▶ Find CORI Files
+Command: find ~ -name '*cori*' -type f 2>/dev/null | head -10
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/install/cori_cv/share/colcon-core/packages/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori-cv.egg-link
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/src/cori_cv/resource/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_27_2025/cori_ws/install/cori_cv/share/colcon-core/packages/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_27_2025/cori_ws/install/cori_cv/share/ament_index/resource_index/packages/cori_cv
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_27_2025/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/cori_simulator.py
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_27_2025/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/__pycache__/cori_simulator.cpython-310.pyc
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_27_2025/cori_ws/install/cori_description/share/colcon-core/packages/cori_description
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_27_2025/cori_ws/install/cori_description/share/ament_index/resource_index/package_run_dependencies/cori_description
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_27_2025/cori_ws/install/cori_description/share/ament_index/resource_index/packages/cori_description
+✅ Success
+
+▶ Find Launch Files
+Command: find ~ -name '*.launch*' 2>/dev/null | grep -i cori | head -5
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_09_2025/cori_ws/src/cori_cv/launch/laundry_color_detector.launch.py
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_27_2025/cori_ws/install/cori_cv/share/cori_cv/launch/laundry_color_detector.launch.py
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_27_2025/cori_ws/install/cori_cv/share/cori_cv/launch/__pycache__/laundry_color_detector.launch.cpython-310.pyc
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_27_2025/cori_ws/install/cori_description/share/cori_description/launch/display_rviz.launch.py
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/archive/06_27_2025/cori_ws/install/cori_description/share/cori_description/launch/spawn_cori_ignition.launch.py
+✅ Success
+
+▶ Colcon
+Command: which colcon
+/usr/bin/colcon
+✅ Success
+
+▶ CMake
+Command: cmake --version 2>/dev/null | head -1
+cmake version 3.22.1
+✅ Success
+
+▶ Make
+Command: make --version 2>/dev/null | head -1
+GNU Make 4.3
+✅ Success
+
+▶ GCC
+Command: gcc --version 2>/dev/null | head -1
+gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+✅ Success
+
+▶ Network Interfaces
+Command: ip addr show | grep -E '^[0-9]+:' -A 2
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+--
+2: enp44s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether 50:eb:f6:d1:94:3f brd ff:ff:ff:ff:ff:ff
+3: wlo1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether f0:b6:1e:7d:03:cf brd ff:ff:ff:ff:ff:ff
+    altname wlp0s20f3
+✅ Success
+
+▶ ROS Domain ID
+Command: echo $ROS_DOMAIN_ID
+
+✅ Success
+
+▶ Localhost Check
+Command: ping -c 1 localhost 2>/dev/null || echo 'Localhost not reachable'
+PING localhost (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.013 ms
+
+--- localhost ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.013/0.013/0.013/0.000 ms
+✅ Success
+
+❌ paste.txt (Database Manager) not found
+❌ paste-2.txt (Sensor Fusion) not found
+❌ paste-3.txt (Laundry Assistant) not found
+
+================================================================
+📊 INTEGRATION READINESS SUMMARY
+================================================================
+
+🟢 READY COMPONENTS:
+-------------------
+✅ Python3 installed
+
+⚠️  POTENTIAL ISSUES:
+--------------------
+
+📝 RECOMMENDED NEXT STEPS:
+-------------------------
+1. Review the complete report above
+2. Install any missing packages identified
+3. Source ROS2 environment if needed
+4. Test individual CORI components
+5. Proceed with integration based on findings
+
+================================================================
+Report generated: Fri 27 Jun 2025 12:05:26 PM EDT
+Report saved to: cori_system_info_20250627_120523.txt
+================================================================

@@ -1,0 +1,45 @@
+[0.434s] Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_cv': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_cv build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/install.log --single-version-externally-managed install_data
+[0.590s] running egg_info
+[0.590s] writing ../../build/cori_cv/cori_cv.egg-info/PKG-INFO
+[0.590s] writing dependency_links to ../../build/cori_cv/cori_cv.egg-info/dependency_links.txt
+[0.590s] writing entry points to ../../build/cori_cv/cori_cv.egg-info/entry_points.txt
+[0.590s] writing requirements to ../../build/cori_cv/cori_cv.egg-info/requires.txt
+[0.591s] writing top-level names to ../../build/cori_cv/cori_cv.egg-info/top_level.txt
+[0.592s] package init file 'cori_cv/__init__.py' not found (or not a regular file)
+[0.592s] reading manifest file '../../build/cori_cv/cori_cv.egg-info/SOURCES.txt'
+[0.592s] writing manifest file '../../build/cori_cv/cori_cv.egg-info/SOURCES.txt'
+[0.593s] running build
+[0.593s] running build_py
+[0.593s] copying cori_cv/cori_simulator.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+[0.593s] copying cori_cv/simple_color_detector.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+[0.593s] copying cori_cv/joint_controller.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+[0.593s] copying cori_cv/database_manager.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+[0.593s] copying cori_cv/color_display.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+[0.593s] copying cori_cv/object_detection.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+[0.593s] running install
+[0.593s] running install_lib
+[0.593s] copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/cori_simulator.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+[0.594s] copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/simple_color_detector.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+[0.594s] copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/joint_controller.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+[0.594s] copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/database_manager.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+[0.594s] copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/color_display.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+[0.594s] copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/object_detection.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+[0.594s] byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/cori_simulator.py to cori_simulator.cpython-310.pyc
+[0.599s] byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/simple_color_detector.py to simple_color_detector.cpython-310.pyc
+[0.600s] byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/joint_controller.py to joint_controller.cpython-310.pyc
+[0.600s] byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/database_manager.py to database_manager.cpython-310.pyc
+[0.602s] byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/color_display.py to color_display.cpython-310.pyc
+[0.602s] byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/object_detection.py to object_detection.cpython-310.pyc
+[0.603s] running install_data
+[0.603s] copying package.xml -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/cori_cv
+[0.603s] copying launch/laundry_color_detector.launch.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/cori_cv/launch
+[0.603s] running install_egg_info
+[0.605s] removing '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv-0.0.0-py3.10.egg-info' (and everything under it)
+[0.605s] Copying ../../build/cori_cv/cori_cv.egg-info to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv-0.0.0-py3.10.egg-info
+[0.605s] running install_scripts
+[0.622s] Installing color_display script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/cori_cv
+[0.622s] Installing laundry_color_detector script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/cori_cv
+[0.622s] Installing object_detection script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/cori_cv
+[0.623s] Installing simple_color_detector script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/cori_cv
+[0.623s] writing list of installed files to '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/install.log'
+[0.640s] Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_cv' returned '0': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_cv build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/install.log --single-version-externally-managed install_data
