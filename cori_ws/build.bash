@@ -4,7 +4,7 @@
 
 # Constants
 WORKSPACE_DIR="/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws"
-SENSOR_FUSION_PATH="src/cori_cv/cori_cv/sensor_fusion/spatial_database.py"
+SENSOR_FUSION_PATH="src/cori_core/cori_core/spatial_database.py"
 INTEGRATION_PATH="src/cori_tools/cori_tools/cori_ignition_integration.py"
 WORLD_FILE="src/cori_description/worlds/laundry_world.sdf"
 URDF_FILE="src/cori_description/urdf/cori.urdf.xacro"
@@ -93,7 +93,7 @@ cleanup_processes() {
     pkill -f "gz sim" 2>/dev/null || true
     pkill -f "v4l2_camera" 2>/dev/null || true
     pkill -f "robot_state_publisher" 2>/dev/null || true
-    pkill -f "cori_cv" 2>/dev/null || true
+    pkill -f "cori_vision|cori_gui|cori_simulation" 2>/dev/null || true
     pkill -f "sensor_fusion" 2>/dev/null || true
     pkill -f "spatial_database" 2>/dev/null || true
     pkill -f "cori_ignition_integration" 2>/dev/null || true
@@ -127,7 +127,7 @@ start_gazebo() {
 start_webcam() {
     local pid_var="$1"
     echo "📷 Starting webcam..."
-    ros2 launch cori_cv laundry_color_detector.launch.py &
+    ros2 launch cori_vision laundry_color_detector.launch.py &
     eval "$pid_var=\$!"
     sleep 5
     [ -z "$(ps -p ${!pid_var} -o pid=)" ] && { echo "❌ Webcam failed to start!"; return 1; }
@@ -141,13 +141,13 @@ run_full_system() {
     start_gazebo GAZEBO_PID
     start_webcam WEBCAM_PID || { kill $GAZEBO_PID 2>/dev/null; exit 1; }
     echo "🔗 Starting color detection bridge..."
-    ros2 run cori_cv simple_color_detector &
+    ros2 run cori_vision simple_color_detector &
     BRIDGE_PID=$!
     sleep 3
     echo "🎨 Starting color display..."
     echo "👋 Hold colored objects in front of your webcam!"
     echo "📺 Ensure webcam permissions are enabled"
-    ros2 run cori_cv color_display
+    ros2 run cori_gui color_display
     cleanup_processes "full system"
 }
 
@@ -183,11 +183,11 @@ run_webcam_color() {
     trap 'cleanup_processes "webcam color detection"; exit 0' SIGINT
     start_webcam WEBCAM_PID || exit 1
     echo "🎨 Starting color detection..."
-    ros2 run cori_cv simple_color_detector &
+    ros2 run cori_vision simple_color_detector &
     BRIDGE_PID=$!
     sleep 2
     echo "👋 Hold colored objects in front of your webcam!"
-    ros2 run cori_cv color_display
+    ros2 run cori_gui color_display
     cleanup_processes "webcam color detection"
 }
 
@@ -211,7 +211,7 @@ run_sensor_fusion() {
     echo "🔍 Checking camera topics..."
     ros2 topic list | grep -E "(image|camera)" || echo "No camera topics found yet, continuing..."
     echo "🧠 Starting sensor fusion processing..."
-    python3 src/cori_cv/cori_cv/sensor_fusion/sensor_fusion_demo.py &
+    python3 src/cori_simulation/cori_simulation/sensor_fusion_demo.py &
     FUSION_PID=$!
     sleep 2
     echo "🖥️ Starting demo display..."
@@ -219,7 +219,7 @@ run_sensor_fusion() {
     echo "   🔴 RED → LEFT"
     echo "   🔵 BLUE → RIGHT"
     echo "   🟢 GREEN → STRAIGHT"
-    python3 src/cori_cv/cori_cv/sensor_fusion/demo_display.py
+    python3 src/cori_simulation/cori_simulation/demo_display.py
     cleanup_processes "sensor fusion"
 }
 
@@ -229,12 +229,12 @@ view_spatial_database() {
     echo "🗃️ SPATIAL DATABASE MANAGEMENT"
     echo "==============================="
     python3 "$SENSOR_FUSION_PATH"
-    echo "💾 Database file: database/cori_spatial_database.json"
+    echo "💾 Database file: shared/database/cori_spatial_database.json"
 }
 
 # Run laundry assistant
 run_laundry_assistant() {
-    local script_path="src/cori_cv/cori_cv/cori_simulator.py"
+    local script_path="src/cori_simulation/cori_simulation/cori_simulator.py"
     [ $(check_file "$script_path"; echo $?) -ne 0 ] && { echo "❌ Laundry assistant not found!"; exit 1; }
     echo "🧺 CORI LAUNDRY SORTING ASSISTANT"
     echo "================================="
@@ -245,7 +245,7 @@ run_laundry_assistant() {
     read -p "🚀 Start laundry sorting? [y/N]: " confirm
     [[ ! $confirm =~ ^[Yy]$ ]] && { echo "👋 Cancelled"; exit 0; }
     trap 'echo -e "\n🛑 Stopping...\n💾 Progress saved!"; exit 0' SIGINT
-    cd src/cori_cv/cori_cv/
+    cd src/cori_simulation/cori_simulation/
     echo "🚀 Launching Laundry Assistant..."
     echo "🎯 TIPS: Start with 'red shirt', 'blue jeans'; type 'quit' to stop"
     python3 cori_simulator.py

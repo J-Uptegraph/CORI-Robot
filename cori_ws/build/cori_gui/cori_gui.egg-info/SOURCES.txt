@@ -1,0 +1,11 @@
+package.xml
+setup.py
+../../build/cori_gui/cori_gui.egg-info/PKG-INFO
+../../build/cori_gui/cori_gui.egg-info/SOURCES.txt
+../../build/cori_gui/cori_gui.egg-info/dependency_links.txt
+../../build/cori_gui/cori_gui.egg-info/entry_points.txt
+../../build/cori_gui/cori_gui.egg-info/requires.txt
+../../build/cori_gui/cori_gui.egg-info/top_level.txt
+../../build/cori_gui/cori_gui.egg-info/zip-safe
+cori_gui/color_display.py
+resource/cori_gui
