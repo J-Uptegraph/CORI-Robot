@@ -162,33 +162,46 @@ class IgnitionCameraHandler:
         
         # Color detection parameters (tuned for your NexiGo camera)
         self.color_ranges = {
-            'red': {
-                'lower1': np.array([0, 120, 70]),
-                'upper1': np.array([10, 255, 255]),
-                'lower2': np.array([170, 120, 70]),
-                'upper2': np.array([180, 255, 255])
-            },
-            'blue': {
-                'lower': np.array([100, 150, 70]),
-                'upper': np.array([130, 255, 255])
-            },
-            'green': {
-                'lower': np.array([40, 120, 70]),
-                'upper': np.array([80, 255, 255])
-            },
-            'white': {
-                'lower': np.array([0, 0, 200]),
-                'upper': np.array([180, 55, 255])
-            },
-            'yellow': {
-                'lower': np.array([20, 100, 100]),
-                'upper': np.array([30, 255, 255])
-            },
-            'orange': {
-                'lower': np.array([10, 100, 100]),
-                'upper': np.array([20, 255, 255])
-            }
+                'red': {
+                    'lower1': np.array([0, 120, 70]),
+                    'upper1': np.array([10, 255, 255]),
+                    'lower2': np.array([170, 120, 70]),
+                    'upper2': np.array([180, 255, 255])
+                },
+                'blue': {
+                    'lower': np.array([100, 150, 70]),
+                    'upper': np.array([130, 255, 255])
+                },
+                'green': {
+                    'lower': np.array([40, 120, 70]),
+                    'upper': np.array([80, 255, 255])
+                },
+                'yellow': {
+                    'lower': np.array([20, 100, 100]),
+                    'upper': np.array([30, 255, 255])
+                },
+                'orange': {
+                    'lower': np.array([10, 100, 100]),
+                    'upper': np.array([20, 255, 255])
+                },
+                'purple': {
+                    'lower': np.array([130, 100, 100]),
+                    'upper': np.array([160, 255, 255])
+                },
+                'black': {
+                    'lower': np.array([0, 0, 0]),
+                    'upper': np.array([180, 255, 50])
+                },
+                'white': {
+                    'lower': np.array([0, 0, 200]),
+                    'upper': np.array([180, 55, 255])
+                },
+                'grey': {
+                    'lower': np.array([0, 0, 80]),
+                    'upper': np.array([180, 50, 200])
+                }
         }
+
         
         if ROS_AVAILABLE:
             self.setup_ros()
@@ -347,17 +360,21 @@ class IgnitionRobotController:
         except Exception as e:
             print(f"❌ Robot controller setup failed: {e}")
     
+
+    # This is what will be replaced with a database
     def move_head_to_color(self, color: str):
         """Move head based on detected color - FIXED COMMANDS"""
         # Updated color-to-angle mapping
         color_angles = {
-            'red': -0.5,      # Look left (negative)
-            'blue': 0.5,      # Look right (positive)
-            'green': 0.0,     # Look straight
-            'white': 0.3,     # Slight right
-            'yellow': -0.3,   # Slight left
-            'orange': -0.7    # Far left
-        }
+    'black':  0.76,
+    'grey':   0.62,
+    'purple': 0.45,
+    'blue':   0.23,
+    'green':  0.0,
+    'yellow': -0.23,
+    'orange': -0.45,
+    'red':    -0.62
+    }
         
         target_angle = color_angles.get(color, 0.0)
         self.move_head(target_angle)

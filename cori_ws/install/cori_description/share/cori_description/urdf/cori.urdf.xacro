@@ -45,7 +45,7 @@
   <joint name="base_to_torso" type="fixed">
     <parent link="base_link"/>
     <child link="torso"/>
-    <origin xyz="0 0 0.15" rpy="0 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
   <link name="head">
@@ -71,8 +71,8 @@
   <joint name="head_joint" type="revolute">
     <parent link="torso"/>
     <child link="head"/>
-    <origin xyz="0 0 0.0" rpy="0 0 0"/> 
-    <axis xyz="0 0 1"/>  <!-- Fixed: inverted Z axis for correct direction -->
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
     <limit lower="-1.8" upper="1.8" effort="80" velocity="2.5"/>
     <dynamics damping="1.8" friction="0.9"/>
   </joint>
@@ -100,7 +100,7 @@
   <joint name="torso_to_pelvis" type="fixed">
     <parent link="torso"/>
     <child link="pelvis"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your spacing -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
   <link name="left_upper_arm">
@@ -126,8 +126,8 @@
   <joint name="left_shoulder_joint" type="revolute">
     <parent link="torso"/>
     <child link="left_upper_arm"/>
-    <origin xyz="-0.07 0 0" rpy="0 0.15 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="1 0 0"/>  <!-- Shoulder rotation -->
+    <origin xyz="-0.07 0 0" rpy="0 0.15 0"/>
+    <axis xyz="1 0 0"/>
     <limit lower="-2.0" upper="2.0" effort="50" velocity="2.0"/>
     <dynamics damping="1.0" friction="0.5"/>
   </joint>
@@ -155,8 +155,8 @@
   <joint name="left_elbow_joint" type="revolute">
     <parent link="left_upper_arm"/>
     <child link="left_forearm"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="0 1 0"/>  <!-- Elbow bend -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
     <limit lower="-1.5" upper="1.5" effort="30" velocity="2.0"/>
     <dynamics damping="0.8" friction="0.3"/>
   </joint>
@@ -184,8 +184,8 @@
   <joint name="left_wrist_joint" type="revolute">
     <parent link="left_forearm"/>
     <child link="left_hand"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="0 0 1"/>  <!-- Wrist rotation -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
     <limit lower="-1.0" upper="1.0" effort="20" velocity="2.0"/>
     <dynamics damping="0.5" friction="0.2"/>
   </joint>
@@ -213,8 +213,8 @@
   <joint name="right_shoulder_joint" type="revolute">
     <parent link="torso"/>
     <child link="right_upper_arm"/>
-    <origin xyz="0.07 0 0" rpy="0 -0.15 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="1 0 0"/>  <!-- Shoulder rotation -->
+    <origin xyz="0.07 0 0" rpy="0 -0.15 0"/>
+    <axis xyz="1 0 0"/>
     <limit lower="-2.0" upper="2.0" effort="50" velocity="2.0"/>
     <dynamics damping="1.0" friction="0.5"/>
   </joint>
@@ -242,8 +242,8 @@
   <joint name="right_elbow_joint" type="revolute">
     <parent link="right_upper_arm"/>
     <child link="right_forearm"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="0 1 0"/>  <!-- Elbow bend -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
     <limit lower="-1.5" upper="1.5" effort="30" velocity="2.0"/>
     <dynamics damping="0.8" friction="0.3"/>
   </joint>
@@ -271,8 +271,8 @@
   <joint name="right_wrist_joint" type="revolute">
     <parent link="right_forearm"/>
     <child link="right_hand"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="0 0 1"/>  <!-- Wrist rotation -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
     <limit lower="-1.0" upper="1.0" effort="20" velocity="2.0"/>
     <dynamics damping="0.5" friction="0.2"/>
   </joint>
@@ -300,8 +300,8 @@
   <joint name="left_hip_joint" type="revolute">
     <parent link="pelvis"/>
     <child link="left_thigh"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="1 0 0"/>  <!-- Hip forward/back -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
     <limit lower="-1.0" upper="1.0" effort="60" velocity="1.5"/>
     <dynamics damping="1.5" friction="0.7"/>
   </joint>
@@ -329,8 +329,8 @@
   <joint name="left_knee_joint" type="revolute">
     <parent link="left_thigh"/>
     <child link="left_shin"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="0 1 0"/>  <!-- Knee bend -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
     <limit lower="-1.5" upper="0.1" effort="40" velocity="1.5"/>
     <dynamics damping="1.2" friction="0.6"/>
   </joint>
@@ -358,7 +358,7 @@
   <joint name="left_shin_to_knee" type="fixed">
     <parent link="left_shin"/>
     <child link="left_knee"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
   <link name="left_foot">
@@ -384,8 +384,8 @@
   <joint name="left_ankle_joint" type="revolute">
     <parent link="left_knee"/>
     <child link="left_foot"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="0 1 0"/>  <!-- Ankle up/down -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
     <limit lower="-0.5" upper="0.5" effort="25" velocity="1.5"/>
     <dynamics damping="0.8" friction="0.4"/>
   </joint>
@@ -413,8 +413,8 @@
   <joint name="right_hip_joint" type="revolute">
     <parent link="pelvis"/>
     <child link="right_thigh"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="1 0 0"/>  <!-- Hip forward/back -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
     <limit lower="-1.0" upper="1.0" effort="60" velocity="1.5"/>
     <dynamics damping="1.5" friction="0.7"/>
   </joint>
@@ -442,8 +442,8 @@
   <joint name="right_knee_joint" type="revolute">
     <parent link="right_thigh"/>
     <child link="right_shin"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="0 1 0"/>  <!-- Knee bend -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
     <limit lower="-1.5" upper="0.1" effort="40" velocity="1.5"/>
     <dynamics damping="1.2" friction="0.6"/>
   </joint>
@@ -471,7 +471,7 @@
   <joint name="right_shin_to_knee" type="fixed">
     <parent link="right_shin"/>
     <child link="right_knee"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
   <link name="right_foot">
@@ -497,8 +497,8 @@
   <joint name="right_ankle_joint" type="revolute">
     <parent link="right_knee"/>
     <child link="right_foot"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>  <!-- Keep your exact spacing -->
-    <axis xyz="0 1 0"/>  <!-- Ankle up/down -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
     <limit lower="-0.5" upper="0.5" effort="25" velocity="1.5"/>
     <dynamics damping="0.8" friction="0.4"/>
   </joint>
@@ -517,7 +517,6 @@
     <material>Gazebo/Blue</material>
   </gazebo>
 
-  <!-- Joint Controllers for ALL movable joints -->
   <gazebo>
     <plugin filename="ignition-gazebo-joint-position-controller-system" name="ignition::gazebo::systems::JointPositionController">
       <joint_name>head_joint</joint_name>
