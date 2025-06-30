@@ -1,0 +1,52 @@
+running egg_info
+creating ../../build/cori_cv/cori_cv.egg-info
+writing ../../build/cori_cv/cori_cv.egg-info/PKG-INFO
+writing dependency_links to ../../build/cori_cv/cori_cv.egg-info/dependency_links.txt
+writing entry points to ../../build/cori_cv/cori_cv.egg-info/entry_points.txt
+writing requirements to ../../build/cori_cv/cori_cv.egg-info/requires.txt
+writing top-level names to ../../build/cori_cv/cori_cv.egg-info/top_level.txt
+writing manifest file '../../build/cori_cv/cori_cv.egg-info/SOURCES.txt'
+reading manifest file '../../build/cori_cv/cori_cv.egg-info/SOURCES.txt'
+writing manifest file '../../build/cori_cv/cori_cv.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+copying cori_cv/cori_simulator.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+copying cori_cv/simple_color_detector.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+copying cori_cv/joint_controller.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+copying cori_cv/database_manager.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+copying cori_cv/color_display.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+copying cori_cv/object_detection.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv
+running install
+running install_lib
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/cori_simulator.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/simple_color_detector.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/joint_controller.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/database_manager.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/color_display.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/build/lib/cori_cv/object_detection.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv
+byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/cori_simulator.py to cori_simulator.cpython-310.pyc
+byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/simple_color_detector.py to simple_color_detector.cpython-310.pyc
+byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/joint_controller.py to joint_controller.cpython-310.pyc
+byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/database_manager.py to database_manager.cpython-310.pyc
+byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/color_display.py to color_display.cpython-310.pyc
+byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv/object_detection.py to object_detection.cpython-310.pyc
+running install_data
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/ament_index
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/ament_index/resource_index
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/ament_index/resource_index/packages
+copying resource/cori_cv -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/ament_index/resource_index/packages
+copying package.xml -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/cori_cv
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/cori_cv/launch
+copying launch/laundry_color_detector.launch.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/share/cori_cv/launch
+running install_egg_info
+Copying ../../build/cori_cv/cori_cv.egg-info to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/python3.10/site-packages/cori_cv-0.0.0-py3.10.egg-info
+running install_scripts
+Installing color_display script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/cori_cv
+Installing laundry_color_detector script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/cori_cv
+Installing object_detection script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/cori_cv
+Installing simple_color_detector script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv/lib/cori_cv
+writing list of installed files to '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_cv/install.log'

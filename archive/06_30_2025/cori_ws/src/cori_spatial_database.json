@@ -1,0 +1,250 @@
+{
+  "metadata": {
+    "created": "2025-06-27 11:48:28",
+    "description": "CORI Spatial Object Database",
+    "version": "3.0"
+  },
+  "objects": {},
+  "laundry_data": {
+    "total_items_sorted": 31,
+    "hamper_counts": {
+      "Lights": 4,
+      "Darks": 5,
+      "Colors": 22
+    },
+    "learning_database": {
+      "red": "Colors",
+      "blue": "Darks",
+      "green": "Colors",
+      "purple": "Colors",
+      "white": "Lights"
+    },
+    "user_corrections": [
+      {
+        "color": "blue",
+        "wrong_category": "Colors",
+        "right_category": "Darks",
+        "reason": "Because they are dark enough to ruin the colors, the blue dye is bad for the color shirts",
+        "timestamp": 1751049413.4190674
+      },
+      {
+        "color": "green",
+        "wrong_category": "Colors",
+        "right_category": "Lights",
+        "reason": "it's light green",
+        "timestamp": 1751049440.2869887
+      },
+      {
+        "color": "blue",
+        "wrong_category": "Darks",
+        "right_category": "Colors",
+        "reason": "it's a light blue and I don't want the dye from the jeans to ruin it",
+        "timestamp": 1751049537.1747105
+      },
+      {
+        "color": "blue",
+        "wrong_category": "Colors",
+        "right_category": "Darks",
+        "reason": "Because it has dye in it",
+        "timestamp": 1751049556.0720284
+      },
+      {
+        "color": "green",
+        "wrong_category": "Lights",
+        "right_category": "Colors",
+        "reason": "because its dark green",
+        "timestamp": 1751049586.6859756
+      }
+    ],
+    "confidence_level": "learning",
+    "custom_colors": {},
+    "sorted_items_history": [
+      {
+        "item_name": "Red Shirt",
+        "category": "Colors",
+        "timestamp": 1751039321.8368607,
+        "color": "red"
+      },
+      {
+        "item_name": "Red Shirt",
+        "category": "Colors",
+        "timestamp": 1751039333.004388,
+        "color": "red"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Darks",
+        "timestamp": 1751039339.7704,
+        "color": "blue"
+      },
+      {
+        "item_name": "Blue Shirt",
+        "category": "Colors",
+        "timestamp": 1751039363.4822462,
+        "color": "blue"
+      },
+      {
+        "item_name": "Green Pants",
+        "category": "Colors",
+        "timestamp": 1751039382.1791277,
+        "color": "green"
+      },
+      {
+        "item_name": "Green Shirt",
+        "category": "Colors",
+        "timestamp": 1751039391.6596847,
+        "color": "green"
+      },
+      {
+        "item_name": "Purple Socks",
+        "category": "Colors",
+        "timestamp": 1751039400.6643307,
+        "color": "purple"
+      },
+      {
+        "item_name": "White Shirt",
+        "category": "Lights",
+        "timestamp": 1751039409.6303136,
+        "color": "white"
+      },
+      {
+        "item_name": "White Pants",
+        "category": "Lights",
+        "timestamp": 1751039414.290021,
+        "color": "white"
+      },
+      {
+        "item_name": "Red Shirt",
+        "category": "Colors",
+        "timestamp": 1751039429.658199,
+        "color": "red"
+      },
+      {
+        "item_name": "Green Pants",
+        "category": "Colors",
+        "timestamp": 1751039438.7341552,
+        "color": "green"
+      },
+      {
+        "item_name": "White Shirt",
+        "category": "Lights",
+        "timestamp": 1751039445.7003505,
+        "color": "white"
+      },
+      {
+        "item_name": "Green Socks",
+        "category": "Colors",
+        "timestamp": 1751039454.6393793,
+        "color": "green"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Colors",
+        "timestamp": 1751039460.3551488,
+        "color": "blue"
+      },
+      {
+        "item_name": "Red Pants",
+        "category": "Colors",
+        "timestamp": 1751039470.4149365,
+        "color": "red"
+      },
+      {
+        "item_name": "Red Shirt",
+        "category": "Colors",
+        "timestamp": 1751041500.5389743,
+        "color": "red"
+      },
+      {
+        "item_name": "Green Pants",
+        "category": "Colors",
+        "timestamp": 1751041508.8143604,
+        "color": "green"
+      },
+      {
+        "item_name": "Red Pants",
+        "category": "Colors",
+        "timestamp": 1751042248.531161,
+        "color": "red"
+      },
+      {
+        "item_name": "Purple Pants",
+        "category": "Colors",
+        "timestamp": 1751042270.997866,
+        "color": "purple"
+      },
+      {
+        "item_name": "Green Shirt",
+        "category": "Colors",
+        "timestamp": 1751045386.6952455,
+        "color": "green"
+      },
+      {
+        "item_name": "Red Pants",
+        "category": "Colors",
+        "timestamp": 1751049368.075051,
+        "color": "red"
+      },
+      {
+        "item_name": "Purple Pants",
+        "category": "Colors",
+        "timestamp": 1751049387.142096,
+        "color": "purple"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Darks",
+        "timestamp": 1751049391.8514268,
+        "color": "blue"
+      },
+      {
+        "item_name": "Red Pants",
+        "category": "Colors",
+        "timestamp": 1751049418.701768,
+        "color": "red"
+      },
+      {
+        "item_name": "Green Shirt",
+        "category": "Lights",
+        "timestamp": 1751049423.871201,
+        "color": "green"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Darks",
+        "timestamp": 1751049507.2052245,
+        "color": "blue"
+      },
+      {
+        "item_name": "Blue Shirt",
+        "category": "Colors",
+        "timestamp": 1751049516.8308609,
+        "color": "blue"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Darks",
+        "timestamp": 1751049543.0098858,
+        "color": "blue"
+      },
+      {
+        "item_name": "Blue Jeans",
+        "category": "Darks",
+        "timestamp": 1751049559.6432345,
+        "color": "blue"
+      },
+      {
+        "item_name": "Red Pants",
+        "category": "Colors",
+        "timestamp": 1751049565.9672031,
+        "color": "red"
+      },
+      {
+        "item_name": "Green Shirt",
+        "category": "Colors",
+        "timestamp": 1751049570.7372026,
+        "color": "green"
+      }
+    ]
+  }
+}
