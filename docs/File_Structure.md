@@ -1,128 +1,146 @@
-## 🤖 CORI Robotics — Core Package Structure
+# CORI — Workspace File Structure: A Modular Approach
 
-This document outlines the foundational ROS 2 packages that power CORI’s MVP: a laundry-sorting, household assistant robot built for real autonomy in constrained domestic spaces.
+This document details the current file structure of CORI's workspace, providing an overview of its core ROS 2 packages and shared assets. This architecture is specifically designed for **C.O.R.I. (Cooperative Organizational Robotic Intelligence)**, a home assistant robot focused on automating household tasks like laundry sorting. The workspace's organization champions modularity, enabling agile development, independent testing, and seamless integration of complex robotic functionalities.
 
----
-
-## 1. `cori_interfaces/`  
-Custom messages, services, and actions for FSM coordination and robot communication.
-
-```bash
-cori_interfaces/
-├── msg/
-│   ├── SystemState.msg
-│   ├── LaundryItem.msg
-│   ├── BinStatus.msg
-│   └── TaskStatus.msg
-├── srv/
-│   ├── StartTask.srv
-│   ├── EmergencyStop.srv
-│   └── GetSystemHealth.srv
-├── action/
-│   ├── NavigateToGoal.action
-│   ├── PickObject.action
-│   ├── SortLaundry.action
-│   └── LoadWasher.action
-├── CMakeLists.txt
-└── package.xml
-```
+> **Note on Paths:**  
+> All paths presented in this document are currently absolute representations of their location within the `cori_ws` workspace. Future documentation updates will implement relative path adjustments for improved portability.
 
 ---
 
-## 2. `cori_state_machine/`  
-Main task logic controller. Implements CORI’s finite state machine and transitions.
+## `shared/`
 
-```bash
-cori_state_machine/
-├── cori_state_machine/
-│   ├── fsm_node.py
-│   ├── states/
-│   │   ├── idle_state.py
-│   │   ├── wake_state.py
-│   │   ├── navigation_states.py
-│   │   ├── manipulation_states.py
-│   │   ├── perception_states.py
-│   │   └── wash_states.py
-│   ├── transitions/
-│   │   └── state_transitions.py
-│   └── utils/
-│       └── fsm_utils.py
-├── config/
-│   └── fsm_config.yaml
-├── launch/
-│   └── state_machine.launch.py
-├── test/
-│   ├── test_fsm.py
-│   └── test_states.py
-├── CMakeLists.txt
-└── package.xml
-```
+This directory serves as a central repository for common assets and data utilized across various CORI packages. It includes essential resources such as:
+
+- `database/cori_spatial_database.json`
+- 3D models under `models/`:
+  - `Sun/`
+  - `ground_plane/`
+  - `Laundry_Hamper.stl`
+
+This centralized shared directory exemplifies the modular design by providing a single, consistent source for common components, reducing redundancy and fostering system-wide coherence.
 
 ---
 
-## 3. `cori_perception/`  
-Handles real-time object detection and color classification using OpenCV and pretrained models.
+## `src/cori_control/`
 
-```bash
-cori_perception/
-├── cori_perception/
-│   ├── object_detection/
-│   │   ├── hamper_detector.py
-│   │   ├── clothes_detector.py
-│   │   └── color_classifier.py
-│   ├── segmentation/
-│   │   └── instance_segmentation.py
-│   ├── pose_estimation/
-│   │   └── object_pose_estimator.py
-│   └── utils/
-│       └── image_utils.py
-├── models/
-│   ├── yolo_clothes.pt
-│   └── color_classifier.pkl
-├── config/
-│   └── camera_params.yaml
-├── launch/
-│   └── perception.launch.py
-└── test/
-    └── test_detection.py
-```
+Responsible for the **low-level control of CORI's joints**. Contains:
+
+- `joint_controller.py`: Interfaces for precise command execution and feedback processing.
+
+This package ensures that CORI's physical actuation is managed by an independent and specialized module.
 
 ---
 
-## 4. `cori_manipulation/`  
-Arm and gripper control, including grasping logic for clothing items and hamper handling.
+## `src/cori_core/`
 
-```bash
-cori_manipulation/
-├── cori_manipulation/
-│   ├── arm_controller.py
-│   ├── gripper_controller.py
-│   └── trajectory_planner.py
-├── config/
-│   └── moveit_config/
-│       ├── joint_limits.yaml
-│       └── kinematics.yaml
-├── launch/
-│   └── manipulation.launch.py
-├── CMakeLists.txt
-└── package.xml
-```
+Provides **fundamental utilities and core functionalities**, including:
+
+- `database_manager.py`
+- `spatial_database.py`
+
+These modules manage spatial data and persistent storage. The package serves as a foundational, reusable layer relied upon by other CORI modules.
 
 ---
 
-## 5. `cori_bringup/`  
-Brings all subsystems online for either hardware deployment or Gazebo simulation.
+## `src/cori_description/`
 
-```bash
-cori_bringup/
-├── launch/
-│   ├── cori_robot.launch.py        # Launch real system
-│   ├── cori_simulation.launch.py   # Launch Gazebo sim
-│   └── full_system.launch.py
-├── config/
-│   └── robot_config.yaml
-├── CMakeLists.txt
-└── package.xml
-```
+Defines **CORI's physical attributes and simulation environment**. Key components:
+
+- Configuration:
+  - `config/ros2_controllers.yaml`
+- Launch files:
+  - `launch/display_rviz.launch.py`
+  - `launch/spawn_cori.launch.py`
+  - `launch/spawn_cori_ignition.launch.py`
+- Meshes:
+  - `meshes/cori_body_v1.0/*.stl`
+  - `CORI_Solid.stl`
+- URDF:
+  - `urdf/cori.urdf.xacro`
+- Gazebo Worlds:
+  - `worlds/laundry_world.sdf`
+  - `worlds/simple_world.sdf`
+- Developer Notes:
+  - `manual_commands/commands.txt`
+
+This package manages the robot's physical definition and simulation setup as a distinct, self-contained module.
 
 ---
+
+## `src/cori_gui/`
+
+Contains **graphical user interface components** for real-time visualization and interaction. Includes:
+
+- `color_display.py`: Displays live data in a user-friendly format.
+
+Separates GUI logic from core robot logic to maintain clean modular boundaries.
+
+---
+
+## `src/cori_simulation/`
+
+Dedicated to **simulating CORI’s behavior**. Key files:
+
+- `cori_simulator.py`
+- `demo_display.py`
+- `sensor_fusion_demo.py`
+
+These ROS 2 nodes model dynamics, sensor data, and behavior in simulation, isolated in their own development sandbox.
+
+---
+
+## `src/cori_tools/`
+
+A utility toolbox including:
+
+- `cori_ignition_database.json`: Ignition-compatible simulation data
+- `cori_ignition_integration.py`: Integration with Ignition simulation tools
+- `cori_info_collector.sh`: Collects system information and runtime diagnostics
+
+These support development, integration, and internal diagnostics, acting as reusable support assets across the system.
+
+---
+
+## `src/cori_vision/`
+
+Enables **visual perception and scene understanding**. Key files:
+
+- `laundry_color_detector.py`
+- `laundry_nodes.py`
+- `object_detection.py`
+- `simple_color_detector.py`
+- `color_piles.yaml`
+- Launch:
+  - `laundry_color_detector.launch.py`
+
+Also includes:
+
+- Testing files:
+  - `test/test_copyright.py`
+  - `test/test_flake8.py`
+  - `test/test_pep257.py`
+- `setup.cfg`: Linting and packaging configuration
+
+This self-contained vision module handles object detection, color classification, and related perception tasks vital to laundry sorting.
+
+---
+
+## Workspace-Level Utilities
+
+The root of the `cori_ws` workspace also includes development helper scripts and dependency tracking tools:
+
+- `build.bash`: Builds the workspace using Colcon.
+- `kill_all.bash`: Terminates all active CORI processes.
+- `current_dependencies.txt`: Logs pinned or active package dependencies.
+
+These utilities facilitate efficient development and process control during ROS 2 testing and integration.
+
+---
+
+## Notes on Exclusions
+
+Directories like `/build`, `/install`, and `/log` are excluded from this document, as they are dynamically generated by Colcon during the build process. The structure and contents of these folders follow standard ROS 2 conventions and reflect the compiled output of the packages above.
+
+---
+
+*This modular architecture enables CORI to scale, adapt, and evolve—piece by piece—into a reliable robotic teammate for the modern home.*
