@@ -1,0 +1,49 @@
+{
+  "analysis_metadata": {
+    "generated_at": "2025-06-30T16:01:41.064107",
+    "repository": "CORI",
+    "period": "2025-05-20 to 2025-06-30",
+    "total_commits": 328
+  },
+  "productivity_metrics": {
+    "commits_per_day": 12.62,
+    "lines_per_commit": 8396.8,
+    "code_churn_ratio": 0.289,
+    "velocity_trend": "stable",
+    "consistency_score": 0,
+    "peak_productivity_hour": 9,
+    "active_days_percentage": 61.9,
+    "commit_frequency_score": 100
+  },
+  "technical_metrics": {
+    "languages_distribution": {
+      "Markdown": 55.8,
+      "Python": 12.2,
+      "JSON": 1.2,
+      "Shell": 1.2
+    },
+    "complexity_trend": [
+      2.976155526903566,
+      9.133329657771478,
+      4.06442932708603,
+      4.631044109828207,
+      3.9676303319180164,
+      16.719712885973554,
+      47.49517762337677
+    ],
+    "refactoring_ratio": 0.3,
+    "testing_coverage": 0.0,
+    "documentation_ratio": 36.9,
+    "architecture_score": 6.5,
+    "code_quality_index": 17.1
+  },
+  "impact_metrics": {
+    "total_lines_of_code": 2137269,
+    "files_impacted": 32035,
+    "repository_coverage": 100,
+    "collaboration_index": 100,
+    "innovation_score": 19.6,
+    "technical_debt_trend": "stable",
+    "delivery_velocity": 57.4
+  }
+}
