@@ -1,10 +1,11 @@
 #!/bin/bash
 # CORI Robot Build and Run Script - Cooperative Organizational Robotic Intelligence
 # Description: Unified build and execution for CORI's laundry sorting system
+
 # Constants
 WORKSPACE_DIR="/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws"
 SENSOR_FUSION_PATH="src/cori_cv/cori_cv/sensor_fusion/spatial_database.py"
-INTEGRATION_PATH="src/tools/cori_ignition_integration.py"
+INTEGRATION_PATH="src/cori_tools/cori_tools/cori_ignition_integration.py"
 WORLD_FILE="src/cori_description/worlds/laundry_world.sdf"
 URDF_FILE="src/cori_description/urdf/cori.urdf.xacro"
 
@@ -43,7 +44,7 @@ local banner_lines=(
     "   ██║        ██║   ██║   ██████╔╝   ██║    "
     "   ██║        ██║   ██║   ██╔══██╗   ██║    "
     "   ╚██████╗██╗╚██████╔╝██╗██║  ██║██╗██║ ██╗"
-    "    ╚═════╝╚═╝ ╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝╚═╝ ╚═╝"
+    "    ╚═════╝╚═╝ ╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝ ╚═╝"
 )
 
     for line in "${banner_lines[@]}"; do
@@ -96,6 +97,7 @@ cleanup_processes() {
     pkill -f "sensor_fusion" 2>/dev/null || true
     pkill -f "spatial_database" 2>/dev/null || true
     pkill -f "cori_ignition_integration" 2>/dev/null || true
+    pkill -f "laundry_color_detector" 2>/dev/null || true
     sleep 3
     echo "✅ $mode processes stopped"
 }
@@ -105,7 +107,7 @@ build_workspace() {
     echo "🧹 Cleaning previous build..."
     rm -rf build/ devel/ install/
     echo "🔨 Building workspace..."
-    colcon build --packages-select cori_description cori_cv
+    colcon build --packages-select cori_description cori_vision cori_control cori_simulation cori_core cori_gui cori_tools
     [ $? -eq 0 ] && echo "✅ Build successful!" || { echo "❌ Build failed!"; exit 1; }
     echo "📦 Sourcing workspace..."
     source install/setup.bash
@@ -249,7 +251,96 @@ run_laundry_assistant() {
     python3 cori_simulator.py
 }
 
-# Run unified integration
+# NEW: Run CORI Smart Control (Your preferred mode - Camera Only)
+run_cori_smart_camera() {
+    [ $(check_file "$INTEGRATION_PATH"; echo $?) -ne 0 ] && exit 1
+    echo "📷 CORI SMART CAMERA MODE"
+    echo "========================"
+    echo "🎯 Features:"
+    echo "   📷 Webcam color detection"
+    echo "   🧠 Smart database logging"
+    echo "   ⚡ No robot movement (camera only)"
+    read -p "🚀 Start smart camera mode? [y/N]: " confirm
+    [[ ! $confirm =~ ^[Yy]$ ]] && { echo "👋 Cancelled"; exit 0; }
+    
+    cleanup_processes "smart camera"
+    trap 'cleanup_processes "smart camera"; exit 0' SIGINT
+    
+    start_webcam CAMERA_PID || exit 1
+    
+    echo "🔍 Verifying camera integration..."
+    sleep 2
+    
+    echo "🧠 Starting CORI smart camera system..."
+    cd src/cori_tools/cori_tools/
+    
+    # Auto-select camera only mode (option 1)
+    echo "1" | python3 cori_ignition_integration.py
+    
+    cleanup_processes "smart camera"
+}
+
+# NEW: Run CORI Full Control (Your working mode - Ignition Full)
+run_cori_full_control() {
+    [ $(check_file "$INTEGRATION_PATH"; echo $?) -ne 0 ] && exit 1
+    echo "🤖 CORI FULL CONTROL MODE"
+    echo "========================="
+    echo "🎯 Features:"
+    echo "   🎮 Gazebo simulation"
+    echo "   📷 Webcam detection"
+    echo "   🤖 Robot head movement"
+    echo "   🧠 Unified database"
+    read -p "🚀 Start full control mode? [y/N]: " confirm
+    [[ ! $confirm =~ ^[Yy]$ ]] && { echo "👋 Cancelled"; exit 0; }
+    
+    cleanup_processes "full control"
+    trap 'cleanup_processes "full control"; exit 0' SIGINT
+    
+    start_gazebo GAZEBO_PID
+    start_webcam CAMERA_PID || { kill $GAZEBO_PID 2>/dev/null; exit 1; }
+    
+    echo "🔍 Verifying integration..."
+    sleep 3
+    
+    ros2 topic list | grep -q "/camera/color/image_raw" && echo "   ✅ Camera topics found" || echo "   ⚠️ Camera topics missing"
+    ros2 topic list | grep -q "/model/cori/joint/head_joint/cmd_pos" && echo "   ✅ Robot topics found" || echo "   ⚠️ Robot topics missing"
+    
+    echo "🤖 Starting CORI full control system..."
+    cd src/cori_tools/cori_tools/
+    
+    # Auto-select ignition full mode (option 2) - THIS IS WHAT YOU WANT
+    echo "2" | python3 cori_ignition_integration.py
+    
+    cleanup_processes "full control"
+}
+
+# NEW: Run CORI Laundry Mode (Camera + Smart Suggestions)
+run_cori_laundry_mode() {
+    [ $(check_file "$INTEGRATION_PATH"; echo $?) -ne 0 ] && exit 1
+    echo "🧺 CORI LAUNDRY SORTING MODE"
+    echo "============================"
+    echo "🎯 Features:"
+    echo "   📷 Webcam detection"
+    echo "   🧺 Laundry category suggestions"
+    echo "   📚 Learning your preferences"
+    read -p "🚀 Start laundry mode? [y/N]: " confirm
+    [[ ! $confirm =~ ^[Yy]$ ]] && { echo "👋 Cancelled"; exit 0; }
+    
+    cleanup_processes "laundry mode"
+    trap 'cleanup_processes "laundry mode"; exit 0' SIGINT
+    
+    start_webcam CAMERA_PID || exit 1
+    
+    echo "🧺 Starting CORI laundry assistant..."
+    cd src/cori_tools/cori_tools/
+    
+    # Auto-select laundry camera mode (option 3)
+    echo "3" | python3 cori_ignition_integration.py
+    
+    cleanup_processes "laundry mode"
+}
+
+# OLD: Run unified integration (kept for backward compatibility)
 run_unified_integration() {
     [ $(check_file "$INTEGRATION_PATH"; echo $?) -ne 0 ] && exit 1
     echo "🔗 CORI UNIFIED INTEGRATION SYSTEM"
@@ -258,6 +349,7 @@ run_unified_integration() {
     echo "   🎮 Gazebo simulation"
     echo "   📷 Camera detection"
     echo "   🧠 Unified database"
+    echo "⚠️  NOTE: You'll need to select a mode after launch"
     read -p "🚀 Start integration? [y/N]: " confirm
     [[ ! $confirm =~ ^[Yy]$ ]] && { echo "👋 Cancelled"; exit 0; }
     cleanup_processes "unified integration"
@@ -266,9 +358,9 @@ run_unified_integration() {
     start_webcam CAMERA_PID || { kill $GAZEBO_PID 2>/dev/null; exit 1; }
     echo "🔍 Verifying integration..."
     ros2 topic list | grep -q "/camera/color/image_raw" || echo "   ⚠️ Camera topic not found"
-    ros2 topic list | grep -q "head_pan_joint" || echo "   ⚠️ Joint topic not found"
+    ros2 topic list | grep -q "/model/cori/joint/head_joint/cmd_pos" || echo "   ⚠️ Joint topic not found"
     echo "🔗 Starting integration system..."
-    cd src/tools/
+    cd src/cori_tools/cori_tools/
     python3 cori_ignition_integration.py
     cleanup_processes "unified integration"
 }
@@ -290,7 +382,6 @@ main() {
     # --- Start of Menu Box ---
     local TOTAL_MENU_WIDTH=70
     local menu_inner_width=$((TOTAL_MENU_WIDTH))
-    local menu_padding=2  # Left padding for menu items
 
     echo "╭"$(printf '─%.0s' $(seq 1 $menu_inner_width))"╮"
 
@@ -324,12 +415,15 @@ main() {
 
     local integration_exists=$(check_file "$INTEGRATION_PATH" && echo true || echo false)
     if [ "$integration_exists" = true ]; then
-        printf "│ %-*s │\n" $((menu_inner_width)) "8) 🔗 Unified Integration Mode"
+        printf "│ %-*s │\n" $((menu_inner_width)) "8) 📷 CORI Smart Camera"
+        printf "│ %-*s │\n" $((menu_inner_width)) "9) 🤖 CORI Full Control"
+        printf "│ %-*s │\n" $((menu_inner_width)) "10) 🧺 CORI Laundry Mode"
+        printf "│ %-*s │\n" $((menu_inner_width)) "11) 🔗 Unified Integration"
     fi
     
     # Static menu items at the bottom
-    printf "│ %-*s │\n" $((menu_inner_width)) "9) 🧹 Kill All ROS Processes"
-    printf "│ %-*s │\n" $((menu_inner_width)) "10) 🚪 Exit"
+    printf "│ %-*s │\n" $((menu_inner_width)) "12) 🧹 Kill All ROS Processes"
+    printf "│ %-*s │\n" $((menu_inner_width)) "13) 🚪 Exit"
 
     # Empty line before bottom border
     printf "│%*s│\n" $menu_inner_width ""
@@ -337,7 +431,7 @@ main() {
     echo "╰"$(printf '─%.0s' $(seq 1 $menu_inner_width))"╯"
     # --- End of Menu Box ---
 
-    read -p "Enter choice [1-10]: " choice
+    read -p "Enter choice [1-13]: " choice
     case $choice in
         1) run_full_system ;;
         2) run_gazebo_only ;;
@@ -346,9 +440,12 @@ main() {
         5) run_manual_control ;;
         6) [ "$fusion_exists" = true ] && run_sensor_fusion || echo "❌ Invalid choice" ;;
         7) [ "$fusion_exists" = true ] && view_spatial_database || echo "❌ Invalid choice" ;;
-        8) [ "$integration_exists" = true ] && run_unified_integration || echo "❌ Invalid choice" ;;
-        9) kill_all_processes ;;
-        10) echo "👋 Exiting..."; exit 0 ;;
+        8) [ "$integration_exists" = true ] && run_cori_smart_camera || echo "❌ Invalid choice" ;;
+        9) [ "$integration_exists" = true ] && run_cori_full_control || echo "❌ Invalid choice" ;;
+        10) [ "$integration_exists" = true ] && run_cori_laundry_mode || echo "❌ Invalid choice" ;;
+        11) [ "$integration_exists" = true ] && run_unified_integration || echo "❌ Invalid choice" ;;
+        12) kill_all_processes ;;
+        13) echo "👋 Exiting..."; exit 0 ;;
         *) echo "❌ Invalid choice"; exit 1 ;;
     esac
     echo "🏁 CORI system ended."

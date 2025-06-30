@@ -1,4 +1,0 @@
-[0.166s] Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/tools': /usr/bin/cmake /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/tools -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/tools
-[0.171s] [0mCMake Error: The source directory "/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/tools" does not appear to contain CMakeLists.txt.
-[0.171s] Specify --help for usage, or press the help button on the CMake GUI.[0m
-[0.172s] Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/tools' returned '1': /usr/bin/cmake /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/tools -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/tools

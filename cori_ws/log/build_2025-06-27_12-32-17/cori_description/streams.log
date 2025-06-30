@@ -1,1 +1,0 @@
-[0.178s] Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_cv:/opt/ros/humble /usr/bin/cmake --build /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description -- -j20 -l20
