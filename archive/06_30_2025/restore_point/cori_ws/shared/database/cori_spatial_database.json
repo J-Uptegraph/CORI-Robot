@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "created": "2025-06-26 19:39:18",
+    "description": "CORI Spatial Object Database",
+    "version": "3.0"
+  },
+  "objects": {},
+  "laundry_data": {
+    "total_items_sorted": 5,
+    "hamper_counts": {
+      "Lights": 0,
+      "Darks": 1,
+      "Colors": 4
+    },
+    "learning_database": {
+      "red": "Colors",
+      "blue": "Darks",
+      "orange": "Colors",
+      "purple": "Colors"
+    },
+    "user_corrections": [],
+    "confidence_level": "learning",
+    "custom_colors": {},
+    "sorted_items_history": [
+      {
+        "item_name": "Red Pants (johnathan)",
+        "category": "Colors",
+        "timestamp": 1750967397.6291525,
+        "color": "red"
+      },
+      {
+        "item_name": "Blue Jeans (johnathan)",
+        "category": "Darks",
+        "timestamp": 1750967405.3150375,
+        "color": "blue"
+      },
+      {
+        "item_name": "Orange Pants (johnathan)",
+        "category": "Colors",
+        "timestamp": 1750967416.5319295,
+        "color": "orange"
+      },
+      {
+        "item_name": "Purple Shirt (johnathan)",
+        "category": "Colors",
+        "timestamp": 1750967425.7983842,
+        "color": "purple"
+      },
+      {
+        "item_name": "Red Shirt (johnathan)",
+        "category": "Colors",
+        "timestamp": 1750969765.4704213,
+        "color": "red"
+      }
+    ],
+    "user_profile": {
+      "johnathan": {
+        "last_used": "2025-06-26 20:47:44"
+      },
+      "john": {
+        "last_used": "2025-06-26 18:27:44"
+      },
+      "wesley": {
+        "created": "2025-06-26 18:16:29",
+        "last_used": "2025-06-26 18:16:29"
+      }
+    }
+  }
+}

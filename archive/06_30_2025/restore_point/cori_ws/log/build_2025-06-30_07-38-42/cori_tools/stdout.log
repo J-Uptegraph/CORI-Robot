@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/cori_tools/cori_tools.egg-info
+writing ../../build/cori_tools/cori_tools.egg-info/PKG-INFO
+writing dependency_links to ../../build/cori_tools/cori_tools.egg-info/dependency_links.txt
+writing entry points to ../../build/cori_tools/cori_tools.egg-info/entry_points.txt
+writing requirements to ../../build/cori_tools/cori_tools.egg-info/requires.txt
+writing top-level names to ../../build/cori_tools/cori_tools.egg-info/top_level.txt
+writing manifest file '../../build/cori_tools/cori_tools.egg-info/SOURCES.txt'
+reading manifest file '../../build/cori_tools/cori_tools.egg-info/SOURCES.txt'
+writing manifest file '../../build/cori_tools/cori_tools.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/build
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/build/lib
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/build/lib/cori_tools
+copying cori_tools/cori_ignition_integration.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/build/lib/cori_tools
+running install
+running install_lib
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/python3.10/site-packages/cori_tools
+copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/build/lib/cori_tools/cori_ignition_integration.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/python3.10/site-packages/cori_tools
+byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/python3.10/site-packages/cori_tools/cori_ignition_integration.py to cori_ignition_integration.cpython-310.pyc
+running install_data
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/ament_index
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/ament_index/resource_index
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/ament_index/resource_index/packages
+copying resource/cori_tools -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/ament_index/resource_index/packages
+copying package.xml -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools
+running install_egg_info
+Copying ../../build/cori_tools/cori_tools.egg-info to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/python3.10/site-packages/cori_tools-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/install.log'

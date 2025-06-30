@@ -1,0 +1,34 @@
+running egg_info
+creating ../../build/cori_core/cori_core.egg-info
+writing ../../build/cori_core/cori_core.egg-info/PKG-INFO
+writing dependency_links to ../../build/cori_core/cori_core.egg-info/dependency_links.txt
+writing entry points to ../../build/cori_core/cori_core.egg-info/entry_points.txt
+writing requirements to ../../build/cori_core/cori_core.egg-info/requires.txt
+writing top-level names to ../../build/cori_core/cori_core.egg-info/top_level.txt
+writing manifest file '../../build/cori_core/cori_core.egg-info/SOURCES.txt'
+reading manifest file '../../build/cori_core/cori_core.egg-info/SOURCES.txt'
+writing manifest file '../../build/cori_core/cori_core.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core
+copying cori_core/database_manager.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core
+copying cori_core/spatial_database.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core
+running install
+running install_lib
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core
+copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core/database_manager.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core
+copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core/spatial_database.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core
+byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core/database_manager.py to database_manager.cpython-310.pyc
+byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core/spatial_database.py to spatial_database.cpython-310.pyc
+running install_data
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/ament_index
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/ament_index/resource_index
+creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/ament_index/resource_index/packages
+copying resource/cori_core -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/ament_index/resource_index/packages
+copying package.xml -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core
+running install_egg_info
+Copying ../../build/cori_core/cori_core.egg-info to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/install.log'

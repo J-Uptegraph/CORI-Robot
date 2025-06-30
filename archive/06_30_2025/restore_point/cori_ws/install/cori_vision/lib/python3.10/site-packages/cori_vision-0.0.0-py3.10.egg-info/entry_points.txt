@@ -1,0 +1,6 @@
+[console_scripts]
+color_display = cori_vision.color_display:main
+laundry_color_detector = cori_vision.laundry_color_detector:main
+object_detection = cori_vision.object_detection:main
+simple_color_detector = cori_vision.simple_color_detector:main
+
