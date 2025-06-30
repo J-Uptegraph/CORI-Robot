@@ -1,3 +1,5 @@
+from ament_index_python.packages import get_package_share_directory
+import os
 #!/usr/bin/env python3
 """
 CORI Database Manager
@@ -32,7 +34,7 @@ class ObjectData:
 class CORIDatabaseManager:
     """Advanced database management for CORI spatial object tracking"""
     
-    def __init__(self, database_file: str = "../../../shared/shared/shared/database/cori_spatial_database.json"):
+    def __init__(self, database_file: str = os.path.join(get_package_share_directory("cori_core"), "database", "cori_spatial_database.json""):
         self.database_file = database_file
         self.database = self.load_database()
     

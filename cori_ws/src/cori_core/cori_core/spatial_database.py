@@ -16,7 +16,7 @@ class SpatialObjectDatabase:
     Based on the actual positions in laundry_world.sdf
     """
     
-    def __init__(self, db_file: str = "shared/shared/database/cori_spatial_database.json"):
+    def __init__(self, db_file: str = os.path.join(get_package_share_directory("cori_core"), "database", "cori_spatial_database.json")):
         self.db_file = db_file
         self.objects = {}
         self.initialize_from_world_data()

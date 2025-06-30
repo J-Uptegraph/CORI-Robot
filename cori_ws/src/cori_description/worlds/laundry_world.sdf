@@ -204,7 +204,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>file:///home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/shared/models/Laundry_Hamper.stl</uri>
+              <uri>model://shared/models/Laundry_Hamper.stl</uri>
               <scale>0.01 0.01 0.01</scale>
             </mesh>
           </geometry>
@@ -220,7 +220,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>file:///home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/shared/models/Laundry_Hamper.stl</uri>
+              <uri>model://shared/models/Laundry_Hamper.stl</uri>
               <scale>0.01 0.01 0.01</scale>
             </mesh>
           </geometry>
@@ -236,7 +236,7 @@
         <visual name="visual">
           <geometry>
             <mesh>
-              <uri>file:///home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/shared/models/Laundry_Hamper.stl</uri>
+              <uri>model://shared/models/Laundry_Hamper.stl</uri>
               <scale>0.01 0.01 0.01</scale>
             </mesh>
           </geometry>

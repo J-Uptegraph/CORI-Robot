@@ -1,3 +1,5 @@
+from ament_index_python.packages import get_package_share_directory
+import os
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import IncludeLaunchDescription
@@ -13,7 +15,7 @@ def generate_launch_description():
     xacro_path = os.path.join(pkg_path, 'urdf', 'cori.urdf.xacro')
 
     # Use full direct path to world file to avoid install issues
-    world_path = '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description/worlds/laundry_world.sdf'
+    world_path = os.path.join(get_package_share_directory('cori_description'), 'worlds', 'laundry_world.sdf')
 
     # Parse XACRO to generate robot_description
     robot_description_config = xacro.process_file(xacro_path)

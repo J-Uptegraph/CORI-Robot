@@ -52,7 +52,7 @@ class IgnitionCORIDatabase:
     
     def __init__(self, database_file: str = None):
         if database_file is None:
-            workspace_path = "/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws"
+            workspace_path = os.path.join(os.getcwd(), "..")
             database_file = f"{workspace_path}/src/cori_tools/cori_tools/cori_ignition_database.json"
         
         self.database_file = database_file
