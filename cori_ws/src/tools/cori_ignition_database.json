@@ -1,0 +1,3549 @@
+{
+  "metadata": {
+    "created": "2025-06-26 18:38:19",
+    "description": "CORI Ignition Gazebo Database",
+    "version": "1.0",
+    "ignition_compatible": true
+  },
+  "spatial_objects": {
+    "red_objects": [],
+    "blue_objects": [],
+    "green_objects": [],
+    "white_objects": [],
+    "black_objects": [],
+    "yellow_objects": [],
+    "orange_objects": []
+  },
+  "ignition_data": {
+    "joint_commands": [],
+    "camera_calibration": {},
+    "movement_history": []
+  },
+  "laundry_learning": {
+    "total_sorted": 0,
+    "user_preferences": {},
+    "color_categories": {
+      "lights": [
+        "white",
+        "yellow",
+        "light_grey",
+        "cream"
+      ],
+      "darks": [
+        "black",
+        "dark_blue",
+        "navy",
+        "brown"
+      ],
+      "colors": [
+        "red",
+        "blue",
+        "green",
+        "orange",
+        "purple"
+      ]
+    }
+  },
+  "detection_history": [
+    {
+      "timestamp": 1751365689.0112903,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365690.0266573,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365848.9723058,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365849.984507,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365850.9975646,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365852.0112436,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365853.027464,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365854.043344,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365855.0569205,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365856.0737119,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365857.0891507,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365858.1017914,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365859.1148052,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365860.1292706,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365861.1429129,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365862.1568606,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365863.373082,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365864.3869042,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365865.402693,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365866.4173357,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365867.4318504,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365868.4455364,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365869.6659207,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365870.6807888,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365871.6972556,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365872.7144127,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365873.7293763,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365874.752137,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365875.766811,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365876.780228,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365877.799539,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365878.8136158,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365879.828667,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365880.8455143,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365881.8612328,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365882.8787997,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365883.8926988,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365884.9079301,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365885.9227808,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365886.940564,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365888.16277,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365889.1781194,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365890.2027018,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365891.2165864,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365892.229895,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365893.2478395,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365894.4713447,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365895.4840577,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365896.49652,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365897.5098112,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365898.5274065,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365899.540922,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365900.5667672,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365901.582018,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365902.5955095,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365903.6105752,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365904.8304393,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365906.0500135,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365907.0625205,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365908.0751667,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365909.0896542,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365910.1035872,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365911.122047,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365912.1377418,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365913.1526725,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365914.1676981,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365915.1825554,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365916.1960056,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365917.2121198,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365918.2286015,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365919.241343,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365920.2575798,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365921.2704742,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365922.2832253,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365923.2966285,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365924.3103366,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365925.323302,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365926.3380558,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365927.3520384,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365928.3664489,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365929.3819134,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365930.395462,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365931.4112153,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365932.425129,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365933.4414783,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365934.4559937,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365935.4864094,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365936.503755,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365937.5194716,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365938.533491,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365939.5482368,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365940.5625505,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365941.577068,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365942.5920014,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365943.6068232,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365944.6200848,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365945.6388083,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365946.6555111,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365947.6714134,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365948.6850128,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365949.7016537,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365950.7295513,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365951.750041,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365952.7678711,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365953.7833033,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365954.8016508,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365955.8148153,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365956.8329084,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365957.851431,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365958.8659387,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365959.8809505,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365960.895486,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365961.910829,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365962.9260209,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365963.943057,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365964.958784,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365965.974634,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365966.9916677,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365968.0052922,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365969.020611,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365970.0373456,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365971.0537877,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365972.0695157,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365973.085221,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365974.1054537,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365975.1259124,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365976.1428442,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365977.1582623,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365978.1716688,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365979.1888425,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365980.206194,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365981.2216506,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365982.2354283,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365983.2510407,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365984.2854192,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365985.2996695,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365986.3170373,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365987.3343275,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365988.3492153,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365989.363329,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365990.3766906,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365991.3910415,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365992.4054558,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365993.4204326,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365994.4386666,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365995.4552152,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365996.4709852,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365997.4985988,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365998.514577,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751365999.5341082,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366000.5500822,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366001.563664,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366002.5789578,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366003.5935445,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366004.6092827,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366005.6228871,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366006.6375606,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366007.6515055,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366008.6641662,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366009.677423,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366010.7030768,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366011.7231393,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366012.739027,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366013.7530117,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366014.7673483,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366015.7837708,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366016.798484,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366017.8125362,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366018.829392,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366019.8435051,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366020.858395,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366021.874745,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366022.8897498,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366023.9148285,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366024.9308887,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366025.9433854,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366026.956679,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366027.970953,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366028.9990723,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366030.0151556,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366031.0294013,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366032.0446303,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366033.0602202,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366034.0759187,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366035.0925362,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366036.1095688,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366037.1259377,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366038.1406798,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751366039.1572611,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367889.2831306,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367890.6356766,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367891.6425223,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367892.655227,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367893.671072,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367894.692732,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367895.6948447,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367896.7067354,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367897.718581,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367898.734644,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367899.8311677,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367900.8435018,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367901.8542995,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367902.8668654,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367903.8784544,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367904.8941495,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367905.9075012,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367906.918801,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367907.9358404,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367908.947799,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367909.9590447,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367910.974745,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367911.987621,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367912.999051,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367914.0917118,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367915.1072404,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367916.2089245,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367917.2149804,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367918.3069692,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367919.412984,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367920.4157975,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367921.4268186,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367922.4431744,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367923.464921,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367924.466862,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367925.4795082,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367926.4927397,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367927.5072105,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367928.6029153,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367929.6151736,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367988.1783788,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367989.1937394,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367990.2101667,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367991.2237344,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367992.2409534,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367993.2554889,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367994.2697737,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367995.2963195,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367996.3104064,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367997.3257284,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367998.339203,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751367999.3550642,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368000.3790398,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368001.394449,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368002.4088554,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368003.4229152,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368004.4372613,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368005.4569976,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368006.4724817,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368007.4879527,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368008.504355,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368009.5194378,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368010.5351114,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368011.5518374,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368012.567608,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368013.5835285,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368014.5980058,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368015.6250367,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368016.6402402,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368017.657157,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368018.6724703,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368019.6900642,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368020.7069914,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368021.72227,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368022.7399538,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368023.7541478,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368024.7696056,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368025.7884765,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368026.8051155,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368027.822468,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368028.840868,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368029.860335,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368030.8769493,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368031.8928468,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368032.9102423,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368033.9374273,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368034.953682,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368035.9670777,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368036.9834654,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368037.998809,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368039.0131552,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368040.0281677,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368041.0475469,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368042.0640821,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368043.0806487,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368044.0958571,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368045.11026,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368046.127199,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368047.1549659,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368048.1689928,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368049.1836042,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368050.198069,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368051.2126038,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368052.2322009,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368053.2457147,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368054.2613292,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368055.276461,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368056.2911587,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368057.3072102,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368058.3223794,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368059.3406348,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368060.3559866,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368061.3717442,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368062.3911426,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368063.4063349,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368064.4357069,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368065.4518175,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368066.4688737,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368067.4835367,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368068.4977577,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368069.515007,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368070.733131,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368071.7465475,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368072.7611806,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368073.77396,
+      "color": "red",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368074.994452,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368076.0097823,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368077.0223198,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368078.0372212,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368079.0509763,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368080.0668862,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368081.0838313,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368082.3030288,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368083.521637,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368085.6581328,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368086.6735656,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368087.690621,
+      "color": "green",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368088.9091377,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368089.926683,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368090.9413123,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368091.9568067,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368092.9708588,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368093.9854484,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368095.0006735,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368096.0160992,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368097.032994,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368098.0488892,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368099.0621223,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368100.092562,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368101.1092267,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368102.1268992,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368103.1435452,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368104.1584103,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368105.1907558,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368106.2052183,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368107.2206495,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368108.2368433,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368109.2570448,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368110.2909148,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368111.304599,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368112.318611,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368113.3359299,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368114.3528326,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368115.3821251,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368116.3965936,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368117.4108799,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368118.4274776,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368119.44252,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368120.4705534,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368121.4840841,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368122.5004554,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368123.5155497,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368124.5298834,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368125.545195,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368126.5611448,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368127.5774944,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368128.593358,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368129.6074367,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368130.6205935,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368131.6330137,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368132.6618896,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368133.6789773,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368134.6998434,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368135.71619,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368136.7305958,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368137.7606885,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368138.9801629,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368140.1992888,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368141.2131813,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368142.2279692,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368143.4473324,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368144.4618487,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368145.6921978,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368146.7058315,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368148.13146,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368149.1459994,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368150.1620178,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368151.1752324,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368152.1908414,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368153.2065897,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368154.2232616,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368155.23678,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368156.2542002,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368157.27004,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368158.2852507,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368159.3013256,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368160.7250628,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368162.1510046,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368163.1635647,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368164.1768303,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368165.189959,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368166.9227529,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368168.1438897,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368169.1576316,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368170.1716247,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368171.1852424,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368172.4041905,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368173.4189067,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368174.4343867,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368175.465703,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368176.6875165,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368177.7046118,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368178.7173445,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368179.7311614,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368180.7685692,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368181.7849967,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368182.8013566,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368184.0223634,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368185.037709,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368186.0513928,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368187.479049,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368188.5015006,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368189.515323,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368190.5285897,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368191.5425065,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368192.5571969,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368193.571743,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368194.586877,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368195.601527,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368196.6160274,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368198.3444543,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368199.5809824,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368200.9018815,
+      "color": "blue",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368202.120724,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368203.1356113,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368204.1507487,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368205.1639545,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368206.1784828,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368207.1956382,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368208.2105043,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368209.2295635,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368210.553647,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368211.5674505,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368212.581325,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368213.5964704,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368214.611059,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368215.6255043,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368216.645689,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368217.6628592,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368218.8798327,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368220.8122945,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368221.8261025,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368222.8417933,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368223.8592436,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368224.8758092,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368225.8915904,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368226.905892,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368227.9218802,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368229.1577895,
+      "color": "white",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368230.3757353,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368231.3894806,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368232.4033563,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368233.41756,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368234.4331715,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368235.4481516,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368236.7717187,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368237.785232,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368238.799254,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368239.816534,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368240.8324308,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368241.8468926,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368242.8613524,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368243.8755383,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368244.892375,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368245.9082797,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368246.9238098,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368247.9377882,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368248.9537108,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368249.967515,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368250.9823809,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368251.9978414,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368253.0127976,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368254.0292373,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368255.0426097,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368256.072906,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368257.0888631,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368258.1055226,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368259.121399,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368260.134946,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368261.1480691,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368262.1647997,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368263.1784391,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368264.1938648,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368265.2074692,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368266.2223816,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368267.2366562,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368268.252626,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368269.267532,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368270.2820852,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368271.2967215,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    },
+    {
+      "timestamp": 1751368272.3134131,
+      "color": "black",
+      "confidence": 0.85,
+      "context": "ignition_camera",
+      "item_type": ""
+    }
+  ]
+}

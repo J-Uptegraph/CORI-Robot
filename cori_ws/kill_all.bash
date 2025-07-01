@@ -10,10 +10,10 @@ pkill -f "ign gazebo" 2>/dev/null || true
 pkill -f "gz sim" 2>/dev/null || true
 pkill -f "v4l2_camera" 2>/dev/null || true
 pkill -f "robot_state_publisher" 2>/dev/null || true
-pkill -f "cori_vision" 2>/dev/null || true
-pkill -f "cori_vision" 2>/dev/null || true
-pkill -f "cori_vision" 2>/dev/null || true
-pkill -f "cori_gui" 2>/dev/null || true
+pkill -f "cori_cv" 2>/dev/null || true
+pkill -f "laundry_color_detector" 2>/dev/null || true
+pkill -f "simple_color_detector" 2>/dev/null || true
+pkill -f "color_display" 2>/dev/null || true
 
 # Force kill any stubborn processes
 pkill -9 -f "v4l2" 2>/dev/null || true
