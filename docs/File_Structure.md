@@ -1,6 +1,6 @@
 # CORI — Workspace File Structure: A Modular Approach
 
-This document details the current file structure of CORI's workspace, providing an overview of its core ROS 2 packages and shared assets. This architecture is specifically designed for **C.O.R.I. (Cooperative Organizational Robotic Intelligence)**, a home assistant robot focused on automating household tasks like laundry sorting. The workspace's organization champions modularity, enabling agile development, independent testing, and seamless integration of complex robotic functionalities.
+This document details the future file structure of CORI's workspace, providing an overview of its core ROS 2 packages and shared assets. This architecture is specifically designed for **C.O.R.I. (Cooperative Organizational Robotic Intelligence)**, a home assistant robot focused on automating household tasks like laundry sorting. The workspace's organization champions modularity, enabling agile development, independent testing, and seamless integration of complex robotic functionalities.
 
 > **Note on Paths:**  
 > All paths presented in this document are currently absolute representations of their location within the `cori_ws` workspace. Future documentation updates will implement relative path adjustments for improved portability.
