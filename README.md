@@ -26,8 +26,21 @@ This isn't about automating tasks—it's about reclaiming our time and energy by
 ---
 
 ## 📢 Latest Updates
-  <div align="center">
-    <table>      
+
+<div align="center">
+  <table>
+    <tr>
+      <td width="50%" align="center">
+        <img src="assets/gifs/CORI_Physical_Detection_to_Joint_Pos.gif" height="400px"/>
+        <br><b>Physical Detection → Joint Movement</b><br>
+        <em>Physical Camera Drives Virtual Head</em>
+      </td>
+      <td width="50%" align="center">
+        <img src="assets/gifs/CORI_Digital_Detection_to_Joint_Pos.gif" height="400px"/>
+        <br><b>Digital Detection → Joint Movement</b><br>
+        <em>Virtual Head Looks at Virtual Objects</em>
+      </td>
+    </tr> 
       <tr>
         <td colspan="2" align="center">
           <br><br>
