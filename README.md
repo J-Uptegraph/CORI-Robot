@@ -15,7 +15,8 @@ This isn't about automating tasks—it's about reclaiming our time and energy by
 
 | Version | Date         | Description                                     | Link                                                    |
 |---------|--------------|-------------------------------------------------|---------------------------------------------------------|
-| `v1.5`  | June 27, 2025 | CORI Laundry Sorting Intelligence & Adaptive Learning | [View v1.5](docs/project_updates/v1.5_update.md) |
+| `v1.6`  | July 1, 2025 | Architecture Refactor & Physical-Virtual Sensor Fusion  | [View v1.6](docs/project_updates/v1.6_update.md) |
+| `v1.5`  | June 27, 2025 | Laundry Sorting Intelligence & Adaptive Learning | [View v1.5](docs/project_updates/v1.5_update.md) |
 | `v1.4`  | June 24, 2025 | Independent Joint Controled URDF               | [View v1.4](docs/project_updates/v1.4_update.md)        |
 | `v1.3`  | June 19, 2025 | Vision + Gazebo Connection 🎉 MVP Achieved 🎉 | [View v1.3](docs/project_updates/v1.3_update.md)         |
 | `v1.2`  | June 15, 2025 | First Render of CORI + Laundry World in Gazebo | [View v1.2](docs/project_updates/v1.2_update.md)        |
