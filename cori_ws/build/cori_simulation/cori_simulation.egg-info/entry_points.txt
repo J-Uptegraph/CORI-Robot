@@ -1,0 +1,5 @@
+[console_scripts]
+cori_simulator = cori_simulation.cori_simulator:main
+demo_display = cori_simulation.demo_display:main
+sensor_fusion_demo = cori_simulation.sensor_fusion_demo:main
+

@@ -3,8 +3,7 @@
 # Description: Unified build and execution for CORI's laundry sorting system
 # Constants
 WORKSPACE_DIR="/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws"
-SENSOR_FUSION_PATH="src/cori_cv/cori_cv/sensor_fusion/spatial_database.py"
-INTEGRATION_PATH="src/tools/cori_ignition_integration.py"
+INTEGRATION_PATH="src/cori_tools/cori_tools/cori_ignition_integration.py"
 WORLD_FILE="src/cori_description/worlds/laundry_world.sdf"
 URDF_FILE="src/cori_description/urdf/cori.urdf.xacro"
 
@@ -92,8 +91,10 @@ URDF_FILE="src/cori_description/urdf/cori.urdf.xacro"
         pkill -f "gz sim" 2>/dev/null || true
         pkill -f "v4l2_camera" 2>/dev/null || true
         pkill -f "robot_state_publisher" 2>/dev/null || true
-        pkill -f "cori_cv" 2>/dev/null || true
-        pkill -f "sensor_fusion" 2>/dev/null || true
+        pkill -f "cori_vision" 2>/dev/null || true
+        pkill -f "cori_gui" 2>/dev/null || true
+        pkill -f "cori_simulation" 2>/dev/null || true
+        pkill -f "cori_tools" 2>/dev/null || true
         pkill -f "spatial_database" 2>/dev/null || true
         pkill -f "cori_ignition_integration" 2>/dev/null || true
         sleep 3
@@ -105,16 +106,36 @@ build_workspace() {
     echo "🧹 Cleaning previous build..."
     rm -rf build/ devel/ install/
     echo "🔨 Building workspace..."
-    colcon build --packages-select cori_description cori_cv
+    colcon build
     [ $? -eq 0 ] && echo "✅ Build successful!" || { echo "❌ Build failed!"; exit 1; }
+    
+    # Fix ROS 2 executable paths for cori_vision
+    echo "🔧 Fixing ROS 2 executable paths..."
+    if [ -d "install/cori_vision/bin" ] && [ -d "install/cori_vision/lib/cori_vision" ]; then
+        cp install/cori_vision/bin/* install/cori_vision/lib/cori_vision/ 2>/dev/null || true
+        echo "✅ Fixed cori_vision executable paths"
+    fi
+    
     echo "📦 Sourcing workspace..."
     source install/setup.bash
+    
+    # Add to bashrc for system-wide availability
+    echo "🌐 Setting up system-wide access..."
+    local setup_line="source $WORKSPACE_DIR/install/setup.bash"
+    if ! grep -q "$setup_line" ~/.bashrc; then
+        echo "# CORI Workspace Setup" >> ~/.bashrc
+        echo "$setup_line" >> ~/.bashrc
+        echo "✅ Added CORI workspace to ~/.bashrc"
+    else
+        echo "✅ CORI workspace already in ~/.bashrc"
+    fi
 }
 
 # Start Gazebo simulation
 start_gazebo() {
     local pid_var="$1"
     echo "🎮 Starting Gazebo simulation..."
+    source install/setup.bash
     ros2 launch cori_description spawn_cori_ignition.launch.py &
     eval "$pid_var=\$!"
     sleep 8
@@ -125,28 +146,29 @@ start_gazebo() {
 start_webcam() {
     local pid_var="$1"
     echo "📷 Starting webcam..."
-    ros2 launch cori_cv laundry_color_detector.launch.py &
+    source install/setup.bash
+    ros2 launch cori_vision laundry_color_detector.launch.py &
     eval "$pid_var=\$!"
     sleep 5
     [ -z "$(ps -p ${!pid_var} -o pid=)" ] && { echo "❌ Webcam failed to start!"; return 1; }
     return 0
 }
 
-# Run full system
-run_full_system() {
-    cleanup_processes "full system"
-    trap 'cleanup_processes "full system"; exit 0' SIGINT
+# Run system test
+run_system_test() {
+    cleanup_processes "system test"
+    trap 'cleanup_processes "system test"; exit 0' SIGINT
     start_gazebo GAZEBO_PID
     start_webcam WEBCAM_PID || { kill $GAZEBO_PID 2>/dev/null; exit 1; }
     echo "🔗 Starting color detection bridge..."
-    ros2 run cori_cv simple_color_detector &
+    ros2 run cori_vision simple_color_detector &
     BRIDGE_PID=$!
     sleep 3
     echo "🎨 Starting color display..."
     echo "👋 Hold colored objects in front of your webcam!"
     echo "📺 Ensure webcam permissions are enabled"
-    ros2 run cori_cv color_display
-    cleanup_processes "full system"
+    ros2 run cori_gui color_display
+    cleanup_processes "system test"
 }
 
 # Run Gazebo simulation only
@@ -181,46 +203,18 @@ run_webcam_color() {
     trap 'cleanup_processes "webcam color detection"; exit 0' SIGINT
     start_webcam WEBCAM_PID || exit 1
     echo "🎨 Starting color detection..."
-    ros2 run cori_cv simple_color_detector &
+    ros2 run cori_vision simple_color_detector &
     BRIDGE_PID=$!
     sleep 2
     echo "👋 Hold colored objects in front of your webcam!"
-    ros2 run cori_cv color_display
+    ros2 run cori_gui color_display
     cleanup_processes "webcam color detection"
 }
 
-# Run sensor fusion demo
-run_sensor_fusion() {
-    [ $(check_file "$SENSOR_FUSION_PATH"; echo $?) -ne 0 ] && exit 1
-    echo "🧠 CORI SENSOR FUSION DEMONSTRATION"
-    echo "==================================="
-    echo "🎯 DEMO SEQUENCE:"
-    echo "   1. Hold RED object → CORI looks LEFT (14°)"
-    echo "   2. Hold BLUE object → CORI looks RIGHT (-16°)"
-    echo "   3. Hold GREEN object → CORI looks STRAIGHT (0°)"
-    read -p "🚀 Start sensor fusion demo? [y/N]: " confirm
-    [[ ! $confirm =~ ^[Yy]$ ]] && { echo "👋 Demo cancelled"; exit 0; }
-    cleanup_processes "sensor fusion"
-    trap 'cleanup_processes "sensor fusion"; exit 0' SIGINT
-    echo "🗃️ Initializing spatial database..."
-    python3 "$SENSOR_FUSION_PATH"
-    start_gazebo GAZEBO_PID
-    start_webcam CAMERA_PID || { kill $GAZEBO_PID 2>/dev/null; exit 1; }
-    echo "🔍 Checking camera topics..."
-    ros2 topic list | grep -E "(image|camera)" || echo "No camera topics found yet, continuing..."
-    echo "🧠 Starting sensor fusion processing..."
-    python3 src/cori_cv/cori_cv/sensor_fusion/sensor_fusion_demo.py &
-    FUSION_PID=$!
-    sleep 2
-    echo "🖥️ Starting demo display..."
-    echo "🎯 HOLD COLORED OBJECTS IN FRONT OF CAMERA:"
-    python3 src/cori_cv/cori_cv/sensor_fusion/demo_display.py
-    cleanup_processes "sensor fusion"
-}
 
 # Run laundry assistant
 run_laundry_assistant() {
-    local script_path="src/cori_cv/cori_cv/cori_simulator.py"
+    local script_path="src/cori_simulation/cori_simulation/cori_simulator.py"
     [ $(check_file "$script_path"; echo $?) -ne 0 ] && { echo "❌ Laundry assistant not found!"; exit 1; }
     echo "🧺 CORI LAUNDRY SORTING ASSISTANT"
     echo "================================="
@@ -231,33 +225,34 @@ run_laundry_assistant() {
     read -p "🚀 Start laundry sorting? [y/N]: " confirm
     [[ ! $confirm =~ ^[Yy]$ ]] && { echo "👋 Cancelled"; exit 0; }
     trap 'echo -e "\n🛑 Stopping...\n💾 Progress saved!"; exit 0' SIGINT
-    cd src/cori_cv/cori_cv/
+    cd src/cori_simulation/cori_simulation/
     echo "🚀 Launching Laundry Assistant..."
     echo "🎯 TIPS: Start with 'red shirt', 'blue jeans'; type 'quit' to stop"
     python3 cori_simulator.py
 }
 
-# Run unified integration
-run_unified_integration() {
+# Run full system
+run_full_system() {
     [ $(check_file "$INTEGRATION_PATH"; echo $?) -ne 0 ] && exit 1
     echo "🔗 CORI UNIFIED INTEGRATION SYSTEM"
     echo "=================================="
     echo "🎯 Features:"
     echo "   🎮 Gazebo simulation"
-    echo "   📷 Camera detection"
+    echo "   📷 Camera detection with head movement"
     echo "   🧠 Unified database"
+    echo "   🤖 Automatic mode selection (Ignition Full)"
     read -p "🚀 Start integration? [y/N]: " confirm
     [[ ! $confirm =~ ^[Yy]$ ]] && { echo "👋 Cancelled"; exit 0; }
     cleanup_processes "unified integration"
     trap 'cleanup_processes "unified integration"; exit 0' SIGINT
     start_gazebo GAZEBO_PID
-    start_webcam CAMERA_PID || { kill $GAZEBO_PID 2>/dev/null; exit 1; }
-    echo "🔍 Verifying integration..."
-    ros2 topic list | grep -q "/camera/color/image_raw" || echo "   ⚠️ Camera topic not found"
-    ros2 topic list | grep -q "head_pan_joint" || echo "   ⚠️ Joint topic not found"
-    echo "🔗 Starting integration system..."
-    cd src/tools/
-    python3 cori_ignition_integration.py
+    echo "🔍 Verifying Gazebo startup..."
+    sleep 3
+    ros2 topic list | grep -q "/model/cori/joint/head_joint/cmd_pos" || echo "   ⚠️ Head joint topic not found"
+    echo "🔗 Starting CORI integration system..."
+    cd src/cori_tools/cori_tools/
+    # Auto-select Ignition Full mode (option 2) via command line argument
+    python3 cori_ignition_integration.py 2
     cleanup_processes "unified integration"
 }
 
@@ -297,21 +292,14 @@ main() {
         "3) 🧺 Laundry Sorting Assistant"
         "4) 📷 Webcam Color Detection"
         "5) 🦾 Manual Robot Control"
+        "6) 🧹 Kill All ROS Processes"
+        "7) 🔗 System Test"
+        "8) 🚪 Exit"
     )
 
     for item in "${menu_items[@]}"; do
         printf "│ %-*s │\n" $((menu_inner_width)) "$item"
     done
-
-    local fusion_exists=$(check_file "$SENSOR_FUSION_PATH" && echo true || echo false)
-    if [ "$fusion_exists" = true ]; then
-        printf "│ %-*s │\n" $((menu_inner_width)) "6) 🧠 Sensor Fusion Demo"
-    fi
-
-    # Note: Original option 8 is now option 7, and original option 1 is now option 8
-    printf "│ %-*s │\n" $((menu_inner_width)) "7) 🧹 Kill All ROS Processes"
-    printf "│ %-*s │\n" $((menu_inner_width)) "8) 🔗 System Test"
-    printf "│ %-*s │\n" $((menu_inner_width)) "9) 🚪 Exit"
 
     # Empty line before bottom border
     printf "│%*s│\n" $menu_inner_width ""
@@ -319,17 +307,16 @@ main() {
     echo "╰"$(printf '─%.0s' $(seq 1 $menu_inner_width))"╯"
     # --- End of Menu Box ---
 
-    read -p "Enter choice [1-9]: " choice
+    read -p "Enter choice [1-8]: " choice
     case $choice in
-        1) run_unified_integration ;;
+        1) run_full_system ;;
         2) run_gazebo_only ;;
         3) run_laundry_assistant ;;
         4) run_webcam_color ;;
         5) run_manual_control ;;
-        6) [ "$fusion_exists" = true ] && run_sensor_fusion || echo "❌ Invalid choice" ;;
-        7) kill_all_processes ;;
-        8) run_full_system ;;
-        9) echo "👋 Exiting..."; exit 0 ;;
+        6) kill_all_processes ;;
+        7) run_system_test ;;
+        8) echo "👋 Exiting..."; exit 0 ;;
         *) echo "❌ Invalid choice"; exit 1 ;;
     esac
     echo "🏁 CORI system ended."

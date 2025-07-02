@@ -1,0 +1,3 @@
+[console_scripts]
+color_display = cori_gui.color_display:main
+

@@ -1,0 +1,21 @@
+[1.183s] Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_control': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_control build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/install.log --single-version-externally-managed install_data
+[1.355s] running egg_info
+[1.355s] writing ../../build/cori_control/cori_control.egg-info/PKG-INFO
+[1.355s] writing dependency_links to ../../build/cori_control/cori_control.egg-info/dependency_links.txt
+[1.355s] writing entry points to ../../build/cori_control/cori_control.egg-info/entry_points.txt
+[1.356s] writing requirements to ../../build/cori_control/cori_control.egg-info/requires.txt
+[1.356s] writing top-level names to ../../build/cori_control/cori_control.egg-info/top_level.txt
+[1.357s] reading manifest file '../../build/cori_control/cori_control.egg-info/SOURCES.txt'
+[1.358s] writing manifest file '../../build/cori_control/cori_control.egg-info/SOURCES.txt'
+[1.358s] running build
+[1.358s] running build_py
+[1.358s] running install
+[1.358s] running install_lib
+[1.359s] running install_data
+[1.359s] running install_egg_info
+[1.361s] removing '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/lib/python3.10/site-packages/cori_control-1.0.0-py3.10.egg-info' (and everything under it)
+[1.361s] Copying ../../build/cori_control/cori_control.egg-info to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/lib/python3.10/site-packages/cori_control-1.0.0-py3.10.egg-info
+[1.361s] running install_scripts
+[1.376s] Installing joint_controller script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/bin
+[1.376s] writing list of installed files to '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/install.log'
+[1.397s] Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_control' returned '0': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_control build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/install.log --single-version-externally-managed install_data

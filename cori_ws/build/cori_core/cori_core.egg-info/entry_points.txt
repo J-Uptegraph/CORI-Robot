@@ -1,0 +1,3 @@
+[console_scripts]
+database_manager = cori_core.database_manager:main
+

@@ -1,0 +1,3 @@
+[console_scripts]
+ignition_integration = cori_tools.cori_ignition_integration:main
+

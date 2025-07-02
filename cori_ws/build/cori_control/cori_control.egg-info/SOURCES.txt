@@ -1,0 +1,12 @@
+package.xml
+setup.py
+../../build/cori_control/cori_control.egg-info/PKG-INFO
+../../build/cori_control/cori_control.egg-info/SOURCES.txt
+../../build/cori_control/cori_control.egg-info/dependency_links.txt
+../../build/cori_control/cori_control.egg-info/entry_points.txt
+../../build/cori_control/cori_control.egg-info/requires.txt
+../../build/cori_control/cori_control.egg-info/top_level.txt
+../../build/cori_control/cori_control.egg-info/zip-safe
+cori_control/__init__.py
+cori_control/joint_controller.py
+resource/cori_control

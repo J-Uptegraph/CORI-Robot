@@ -1,0 +1,628 @@
+[0.076s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.076s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7046e57e4700>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7046e57e4130>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7046e57e4130>>)
+[0.166s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.167s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.167s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.167s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.167s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.167s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.167s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extensions ['colcon_pkg']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extension 'colcon_pkg'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extension 'ros'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extensions ['cmake', 'python']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extension 'cmake'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extension 'python'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extensions ['python_setup_py']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models) by extension 'python_setup_py'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extension 'ros'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extensions ['cmake', 'python']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extension 'cmake'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extension 'python'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extensions ['python_setup_py']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/Sun) by extension 'python_setup_py'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extension 'ros'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extensions ['cmake', 'python']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extension 'cmake'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extension 'python'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extensions ['python_setup_py']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(models/ground_plane) by extension 'python_setup_py'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ros'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['cmake', 'python']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'cmake'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['python_setup_py']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python_setup_py'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extension 'ros'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extensions ['cmake', 'python']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extension 'cmake'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extension 'python'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extensions ['python_setup_py']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared) by extension 'python_setup_py'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extensions ['colcon_meta']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extension 'colcon_meta'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extensions ['ros']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extension 'ros'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extensions ['cmake', 'python']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extension 'cmake'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extension 'python'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extensions ['python_setup_py']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/database) by extension 'python_setup_py'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extensions ['colcon_meta']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extension 'colcon_meta'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extensions ['ros']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extension 'ros'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extensions ['cmake', 'python']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extension 'cmake'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extension 'python'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extensions ['python_setup_py']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models) by extension 'python_setup_py'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extensions ['colcon_meta']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extension 'colcon_meta'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extensions ['ros']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extension 'ros'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extensions ['cmake', 'python']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extension 'cmake'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extension 'python'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extensions ['python_setup_py']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/Sun) by extension 'python_setup_py'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extension 'ignore_ament_install'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extensions ['colcon_pkg']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extension 'colcon_pkg'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extension 'colcon_meta'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extensions ['ros']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extension 'ros'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extensions ['cmake', 'python']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extension 'cmake'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extension 'python'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extensions ['python_setup_py']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/models/ground_plane) by extension 'python_setup_py'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extension 'ignore_ament_install'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extensions ['colcon_pkg']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extension 'colcon_pkg'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extension 'colcon_meta'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extensions ['ros']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extension 'ros'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extensions ['cmake', 'python']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extension 'cmake'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extension 'python'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extensions ['python_setup_py']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(shared/worlds) by extension 'python_setup_py'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_control) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_control) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_control) by extension 'ignore_ament_install'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_control) by extensions ['colcon_pkg']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_control) by extension 'colcon_pkg'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_control) by extensions ['colcon_meta']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_control) by extension 'colcon_meta'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_control) by extensions ['ros']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_control) by extension 'ros'
+[0.179s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cori_control' with type 'ros.ament_python' and name 'cori_control'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_core) by extensions ['ignore', 'ignore_ament_install']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_core) by extension 'ignore'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_core) by extension 'ignore_ament_install'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_core) by extensions ['colcon_pkg']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_core) by extension 'colcon_pkg'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_core) by extensions ['colcon_meta']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_core) by extension 'colcon_meta'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_core) by extensions ['ros']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_core) by extension 'ros'
+[0.180s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cori_core' with type 'ros.ament_python' and name 'cori_core'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_description) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_description) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_description) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_description) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_description) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_description) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_description) by extension 'colcon_meta'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_description) by extensions ['ros']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_description) by extension 'ros'
+[0.180s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cori_description' with type 'ros.ament_cmake' and name 'cori_description'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_gui) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_gui) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_gui) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_gui) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_gui) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_gui) by extensions ['colcon_meta']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_gui) by extension 'colcon_meta'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_gui) by extensions ['ros']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_gui) by extension 'ros'
+[0.181s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cori_gui' with type 'ros.ament_python' and name 'cori_gui'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_simulation) by extensions ['ignore', 'ignore_ament_install']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_simulation) by extension 'ignore'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_simulation) by extension 'ignore_ament_install'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_simulation) by extensions ['colcon_pkg']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_simulation) by extension 'colcon_pkg'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_simulation) by extensions ['colcon_meta']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_simulation) by extension 'colcon_meta'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_simulation) by extensions ['ros']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_simulation) by extension 'ros'
+[0.182s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cori_simulation' with type 'ros.ament_python' and name 'cori_simulation'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_tools) by extension 'ignore'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_tools) by extension 'ignore_ament_install'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_tools) by extensions ['colcon_pkg']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_tools) by extension 'colcon_pkg'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_tools) by extensions ['colcon_meta']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_tools) by extension 'colcon_meta'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_tools) by extensions ['ros']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_tools) by extension 'ros'
+[0.182s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cori_tools' with type 'ros.ament_python' and name 'cori_tools'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_vision) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_vision) by extension 'ignore'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_vision) by extension 'ignore_ament_install'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_vision) by extensions ['colcon_pkg']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_vision) by extension 'colcon_pkg'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_vision) by extensions ['colcon_meta']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_vision) by extension 'colcon_meta'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_vision) by extensions ['ros']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/cori_vision) by extension 'ros'
+[0.183s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cori_vision' with type 'ros.ament_python' and name 'cori_vision'
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.201s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 338 installed packages in /opt/ros/humble
+[0.202s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_control' build argument 'cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_control' build argument 'cmake_target' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.225s] DEBUG:colcon.colcon_core.verb:Building package 'cori_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control', 'merge_install': False, 'path': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_control', 'symlink_install': False, 'test_result_base': None}
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_core' build argument 'cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_core' build argument 'cmake_target' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_core' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_core' build argument 'cmake_clean_cache' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_core' build argument 'cmake_clean_first' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_core' build argument 'cmake_force_configure' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_core' build argument 'ament_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_core' build argument 'catkin_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_core' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.225s] DEBUG:colcon.colcon_core.verb:Building package 'cori_core' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core', 'merge_install': False, 'path': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_core', 'symlink_install': False, 'test_result_base': None}
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_description' build argument 'cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_description' build argument 'cmake_target' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'cori_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.225s] DEBUG:colcon.colcon_core.verb:Building package 'cori_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description', 'merge_install': False, 'path': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description', 'symlink_install': False, 'test_result_base': None}
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_gui' build argument 'cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_gui' build argument 'cmake_target' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_gui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_gui' build argument 'cmake_clean_cache' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_gui' build argument 'cmake_clean_first' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_gui' build argument 'cmake_force_configure' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_gui' build argument 'ament_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_gui' build argument 'catkin_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_gui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.226s] DEBUG:colcon.colcon_core.verb:Building package 'cori_gui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui', 'merge_install': False, 'path': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_gui', 'symlink_install': False, 'test_result_base': None}
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_tools' build argument 'cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_tools' build argument 'cmake_target' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_tools' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_tools' build argument 'cmake_clean_cache' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_tools' build argument 'cmake_clean_first' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_tools' build argument 'cmake_force_configure' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_tools' build argument 'ament_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_tools' build argument 'catkin_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_tools' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.226s] DEBUG:colcon.colcon_core.verb:Building package 'cori_tools' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools', 'merge_install': False, 'path': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_tools', 'symlink_install': False, 'test_result_base': None}
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_vision' build argument 'cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_vision' build argument 'cmake_target' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_vision' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_vision' build argument 'cmake_clean_cache' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_vision' build argument 'cmake_clean_first' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_vision' build argument 'cmake_force_configure' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_vision' build argument 'ament_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_vision' build argument 'catkin_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_vision' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.226s] DEBUG:colcon.colcon_core.verb:Building package 'cori_vision' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision', 'merge_install': False, 'path': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_vision', 'symlink_install': False, 'test_result_base': None}
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_simulation' build argument 'cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_simulation' build argument 'cmake_target' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_simulation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_simulation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_simulation' build argument 'cmake_clean_first' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_simulation' build argument 'cmake_force_configure' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_simulation' build argument 'ament_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'cori_simulation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.227s] Level 5:colcon.colcon_core.verb:set package 'cori_simulation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.227s] DEBUG:colcon.colcon_core.verb:Building package 'cori_simulation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_simulation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation', 'merge_install': False, 'path': '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_simulation', 'symlink_install': False, 'test_result_base': None}
+[0.227s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.227s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.227s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_core' with build type 'ament_python'
+[0.227s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_core', 'ament_prefix_path')
+[0.229s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/ament_prefix_path.ps1'
+[0.229s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/ament_prefix_path.dsv'
+[0.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/ament_prefix_path.sh'
+[0.230s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.230s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.231s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_control' with build type 'ament_python'
+[0.232s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_control', 'ament_prefix_path')
+[0.232s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/ament_prefix_path.ps1'
+[0.232s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/ament_prefix_path.dsv'
+[0.232s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/ament_prefix_path.sh'
+[0.232s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.232s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.234s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description' with build type 'ament_cmake'
+[0.234s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description'
+[0.234s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.234s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.236s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_gui' with build type 'ament_python'
+[0.236s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_gui', 'ament_prefix_path')
+[0.236s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/ament_prefix_path.ps1'
+[0.236s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/ament_prefix_path.dsv'
+[0.236s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/ament_prefix_path.sh'
+[0.237s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.237s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.238s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_tools' with build type 'ament_python'
+[0.238s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_tools', 'ament_prefix_path')
+[0.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/ament_prefix_path.ps1'
+[0.239s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/ament_prefix_path.dsv'
+[0.239s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/ament_prefix_path.sh'
+[0.239s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.239s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.241s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_vision' with build type 'ament_python'
+[0.241s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_vision', 'ament_prefix_path')
+[0.241s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/ament_prefix_path.ps1'
+[0.242s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/ament_prefix_path.dsv'
+[0.242s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/ament_prefix_path.sh'
+[0.242s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.242s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.424s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_core'
+[0.425s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.425s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.582s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_control'
+[0.582s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.582s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.586s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description -DCMAKE_INSTALL_PREFIX=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description
+[0.742s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_gui'
+[0.742s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.742s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.907s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_tools'
+[0.907s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.907s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.089s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_vision'
+[1.089s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.089s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.097s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_description -DCMAKE_INSTALL_PREFIX=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description
+[1.099s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description -- -j20 -l20
+[1.132s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description -- -j20 -l20
+[1.142s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description
+[1.174s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cori_description)
+[1.177s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description' for CMake module files
+[1.178s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description' for CMake config files
+[1.183s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_description
+[1.183s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_description', 'cmake_prefix_path')
+[1.183s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/hook/cmake_prefix_path.ps1'
+[1.184s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/hook/cmake_prefix_path.dsv'
+[1.184s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/hook/cmake_prefix_path.sh'
+[1.184s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/bin'
+[1.184s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/lib/pkgconfig/cori_description.pc'
+[1.185s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/lib/python3.10/site-packages'
+[1.185s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/bin'
+[1.185s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.ps1'
+[1.186s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.dsv'
+[1.186s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.sh'
+[1.186s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.bash'
+[1.187s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.zsh'
+[1.187s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/colcon-core/packages/cori_description)
+[1.188s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cori_description)
+[1.188s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description' for CMake module files
+[1.188s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description' for CMake config files
+[1.189s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_description', 'cmake_prefix_path')
+[1.189s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/hook/cmake_prefix_path.ps1'
+[1.189s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/hook/cmake_prefix_path.dsv'
+[1.189s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/hook/cmake_prefix_path.sh'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/bin'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/lib/pkgconfig/cori_description.pc'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/lib/python3.10/site-packages'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/bin'
+[1.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.ps1'
+[1.190s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.dsv'
+[1.191s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.sh'
+[1.191s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.bash'
+[1.191s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/cori_description/package.zsh'
+[1.191s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_description/share/colcon-core/packages/cori_description)
+[1.370s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_tools': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_tools build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/install.log --single-version-externally-managed install_data
+[1.377s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_core': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_core build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/install.log --single-version-externally-managed install_data
+[1.381s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_vision': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_vision build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/install.log --single-version-externally-managed install_data
+[1.395s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_control': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_control build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/install.log --single-version-externally-managed install_data
+[1.471s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_gui': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_gui build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/install.log --single-version-externally-managed install_data
+[1.606s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core' for CMake module files
+[1.606s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_core' returned '0': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_core build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/install.log --single-version-externally-managed install_data
+[1.607s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core' for CMake config files
+[1.607s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib'
+[1.607s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/bin'
+[1.608s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_core', 'path')
+[1.608s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/path.ps1'
+[1.608s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/path.dsv'
+[1.608s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/path.sh'
+[1.608s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/pkgconfig/cori_core.pc'
+[1.609s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages'
+[1.609s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_core', 'pythonpath')
+[1.609s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/pythonpath.ps1'
+[1.609s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/pythonpath.dsv'
+[1.609s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/pythonpath.sh'
+[1.610s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/bin'
+[1.610s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_core', 'pythonscriptspath')
+[1.610s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/pythonscriptspath.ps1'
+[1.610s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/pythonscriptspath.dsv'
+[1.610s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/hook/pythonscriptspath.sh'
+[1.611s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cori_core)
+[1.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/package.ps1'
+[1.611s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/package.dsv'
+[1.612s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/package.sh'
+[1.612s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/package.bash'
+[1.612s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core/package.zsh'
+[1.612s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/colcon-core/packages/cori_core)
+[1.613s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_simulation' with build type 'ament_python'
+[1.613s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_simulation', 'ament_prefix_path')
+[1.613s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/ament_prefix_path.ps1'
+[1.614s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/ament_prefix_path.dsv'
+[1.614s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/ament_prefix_path.sh'
+[1.614s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.614s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.617s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools' for CMake module files
+[1.618s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_tools' returned '0': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_tools build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/install.log --single-version-externally-managed install_data
+[1.619s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools' for CMake config files
+[1.619s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib'
+[1.619s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/bin'
+[1.620s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_tools', 'path')
+[1.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/path.ps1'
+[1.620s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/path.dsv'
+[1.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/path.sh'
+[1.621s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/pkgconfig/cori_tools.pc'
+[1.621s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/python3.10/site-packages'
+[1.621s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_tools', 'pythonpath')
+[1.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/pythonpath.ps1'
+[1.621s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/pythonpath.dsv'
+[1.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/pythonpath.sh'
+[1.622s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/bin'
+[1.622s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_tools', 'pythonscriptspath')
+[1.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/pythonscriptspath.ps1'
+[1.622s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/pythonscriptspath.dsv'
+[1.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/hook/pythonscriptspath.sh'
+[1.623s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cori_tools)
+[1.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/package.ps1'
+[1.623s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/package.dsv'
+[1.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/package.sh'
+[1.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/package.bash'
+[1.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/cori_tools/package.zsh'
+[1.624s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/share/colcon-core/packages/cori_tools)
+[1.625s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision' for CMake module files
+[1.625s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_vision' returned '0': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_vision build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/install.log --single-version-externally-managed install_data
+[1.626s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision' for CMake config files
+[1.626s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/lib'
+[1.626s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/bin'
+[1.626s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_vision', 'path')
+[1.626s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/path.ps1'
+[1.626s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/path.dsv'
+[1.627s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/path.sh'
+[1.627s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/lib/pkgconfig/cori_vision.pc'
+[1.627s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/lib/python3.10/site-packages'
+[1.627s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_vision', 'pythonpath')
+[1.627s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/pythonpath.ps1'
+[1.628s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/pythonpath.dsv'
+[1.628s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/pythonpath.sh'
+[1.628s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/bin'
+[1.628s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_vision', 'pythonscriptspath')
+[1.629s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/pythonscriptspath.ps1'
+[1.629s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/pythonscriptspath.dsv'
+[1.629s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/hook/pythonscriptspath.sh'
+[1.630s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cori_vision)
+[1.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/package.ps1'
+[1.631s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/package.dsv'
+[1.632s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/package.sh'
+[1.633s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/package.bash'
+[1.633s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/package.zsh'
+[1.634s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/colcon-core/packages/cori_vision)
+[1.817s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_simulation'
+[1.818s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.818s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.821s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui' for CMake module files
+[1.821s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_gui' returned '0': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_gui build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/install.log --single-version-externally-managed install_data
+[1.821s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui' for CMake config files
+[1.821s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib'
+[1.821s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/bin'
+[1.821s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_gui', 'path')
+[1.822s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/path.ps1'
+[1.822s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/path.dsv'
+[1.822s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/path.sh'
+[1.822s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/pkgconfig/cori_gui.pc'
+[1.822s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/python3.10/site-packages'
+[1.822s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_gui', 'pythonpath')
+[1.823s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/pythonpath.ps1'
+[1.823s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/pythonpath.dsv'
+[1.823s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/pythonpath.sh'
+[1.823s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/bin'
+[1.823s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_gui', 'pythonscriptspath')
+[1.823s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/pythonscriptspath.ps1'
+[1.824s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/pythonscriptspath.dsv'
+[1.824s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/hook/pythonscriptspath.sh'
+[1.824s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cori_gui)
+[1.824s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/package.ps1'
+[1.824s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/package.dsv'
+[1.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/package.sh'
+[1.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/package.bash'
+[1.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui/package.zsh'
+[1.825s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/colcon-core/packages/cori_gui)
+[1.826s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control' for CMake module files
+[1.826s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control' for CMake config files
+[1.826s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/lib'
+[1.826s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/bin'
+[1.826s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_control', 'path')
+[1.827s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/path.ps1'
+[1.827s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_control' returned '0': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_control build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_control/install.log --single-version-externally-managed install_data
+[1.827s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/path.dsv'
+[1.827s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/path.sh'
+[1.827s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/lib/pkgconfig/cori_control.pc'
+[1.828s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/lib/python3.10/site-packages'
+[1.828s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_control', 'pythonpath')
+[1.828s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/pythonpath.ps1'
+[1.828s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/pythonpath.dsv'
+[1.828s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/pythonpath.sh'
+[1.829s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/bin'
+[1.829s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_control', 'pythonscriptspath')
+[1.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/pythonscriptspath.ps1'
+[1.829s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/pythonscriptspath.dsv'
+[1.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/hook/pythonscriptspath.sh'
+[1.830s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cori_control)
+[1.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/package.ps1'
+[1.830s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/package.dsv'
+[1.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/package.sh'
+[1.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/package.bash'
+[1.831s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/cori_control/package.zsh'
+[1.831s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_control/share/colcon-core/packages/cori_control)
+[2.105s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_simulation': AMENT_PREFIX_PATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core:${AMENT_PREFIX_PATH} PATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/bin:${PATH} PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/lib/python3.10/site-packages:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_simulation build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_simulation/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_simulation/install.log --single-version-externally-managed install_data
+[2.332s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation' for CMake module files
+[2.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_simulation' returned '0': AMENT_PREFIX_PATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core:${AMENT_PREFIX_PATH} PATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/bin:${PATH} PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/lib/python3.10/site-packages:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_simulation build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_simulation/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_simulation/install.log --single-version-externally-managed install_data
+[2.333s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation' for CMake config files
+[2.333s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/lib'
+[2.333s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/bin'
+[2.334s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_simulation', 'path')
+[2.334s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/path.ps1'
+[2.334s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/path.dsv'
+[2.334s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/path.sh'
+[2.335s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/lib/pkgconfig/cori_simulation.pc'
+[2.335s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/lib/python3.10/site-packages'
+[2.335s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_simulation', 'pythonpath')
+[2.335s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/pythonpath.ps1'
+[2.336s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/pythonpath.dsv'
+[2.336s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/pythonpath.sh'
+[2.336s] Level 1:colcon.colcon_core.environment:checking '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/bin'
+[2.336s] Level 1:colcon.colcon_core.shell:create_environment_hook('cori_simulation', 'pythonscriptspath')
+[2.337s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/pythonscriptspath.ps1'
+[2.337s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/pythonscriptspath.dsv'
+[2.337s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/hook/pythonscriptspath.sh'
+[2.337s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cori_simulation)
+[2.338s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/package.ps1'
+[2.338s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/package.dsv'
+[2.338s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/package.sh'
+[2.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/package.bash'
+[2.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/cori_simulation/package.zsh'
+[2.339s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_simulation/share/colcon-core/packages/cori_simulation)
+[2.340s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.340s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.340s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.340s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.345s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.345s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.345s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.354s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.354s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/local_setup.ps1'
+[2.355s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/_local_setup_util_ps1.py'
+[2.356s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/setup.ps1'
+[2.357s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/local_setup.sh'
+[2.358s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/_local_setup_util_sh.py'
+[2.359s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/setup.sh'
+[2.360s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/local_setup.bash'
+[2.360s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/setup.bash'
+[2.361s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/local_setup.zsh'
+[2.362s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/setup.zsh'

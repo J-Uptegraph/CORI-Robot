@@ -1,0 +1,28 @@
+# CORI Workspace Dependencies
+# Generated: 2025-07-01
+
+## ROS 2 Core Dependencies
+rclpy
+std_msgs
+sensor_msgs
+cv_bridge
+
+## Computer Vision
+opencv-python
+python3-opencv
+
+## Simulation
+gazebo-ros-pkgs
+ros-humble-robot-state-publisher
+ros-humble-joint-state-publisher
+ros-humble-xacro
+
+## Development Tools
+python3-pytest
+ament-copyright
+ament-flake8
+ament-pep257
+
+## System Dependencies
+python3-json
+python3-yaml

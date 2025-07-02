@@ -1,0 +1,12 @@
+source;share/cori_simulation/hook/path.ps1
+source;share/cori_simulation/hook/path.dsv
+source;share/cori_simulation/hook/path.sh
+source;share/cori_simulation/hook/pythonpath.ps1
+source;share/cori_simulation/hook/pythonpath.dsv
+source;share/cori_simulation/hook/pythonpath.sh
+source;share/cori_simulation/hook/pythonscriptspath.ps1
+source;share/cori_simulation/hook/pythonscriptspath.dsv
+source;share/cori_simulation/hook/pythonscriptspath.sh
+source;share/cori_simulation/hook/ament_prefix_path.ps1
+source;share/cori_simulation/hook/ament_prefix_path.dsv
+source;share/cori_simulation/hook/ament_prefix_path.sh
