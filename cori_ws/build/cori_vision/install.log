@@ -9,6 +9,7 @@
 /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/ament_index/resource_index/packages/cori_vision
 /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/package.xml
 /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/launch/laundry_color_detector.launch.py
+/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/launch/camera_only.launch.py
 /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/share/cori_vision/config/color_piles.yaml
 /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/lib/cori_vision
 /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/lib/python3.10/site-packages/cori_vision-1.0.0-py3.10.egg-info/entry_points.txt

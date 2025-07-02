@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/cori_tools/cori_tools.egg-info/PKG-INFO
+writing dependency_links to ../../build/cori_tools/cori_tools.egg-info/dependency_links.txt
+writing entry points to ../../build/cori_tools/cori_tools.egg-info/entry_points.txt
+writing requirements to ../../build/cori_tools/cori_tools.egg-info/requires.txt
+writing top-level names to ../../build/cori_tools/cori_tools.egg-info/top_level.txt
+reading manifest file '../../build/cori_tools/cori_tools.egg-info/SOURCES.txt'
+writing manifest file '../../build/cori_tools/cori_tools.egg-info/SOURCES.txt'
+running build
+running build_py
+copying cori_tools/cori_ignition_integration.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/build/lib/cori_tools
+running install
+running install_lib
+copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/build/lib/cori_tools/cori_ignition_integration.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/python3.10/site-packages/cori_tools
+byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/python3.10/site-packages/cori_tools/cori_ignition_integration.py to cori_ignition_integration.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/python3.10/site-packages/cori_tools-1.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/cori_tools/cori_tools.egg-info to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/lib/python3.10/site-packages/cori_tools-1.0.0-py3.10.egg-info
+running install_scripts
+Installing ignition_integration script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_tools/bin
+writing list of installed files to '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_tools/install.log'

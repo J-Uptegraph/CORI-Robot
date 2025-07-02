@@ -28,7 +28,7 @@ def generate_launch_description():
             package='cori_vision',
             executable='laundry_color_detector',
             name='laundry_color_detector',
-            output='screen',
+            output='log',  # Suppress terminal output
             remappings=[
                 ('/image_raw', '/camera/color/image_raw')
             ]

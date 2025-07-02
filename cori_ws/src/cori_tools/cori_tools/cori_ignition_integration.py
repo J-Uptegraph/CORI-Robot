@@ -11,6 +11,8 @@ import threading
 import queue
 import os
 import sys
+import subprocess
+import signal
 from typing import Dict, List, Optional, Tuple, Any
 from dataclasses import dataclass, asdict
 from datetime import datetime
@@ -154,21 +156,34 @@ class IgnitionCameraHandler:
         self.node = None
         self.bridge = None
         self.detection_callbacks = []
+        self.camera_process = None
         
         # Detection throttling
         self.last_detection_time = 0
-        self.detection_interval = 1.0  # Only detect every 1 second
+        self.last_action_time = 0
+        self.detection_interval = 0.1  # Check every 100ms for responsiveness
+        self.action_interval = 2.0  # Only take action every 2 seconds
         self.last_detected_color = "unknown"
-        self.stable_detection_count = 0
-        self.required_stable_detections = 3
+        self.last_reported_color = "unknown"  # Track what was last reported to avoid repeats
+        self.color_start_time = 0
+        self.required_hold_time = 0.5  # Hold color for 0.5 seconds before acting
+        self.min_confidence_threshold = 0.75  # Minimum confidence to trigger detection
         
         # Color detection parameters (tuned for your NexiGo camera)
         self.color_ranges = {
                 'red': {
-                    'lower1': np.array([0, 120, 70]),
-                    'upper1': np.array([10, 255, 255]),
-                    'lower2': np.array([170, 120, 70]),
+                    'lower1': np.array([0, 150, 100]),
+                    'upper1': np.array([5, 255, 255]),
+                    'lower2': np.array([175, 150, 100]),
                     'upper2': np.array([180, 255, 255])
+                },
+                'orange': {
+                    'lower': np.array([8, 120, 100]),
+                    'upper': np.array([20, 255, 255])
+                },
+                'yellow': {
+                    'lower': np.array([22, 80, 120]),
+                    'upper': np.array([32, 255, 255])
                 },
                 'blue': {
                     'lower': np.array([100, 150, 70]),
@@ -178,17 +193,9 @@ class IgnitionCameraHandler:
                     'lower': np.array([40, 120, 70]),
                     'upper': np.array([80, 255, 255])
                 },
-                'yellow': {
-                    'lower': np.array([20, 100, 100]),
-                    'upper': np.array([30, 255, 255])
-                },
-                'orange': {
-                    'lower': np.array([10, 100, 100]),
-                    'upper': np.array([20, 255, 255])
-                },
                 'purple': {
-                    'lower': np.array([130, 100, 100]),
-                    'upper': np.array([160, 255, 255])
+                    'lower': np.array([120, 80, 60]),
+                    'upper': np.array([170, 255, 255])
                 },
                 'black': {
                     'lower': np.array([0, 0, 0]),
@@ -203,10 +210,53 @@ class IgnitionCameraHandler:
                     'upper': np.array([180, 50, 200])
                 }
         }
-
         
         if ROS_AVAILABLE:
             self.setup_ros()
+    
+    def launch_camera(self):
+        """Launch camera nodes automatically"""
+        try:
+            print("📷 Launching camera nodes...")
+            
+            # Create a separate thread to launch camera
+            def camera_thread():
+                try:
+                    # Get the current environment and add ROS setup
+                    env = os.environ.copy()
+                    workspace_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+                    
+                    # Add ROS paths to environment
+                    setup_script = os.path.join(workspace_dir, 'install', 'setup.bash')
+                    
+                    # Source the setup and launch camera
+                    cmd = ['bash', '-c', f'source {setup_script} && exec ros2 launch cori_vision laundry_color_detector.launch.py']
+                    
+                    self.camera_process = subprocess.Popen(
+                        cmd,
+                        env=env,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        preexec_fn=os.setsid
+                    )
+                    
+                    # Keep process alive
+                    self.camera_process.wait()
+                    
+                except Exception as e:
+                    print(f"Camera thread error: {e}")
+            
+            # Start camera in background thread
+            camera_thread_obj = threading.Thread(target=camera_thread, daemon=True)
+            camera_thread_obj.start()
+            
+            # Wait for camera to initialize
+            time.sleep(3)
+            # Suppressed for cleaner output
+            
+        except Exception as e:
+            print(f"⚠️  Failed to launch camera: {e}")
+            self.camera_process = None
     
     def setup_ros(self):
         """Setup ROS2 node for camera handling"""
@@ -232,7 +282,7 @@ class IgnitionCameraHandler:
                 10
             )
             
-            print("✅ Camera handler initialized with Ignition topics")
+            # Suppressed for cleaner output
             
         except Exception as e:
             print(f"❌ ROS setup failed: {e}")
@@ -242,54 +292,65 @@ class IgnitionCameraHandler:
         self.detection_callbacks.append(callback)
     
     def camera_callback(self, msg):
-        """Process camera images with throttling"""
+        """Process camera images with hold-time throttling"""
         current_time = time.time()
         
         # Throttle detection rate
         if current_time - self.last_detection_time < self.detection_interval:
             return
         
+        self.last_detection_time = current_time
+        
         try:
             cv_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
-            detected_color = self.detect_dominant_color(cv_image)
+            detected_color, confidence = self.detect_dominant_color(cv_image)
             
-            # Require stable detections
-            if detected_color == self.last_detected_color:
-                self.stable_detection_count += 1
+            # Only process if confidence is high enough
+            if confidence < self.min_confidence_threshold:
+                detected_color = "unknown"
+            
+            # Track color hold time
+            if detected_color == self.last_detected_color and detected_color != "unknown":
+                # Same color continues - check if held long enough
+                hold_time = current_time - self.color_start_time
+                
+                if (hold_time >= self.required_hold_time and 
+                    detected_color != self.last_reported_color):
+                    
+                    # Color held long enough and is different from last reported
+                    event = DetectionEvent(
+                        color=detected_color,
+                        confidence=confidence,
+                        timestamp=current_time,
+                        context="ignition_camera"
+                    )
+                    
+                    self.last_action_time = current_time
+                    self.last_reported_color = detected_color  # Track what we reported
+                    
+                    # Notify all callbacks
+                    for callback in self.detection_callbacks:
+                        try:
+                            callback(event)
+                        except Exception as e:
+                            print(f"⚠️  Callback error: {e}")
+                    
+                    # Publish to ROS topic
+                    color_msg = String()
+                    color_msg.data = detected_color
+                    self.color_pub.publish(color_msg)
+            
             else:
-                self.stable_detection_count = 1
-                self.last_detected_color = detected_color
-            
-            # Only process stable detections
-            if detected_color != "unknown" and self.stable_detection_count >= self.required_stable_detections:
-                # Create detection event
-                event = DetectionEvent(
-                    color=detected_color,
-                    confidence=0.85,
-                    timestamp=current_time,
-                    context="ignition_camera"
-                )
-                
-                # Update last detection time
-                self.last_detection_time = current_time
-                
-                # Notify all callbacks
-                for callback in self.detection_callbacks:
-                    try:
-                        callback(event)
-                    except Exception as e:
-                        print(f"⚠️  Callback error: {e}")
-                
-                # Publish to ROS topic
-                color_msg = String()
-                color_msg.data = detected_color
-                self.color_pub.publish(color_msg)
+                # Different color detected - reset timer
+                if detected_color != self.last_detected_color:
+                    self.last_detected_color = detected_color
+                    self.color_start_time = current_time
                 
         except Exception as e:
             print(f"❌ Camera callback error: {e}")
     
     def detect_dominant_color(self, image):
-        """Detect dominant color in image center"""
+        """Detect dominant color in image center with confidence scoring"""
         height, width = image.shape[:2]
         center_x, center_y = width // 2, height // 2
         roi_size = min(width, height) // 6
@@ -303,9 +364,16 @@ class IgnitionCameraHandler:
         # Convert to HSV
         hsv_roi = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
         
+        # Calculate average brightness to filter out dark backgrounds
+        avg_brightness = np.mean(hsv_roi[:, :, 2])
+        if avg_brightness < 50:  # Too dark, likely background
+            return "unknown", 0.0
+        
         # Test each color
         best_score = 0
         best_color = "unknown"
+        best_confidence = 0.0
+        roi_pixels = roi_size * roi_size * 4  # Total pixels in ROI
         
         for color_name, ranges in self.color_ranges.items():
             if color_name == 'red':
@@ -316,12 +384,31 @@ class IgnitionCameraHandler:
             else:
                 mask = cv2.inRange(hsv_roi, ranges['lower'], ranges['upper'])
             
-            score = np.sum(mask) / 255
-            if score > best_score and score > 200:  # Minimum threshold
-                best_score = score
+            # Calculate confidence as percentage of pixels matching
+            matching_pixels = np.sum(mask) / 255
+            confidence = matching_pixels / roi_pixels
+            
+            if confidence > best_confidence and confidence > 0.15:  # At least 15% of pixels must match
+                best_confidence = confidence
                 best_color = color_name
         
-        return best_color
+        return best_color, best_confidence
+    
+    def cleanup(self):
+        """Cleanup camera processes"""
+        if self.camera_process:
+            try:
+                # Kill entire process group
+                os.killpg(os.getpgid(self.camera_process.pid), signal.SIGTERM)
+                self.camera_process.wait(timeout=5)
+                print("✅ Camera process stopped")
+            except:
+                try:
+                    os.killpg(os.getpgid(self.camera_process.pid), signal.SIGKILL)
+                except:
+                    pass
+                print("⚠️  Camera process killed")
+            self.camera_process = None
 
 class IgnitionRobotController:
     """Control CORI robot in Ignition Gazebo - FIXED JOINT NAMES"""
@@ -382,7 +469,8 @@ class IgnitionRobotController:
         self.move_head(target_angle)
         
         angle_degrees = math.degrees(target_angle)
-        direction = "LEFT" if target_angle < 0 else "RIGHT" if target_angle > 0 else "CENTER"
+        # Fixed direction mapping - flip LEFT and RIGHT
+        direction = "RIGHT" if target_angle < 0 else "LEFT" if target_angle > 0 else "CENTER"
         print(f"🤖 Moving head {direction} ({angle_degrees:.1f}°) for {color} object")
     
     def move_head(self, angle_rad: float):
@@ -437,11 +525,39 @@ class CORIIgnitionSystem:
         
         self.ros_thread = threading.Thread(target=spin_nodes, daemon=True)
         self.ros_thread.start()
-        print("✅ ROS spinning started in background")
+        # ROS spinning started (suppressed for cleaner output)
+    
+    def print_ready_banner(self):
+        """Print a clean banner when system is ready"""
+        print("\n" + "="*60)
+        print("🤖 CORI COLOR DETECTION SYSTEM - READY")
+        print("="*60)
+        print("Hold a colored object in front of the camera for 0.5 seconds")
+        print("Head will move and colors will be displayed below:")
+        print("-"*60)
     
     def handle_detection(self, event: DetectionEvent):
-        """Handle color detection events"""
-        print(f"👁️  Detected {event.color} (confidence: {event.confidence:.2f})")
+        """Handle color detection events with colored text"""
+        # ANSI color codes for terminal output
+        color_codes = {
+            'red': '\033[91m',
+            'green': '\033[92m', 
+            'yellow': '\033[93m',
+            'blue': '\033[94m',
+            'purple': '\033[95m',
+            'orange': '\033[38;5;208m',
+            'black': '\033[90m',
+            'grey': '\033[37m',
+            'white': '\033[97m'
+        }
+        reset_code = '\033[0m'
+        
+        # Get color code or use default
+        color_code = color_codes.get(event.color, '')
+        colored_color = f"{color_code}{event.color.upper()}{reset_code}"
+        
+        print(f"\n{'-'*40}")
+        print(f"👁️  Detected {colored_color} (confidence: {event.confidence:.2f})")
         
         # Log to database
         self.database.log_detection(event)
@@ -684,17 +800,27 @@ def main():
         except ValueError:
             pass
     
-    # Check if ROS2 topics are available
+    # Check if ROS2 topics are available (wait for them to start)
     if ROS_AVAILABLE:
         try:
             rclpy.init()
             temp_node = rclpy.create_node('cori_topic_checker')
             
-            topic_names = temp_node.get_topic_names_and_types()
-            topic_list = [name for name, _ in topic_names]
+            # Wait for topics to appear (camera may be launching)
+            camera_available = False
+            cori_available = False
             
-            camera_available = any('/camera' in topic for topic in topic_list)
-            cori_available = any('/cori' in topic for topic in topic_list)
+            for i in range(10):  # Wait up to 10 seconds
+                topic_names = temp_node.get_topic_names_and_types()
+                topic_list = [name for name, _ in topic_names]
+                
+                camera_available = any('/camera' in topic for topic in topic_list)
+                cori_available = any('/cori' in topic for topic in topic_list)
+                
+                if camera_available and cori_available:
+                    break
+                    
+                time.sleep(1)  # Wait 1 second between checks
             
             temp_node.destroy_node()
             rclpy.shutdown()
@@ -732,8 +858,9 @@ def main():
     try:
         system = CORIIgnitionSystem(selected_mode)
         if auto_mode:
-            print("🤖 Auto-mode: Starting camera detection and manual control...")
-            print("Press Ctrl+C to exit")
+            # Give system a moment to fully initialize
+            time.sleep(2)
+            system.print_ready_banner()
             # Keep running until interrupted
             while True:
                 time.sleep(1)

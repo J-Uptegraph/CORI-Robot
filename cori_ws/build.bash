@@ -147,7 +147,7 @@ start_webcam() {
     local pid_var="$1"
     echo "📷 Starting webcam..."
     source install/setup.bash
-    ros2 launch cori_vision laundry_color_detector.launch.py &
+    ros2 launch cori_vision camera_only.launch.py &
     eval "$pid_var=\$!"
     sleep 5
     [ -z "$(ps -p ${!pid_var} -o pid=)" ] && { echo "❌ Webcam failed to start!"; return 1; }
@@ -243,12 +243,14 @@ run_full_system() {
     echo "   🤖 Automatic mode selection (Ignition Full)"
     read -p "🚀 Start integration? [y/N]: " confirm
     [[ ! $confirm =~ ^[Yy]$ ]] && { echo "👋 Cancelled"; exit 0; }
-    cleanup_processes "unified integration"
     trap 'cleanup_processes "unified integration"; exit 0' SIGINT
     start_gazebo GAZEBO_PID
     echo "🔍 Verifying Gazebo startup..."
+    sleep 5
+    # Launch camera for full system mode
+    echo "📷 Starting camera for integration..."
+    start_webcam WEBCAM_PID
     sleep 3
-    ros2 topic list | grep -q "/model/cori/joint/head_joint/cmd_pos" || echo "   ⚠️ Head joint topic not found"
     echo "🔗 Starting CORI integration system..."
     cd src/cori_tools/cori_tools/
     # Auto-select Ignition Full mode (option 2) via command line argument

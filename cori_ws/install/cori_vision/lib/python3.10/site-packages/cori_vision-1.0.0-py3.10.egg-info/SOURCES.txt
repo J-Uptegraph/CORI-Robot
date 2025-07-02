@@ -12,5 +12,6 @@ cori_vision/__init__.py
 cori_vision/laundry_color_detector.py
 cori_vision/object_detection.py
 cori_vision/simple_color_detector.py
+launch/camera_only.launch.py
 launch/laundry_color_detector.launch.py
 resource/cori_vision

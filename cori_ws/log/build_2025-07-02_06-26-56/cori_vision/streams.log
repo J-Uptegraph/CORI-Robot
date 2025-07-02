@@ -1,0 +1,23 @@
+[1.176s] Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_vision': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_vision build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/install.log --single-version-externally-managed install_data
+[1.352s] running egg_info
+[1.352s] writing ../../build/cori_vision/cori_vision.egg-info/PKG-INFO
+[1.353s] writing dependency_links to ../../build/cori_vision/cori_vision.egg-info/dependency_links.txt
+[1.353s] writing entry points to ../../build/cori_vision/cori_vision.egg-info/entry_points.txt
+[1.353s] writing requirements to ../../build/cori_vision/cori_vision.egg-info/requires.txt
+[1.353s] writing top-level names to ../../build/cori_vision/cori_vision.egg-info/top_level.txt
+[1.354s] reading manifest file '../../build/cori_vision/cori_vision.egg-info/SOURCES.txt'
+[1.355s] writing manifest file '../../build/cori_vision/cori_vision.egg-info/SOURCES.txt'
+[1.355s] running build
+[1.355s] running build_py
+[1.355s] running install
+[1.355s] running install_lib
+[1.356s] running install_data
+[1.356s] running install_egg_info
+[1.358s] removing '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/lib/python3.10/site-packages/cori_vision-1.0.0-py3.10.egg-info' (and everything under it)
+[1.359s] Copying ../../build/cori_vision/cori_vision.egg-info to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/lib/python3.10/site-packages/cori_vision-1.0.0-py3.10.egg-info
+[1.359s] running install_scripts
+[1.375s] Installing laundry_color_detector script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/bin
+[1.375s] Installing object_detection script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/bin
+[1.375s] Installing simple_color_detector script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/bin
+[1.376s] writing list of installed files to '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/install.log'
+[1.399s] Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_vision' returned '0': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_vision build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_vision/install.log --single-version-externally-managed install_data

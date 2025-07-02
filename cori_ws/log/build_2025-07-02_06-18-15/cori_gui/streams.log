@@ -1,0 +1,37 @@
+[1.612s] Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_gui': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_gui build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/install.log --single-version-externally-managed install_data
+[2.107s] running egg_info
+[2.107s] creating ../../build/cori_gui/cori_gui.egg-info
+[2.107s] writing ../../build/cori_gui/cori_gui.egg-info/PKG-INFO
+[2.107s] writing dependency_links to ../../build/cori_gui/cori_gui.egg-info/dependency_links.txt
+[2.107s] writing entry points to ../../build/cori_gui/cori_gui.egg-info/entry_points.txt
+[2.107s] writing requirements to ../../build/cori_gui/cori_gui.egg-info/requires.txt
+[2.107s] writing top-level names to ../../build/cori_gui/cori_gui.egg-info/top_level.txt
+[2.107s] writing manifest file '../../build/cori_gui/cori_gui.egg-info/SOURCES.txt'
+[2.107s] reading manifest file '../../build/cori_gui/cori_gui.egg-info/SOURCES.txt'
+[2.107s] writing manifest file '../../build/cori_gui/cori_gui.egg-info/SOURCES.txt'
+[2.107s] running build
+[2.107s] running build_py
+[2.107s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/build
+[2.108s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/build/lib
+[2.108s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/build/lib/cori_gui
+[2.108s] copying cori_gui/__init__.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/build/lib/cori_gui
+[2.108s] copying cori_gui/color_display.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/build/lib/cori_gui
+[2.108s] running install
+[2.108s] running install_lib
+[2.108s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/python3.10/site-packages/cori_gui
+[2.108s] copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/build/lib/cori_gui/__init__.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/python3.10/site-packages/cori_gui
+[2.108s] copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/build/lib/cori_gui/color_display.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/python3.10/site-packages/cori_gui
+[2.108s] byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/python3.10/site-packages/cori_gui/__init__.py to __init__.cpython-310.pyc
+[2.108s] byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/python3.10/site-packages/cori_gui/color_display.py to color_display.cpython-310.pyc
+[2.108s] running install_data
+[2.108s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/ament_index
+[2.108s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/ament_index/resource_index
+[2.108s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/ament_index/resource_index/packages
+[2.108s] copying resource/cori_gui -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/ament_index/resource_index/packages
+[2.108s] copying package.xml -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/share/cori_gui
+[2.108s] running install_egg_info
+[2.109s] Copying ../../build/cori_gui/cori_gui.egg-info to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/python3.10/site-packages/cori_gui-1.0.0-py3.10.egg-info
+[2.109s] running install_scripts
+[2.109s] Installing color_display script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/bin
+[2.109s] writing list of installed files to '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/install.log'
+[2.117s] Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_gui' returned '0': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_gui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_gui build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_gui/install.log --single-version-externally-managed install_data

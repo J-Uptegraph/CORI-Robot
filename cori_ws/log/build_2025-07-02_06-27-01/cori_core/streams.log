@@ -1,0 +1,40 @@
+[1.193s] Invoking command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_core': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_core build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/install.log --single-version-externally-managed install_data
+[1.382s] running egg_info
+[1.383s] creating ../../build/cori_core/cori_core.egg-info
+[1.383s] writing ../../build/cori_core/cori_core.egg-info/PKG-INFO
+[1.383s] writing dependency_links to ../../build/cori_core/cori_core.egg-info/dependency_links.txt
+[1.383s] writing entry points to ../../build/cori_core/cori_core.egg-info/entry_points.txt
+[1.383s] writing requirements to ../../build/cori_core/cori_core.egg-info/requires.txt
+[1.383s] writing top-level names to ../../build/cori_core/cori_core.egg-info/top_level.txt
+[1.383s] writing manifest file '../../build/cori_core/cori_core.egg-info/SOURCES.txt'
+[1.383s] reading manifest file '../../build/cori_core/cori_core.egg-info/SOURCES.txt'
+[1.384s] writing manifest file '../../build/cori_core/cori_core.egg-info/SOURCES.txt'
+[1.384s] running build
+[1.384s] running build_py
+[1.384s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build
+[1.385s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib
+[1.385s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core
+[1.385s] copying cori_core/database_manager.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core
+[1.385s] copying cori_core/__init__.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core
+[1.385s] copying cori_core/spatial_database.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core
+[1.385s] running install
+[1.385s] running install_lib
+[1.385s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core
+[1.386s] copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core/database_manager.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core
+[1.386s] copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core/__init__.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core
+[1.386s] copying /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build/lib/cori_core/spatial_database.py -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core
+[1.386s] byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core/database_manager.py to database_manager.cpython-310.pyc
+[1.389s] byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core/__init__.py to __init__.cpython-310.pyc
+[1.389s] byte-compiling /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core/spatial_database.py to spatial_database.cpython-310.pyc
+[1.390s] running install_data
+[1.390s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/ament_index
+[1.390s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/ament_index/resource_index
+[1.390s] creating /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/ament_index/resource_index/packages
+[1.391s] copying resource/cori_core -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/ament_index/resource_index/packages
+[1.391s] copying package.xml -> /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/share/cori_core
+[1.391s] running install_egg_info
+[1.393s] Copying ../../build/cori_core/cori_core.egg-info to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages/cori_core-1.0.0-py3.10.egg-info
+[1.393s] running install_scripts
+[1.410s] Installing database_manager script to /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/bin
+[1.410s] writing list of installed files to '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/install.log'
+[1.432s] Invoked command in '/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/src/cori_core' returned '0': PYTHONPATH=/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/install/cori_core/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cori_core build --build-base /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/build install --record /home/juptegraph/Workspaces/Robotics/Projects/CORI/cori_ws/build/cori_core/install.log --single-version-externally-managed install_data
